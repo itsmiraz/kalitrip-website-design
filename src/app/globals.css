@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* styles/globals.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+
+:root {
+  --background: #FDF7FA;
+  --foreground: #040F16;
+}
+/* styles/globals.css */
+.font-mont {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.font-opensans {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+.font-roboto {
+  font-family: 'Roboto', sans-serif !important;
+}
+
+/* styles.css or globals.css */
+.linier-gradient-left-to-right {
+  background: linear-gradient(126.27deg, #0052CC -281.63%, #001B2E 42.23%);
+}
+.linier-gradient-left-to-right-always {
+  background: linear-gradient(126.27deg, #0052CC -281.63%, #001B2E 42.23%);
+}
+
+.linier-gradient-right-to-left {
+  background: linear-gradient(200deg, #0052CC -281.63%, #001B2E 42.23%);
+}
+
+/* Hide gradients on mobile devices */
+@media (max-width: 767px) { /* Adjust the breakpoint as needed */
+  .linier-gradient-left-to-right {
+    background: none; /* Remove the background gradient */
+  }
+
+  .linier-gradient-right-to-left {
+    background: none; /* Remove the background gradient */
+  }
+}
+
+.custom-card-inner-shadow {
+  backdrop-filter: blur(54px);
+
+  box-shadow: 0px 0px 14px 0px rgba(247, 249, 251, 0.1) inset;
+  
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* css for slider animation */
+@keyframes slide-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slider {
+  animation-play-state: running;
+}
+
+.slider:hover {
+  animation-play-state: paused;
+}
+
+
+
+/* for animating the border bubbles */
+@keyframes bubble-move-top {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(100%, 0); /* Moves from left to right */
+  }
+  100% {
+    transform: translate(0, 0);
+    /* Moves from left to right */
+  }
+}
+
+@keyframes bubble-move-bottom {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-100%, 0); /* Moves from right to left */
+  }
+  100% {
+    transform: translate(0, 0);
+    /* Moves from left to right */
+  }
+}
+
+.animate-bubble-top {
+  animation: bubble-move-top 20s linear infinite;
+}
+
+.animate-bubble-bottom {
+  animation: bubble-move-bottom 20s linear infinite;
+}
+
+
+/* funnel card glowing gradienet */
+@keyframes bubble-move-diagonal {
+  0% {
+    transform: translate(0, 0) rotate(0deg); /* Start at the top-left, no rotation */
+  }
+  25% {
+    transform: translate(216px, 0) rotate(90deg); /* Move to the top-right, rotate */
+  }
+  50% {
+    transform: translate(216px, 366px) rotate(180deg); /* Move to the bottom-right, rotate */
+  }
+  75% {
+    transform: translate(0, 346px) rotate(270deg); /* Move to the bottom-left, rotate */
+  }
+  100% {
+    transform: translate(0, 0) rotate(0); /* Complete the loop, rotate */
+  }
+}
+
+.animate-funnel-card-gradient-animation {
+  animation: bubble-move-diagonal 15s linear infinite;
+}
+
+
+
+/* ai power house */
+@keyframes bubble-move-diagonal-ai-power-house {
+  0% {
+    transform: translate(0, 0) rotate(0deg) ; /* Start at the top-left */
+  }
+  25% {
+    transform: translate(100%, 0); /* Move to the top-right */
+  }
+  50% {
+    transform: translate(100%, 100%)  rotate(90deg); /* Move to the bottom-right */
+  }
+  75% {
+    transform: translate(0, 110%)  rotate(180deg);/* Move to the bottom-left */
+  }
+  100% {
+    transform: translate(0, 0) ; /* Complete the loop back to the start */
+  }
+}
+.animate-ai-power-gradient-animation {
+  animation: bubble-move-diagonal-ai-power-house 20s linear infinite;
+}
