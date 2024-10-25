@@ -13,6 +13,7 @@ const config: Config = {
         roboto: ['Roboto', 'sans-serif'],
       },
       colors: {
+        'heading-color':"#040F16",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
