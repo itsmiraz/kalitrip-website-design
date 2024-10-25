@@ -1,5 +1,6 @@
 import Blogs from "./components/blogs";
 import Expertise from "./components/expertise";
+import Footer from "./components/footer";
 import Hero from "./components/hero";
 import PricingPlan from "./components/pricingPlan";
 import Products from "./components/products";
@@ -14,6 +15,7 @@ export default function Home() {
       <Products />
       <Testimonials />
       <Blogs />
+      <Footer/>
     </div>
   );
 }
