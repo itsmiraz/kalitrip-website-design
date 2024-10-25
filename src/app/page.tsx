@@ -1,6 +1,7 @@
 import Expertise from "./components/expertise";
 import Hero from "./components/hero";
 import PricingPlan from "./components/pricingPlan";
+import Products from "./components/products";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <Expertise />
       <PricingPlan />
+      <Products/>
     </div>
   );
 }
