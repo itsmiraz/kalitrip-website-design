@@ -37,7 +37,7 @@ const Testimonials = () => {
 
   const swiperRef = useRef<any>(null);
 
-  const handleLeftClick = () => {
+  const handleLeftClick = () => { 
     if (swiperRef.current) {
       swiperRef?.current?.swiper?.slidePrev();
     }

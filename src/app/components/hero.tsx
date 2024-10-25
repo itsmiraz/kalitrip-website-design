@@ -9,7 +9,7 @@ import ArrowDown from "@/assets/icons/ArrowDown.svg";
 import Location from "@/assets/icons/Location.svg";
 import PlanIcon from "@/assets/images/plan-icon.png";
 import SelectBudget from "@/assets/icons/SelectBudget.svg";
-import SelectTraverl from "@/assets/icons/SelectTravelers.svg"
+import SelectTraverl from "@/assets/icons/SelectTravelers.svg";
 import SelectDate from "@/assets/icons/SelectDate.svg";
 import { useState } from "react";
 
@@ -111,9 +111,10 @@ const Hero = () => {
       {/* Filter */}
       <div className="-translate-y-20 pb-[20px] bg-white drop-shadow rounded-[20px] max-w-[1240px] mx-auto pt-[50px] px-[30px]">
         <div className="flex pb-[30px] border-b border-[#E6E6E6] justify-between items-center">
-          
           <div>
-            <p className="text-[12px] pb-[12px] font-semibold text-[#080705]">Where are you Coming from</p>
+            <p className="text-[12px] pb-[12px] font-semibold text-[#080705]">
+              Where are you Coming from
+            </p>
             <div className="max-w-[240px] rounded-[13px] gap-x-[5px] border pr-4 py-[17px] pl-[15px] flex items-center justify-start text-[#080705] font-medium border-[#080705]">
               <div>
                 <Location />
@@ -125,9 +126,11 @@ const Hero = () => {
               />
             </div>
           </div>
-          
+
           <div>
-            <p className="text-[12px] pb-[12px] font-semibold text-[#080705]">Where do you want to go?</p>
+            <p className="text-[12px] pb-[12px] font-semibold text-[#080705]">
+              Where do you want to go?
+            </p>
             <div className="max-w-[240px] rounded-[13px] gap-x-[5px] border pr-4 py-[17px] pl-[15px] flex items-center justify-start text-[#080705] font-medium border-[#080705]">
               <div>
                 <Location />
@@ -139,21 +142,16 @@ const Hero = () => {
               />
             </div>
           </div>
-       
+
           <div>
-            <SelectDate/>
-            </div>
+            <SelectDate />
+          </div>
           <div>
-            <SelectTraverl/>
-            </div>
+            <SelectTraverl />
+          </div>
           <div>
-            <SelectBudget/>
-            </div>
-
-        
-
-
-
+            <SelectBudget />
+          </div>
         </div>
         <div className="flex justify-center flex-wrap px-20 gap-y-[30px] gap-x-[40px] border-b border-[#E6E6E6] py-[30px] items-center ">
           {options.map((item, i) => (

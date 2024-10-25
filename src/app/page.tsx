@@ -1,3 +1,4 @@
+import Blogs from "./components/blogs";
 import Expertise from "./components/expertise";
 import Hero from "./components/hero";
 import PricingPlan from "./components/pricingPlan";
@@ -10,8 +11,9 @@ export default function Home() {
       <Hero />
       <Expertise />
       <PricingPlan />
-      <Products/>
-      <Testimonials/>
+      <Products />
+      <Testimonials />
+      <Blogs />
     </div>
   );
 }
