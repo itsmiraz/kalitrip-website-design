@@ -32,7 +32,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={` max-w-[1600px] mx-auto antialiased`}
+        className={`transition-all ease-in-out duration-300 max-w-[2000px] mx-auto antialiased`}
       >
         {children}
       </body>
