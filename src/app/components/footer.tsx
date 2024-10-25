@@ -10,6 +10,20 @@ import Youtube from "@/assets/icons/social/Youtube.svg";
 import Tiktok from "@/assets/icons/social/Tiktok.svg";
 import Discord from "@/assets/icons/social/Discord.svg";
 
+import Phone from "@/assets/icons/PhoneIcon.svg";
+import Mail from "@/assets/icons/MailIcon.svg";
+import Location from "@/assets/icons/LocationIcon.svg";
+
+import Image1 from "@/assets/images/footerImages/image1.png";
+import Image2 from "@/assets/images/footerImages/image-2.png";
+import Image3 from "@/assets/images/footerImages/image-8.png";
+import Image4 from "@/assets/images/footerImages/image4.png";
+import Image5 from "@/assets/images/footerImages/image-5.png";
+import Image6 from "@/assets/images/footerImages/image6.png";
+import Image7 from "@/assets/images/footerImages/image7.png";
+import Image8 from "@/assets/images/footerImages/image-8.png";
+import Image9 from "@/assets/images/footerImages/image9.png";
+
 const Footer = () => {
   const socialLinks = [
     {
@@ -38,9 +52,21 @@ const Footer = () => {
     },
   ];
 
+  const FooterImages = [
+    Image1,
+    Image2,
+    Image3,
+    Image4,
+    Image5,
+    Image6,
+    Image7,
+    Image8,
+    Image9,
+  ];
+
   return (
     <div className="mt-[120px]">
-      <div className="max-w-[1240px] gap-x-[128px] items-center flex justify-between py-[30px] px-[80px] rounded-[30px] bg-[#945600] mx-auto">
+      <div className="max-w-[1240px] translate-y-36 gap-x-[128px] items-center flex justify-between py-[30px] px-[80px] rounded-[30px] bg-[#945600] mx-auto">
         <Image src={CTA} alt="" />
 
         <div>
@@ -64,8 +90,8 @@ const Footer = () => {
         </div>
       </div>
       {/* Footer */}
-      <div className="bg-[#040F16] pt-[200px]">
-        <div className="max-w-[1240px] mx-auto">
+      <div className="bg-[#040F16]  pt-[260px]">
+        <div className="max-w-[1240px] flex justify-between mx-auto">
           <div className="max-w-[192px]">
             <Image src={Logo} alt="" />
             <div className="flex mt-[40px] flex-wrap gap-[16px]">
@@ -80,26 +106,68 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <h3>
-            Ease of use
+            <h3 className="font-semibold text-[24px] mb-[30px]   text-[#FDF7FA] ">
+              Ease of use
             </h3>
-            <ul>
-                <li>
-                    <p>Welcome</p>
-                </li>
-                <p>
-                Features
+            <ul className="space-y-[20px]">
+              <li>
+                <p className="text-[#ABABAB]  cursor-pointer    hover:font-semibold hover:text-[#14591D] text-[18px]">
+                  Welcome
                 </p>
-                <p>
-                Testimonials
+              </li>
+              <li>
+                <p className="text-[#ABABAB]  cursor-pointer    hover:font-semibold hover:text-[#14591D] text-[18px]">
+                  Features
                 </p>
-                <p>
-                Blog
+              </li>
+              <li>
+                <p className="text-[#ABABAB]   cursor-pointer   hover:font-semibold hover:text-[#14591D] text-[18px]">
+                  Testimonials
                 </p>
-                <p>
-                Boutique
+              </li>
+              <li>
+                <p className="text-[#ABABAB]   cursor-pointer   hover:font-semibold hover:text-[#14591D] text-[18px]">
+                  Blog
                 </p>
+              </li>
+              <li>
+                <p className="text-[#ABABAB]  cursor-pointer    hover:font-semibold hover:text-[#14591D] text-[18px]">
+                  Boutique
+                </p>
+              </li>
             </ul>
+          </div>
+          <div>
+            <h3 className="font-semibold text-[24px] mb-[30px]   text-[#FDF7FA] ">
+              Contact Info.
+            </h3>
+            <ul className="space-y-[16px]">
+              <li className="flex  gap-x-[17px]">
+                <Phone />
+                <p className="text-[18px]   text-[#ABABAB]">
+                  +33 05 51 90 02 80
+                </p>
+              </li>
+              <li className="flex  gap-x-[17px]">
+                <Mail />
+                <p className="text-[18px]   text-[#ABABAB]">
+                  Kalitrip@gmail.com
+                </p>
+              </li>
+              <li className="flex  gap-x-[17px]">
+                <Location />
+                <p className="text-[18px]   text-[#ABABAB]">
+                  85 rue Marie de Médicis, <br /> Blagnac, France.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div className="flex max-w-[266px] flex-wrap  gap-x-[10px]">
+            {FooterImages.map((item, i) => (
+              <div key={i} className="w-[82px]  h-[68px] ">
+                <Image key={i} className="w-full h-full"  alt="" src={item} />
+              </div>
+            ))}
           </div>
         </div>
       </div>
