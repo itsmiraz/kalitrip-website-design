@@ -68,9 +68,9 @@ const Hero = () => {
         className="h-[913px] px-10 pt-[20px]"
       >
         {/* Header */}
-        <div className="flex -translate-x-20 justify-between items-center">
+        <div className="flex  mx-auto justify-between items-center">
           <Image src={Logo} alt="" className="max-w-[170]" />
-          <ul className="flex gap-x-[40px] items-center">
+          <ul className="flex gap-x-[40px] translate-x-20  items-center">
             {navLinks.map((item, i) => (
               <li key={i}>
                 {" "}
