@@ -66,7 +66,7 @@ const Testimonials = () => {
     <div ref={sectionRef} id="testimonials" className="py-[40px] mx-auto max-w-[1500px] mx-a md:py-[93px]">
       {" "}
       <div className="flex md:flex-row flex-col md:mb-[57px]  justify-center gap-[34px] md:justify-between md:px-20 items-center">
-        <h2 className="text-[24px] leading-[110%] md:text-[48px] font-bold text-heading-color">
+        <h2 className="text-[24px] font-montserrat leading-[110%] md:text-[48px] font-bold text-heading-color">
           What our <br /> customers say <br />
           <span className="text-[#14591D]">KaliTrip</span>
         </h2>
@@ -182,17 +182,17 @@ const TestimonialCard = ({
     <div className="bg-white w-[605px] rounded-[20px] py-[40px] px-[30px]">
       <div>
         <QuoteIcon />
-        <p className="text-[#4A4A4A] py-[40px] font-medium text-[18px]">
+        <p className="text-[#4A4A4A] font-inter py-[40px] font-medium text-[18px]">
           {data.desc}
         </p>
         <div className="flex justify-between items-center">
           <div className="flex  gap-x-[20px]">
             <Image src={data.profile} alt="" />
             <div>
-              <h3 className="text-[24px] font-semibold text-heading-color ">
+              <h3 className="text-[24px] font-montserrat font-semibold text-heading-color ">
                 {data.name}
               </h3>
-              <p className="text-[#4A4A4A] text-[16px]">{data.role}</p>
+              <p className="text-[#4A4A4A] text-[16px] font-inter">{data.role}</p>
             </div>
           </div>
           <div className="flex gap-x-[10px]">

@@ -6,12 +6,14 @@ import Logo from "@/assets/images/logo.webp";
 import Image from "next/image";
 import Earth from "@/assets/icons/Earth.svg";
 import ArrowDown from "@/assets/icons/ArrowDown.svg";
-import Location from "@/assets/icons/Location.svg";
+// import Location from "@/assets/icons/Location.svg";
 import PlanIcon from "@/assets/images/plan-icon.png";
-import SelectBudget from "@/assets/icons/SelectBudget.svg";
-import SelectTraverl from "@/assets/icons/SelectTravelers.svg";
-import SelectDate from "@/assets/icons/SelectDate.svg";
+// import SelectBudget from "@/assets/icons/SelectBudget.svg";
 import { useState } from "react";
+import LocationInput from "./locationInput";
+import SelectDateRange from "./selectDateRange";
+import SelectTravelers, { TravelersCount } from "./selectTraveler";
+import BudgetSelector from "./budgetSelector";
 
 const Hero = () => {
   const navLinks = [
@@ -49,8 +51,13 @@ const Hero = () => {
       label: "🌟 Popular destinations",
     },
   ];
+  const handleTravelersChange = (travelers: TravelersCount) => {
+    console.log('Selected travelers:', travelers);
+  };
+
+
   return (
-    <div>
+    <div id="hero">
       <div
         style={{
           backgroundImage: `url(${CoverImage.src})`,
@@ -96,12 +103,12 @@ const Hero = () => {
             <div className="translate-x-24">
               <Image src={PlanIcon} alt="" />
             </div>
-            <h1 className="text-[68px] text-white text-center leading-[110%] font-semibold">
+            <h1 className="text-[68px]  font-montserrat text-white text-center leading-[110%] font-semibold">
               Why is it so absurd? <br /> to delight in many inanimate <br />{" "}
               <span className="text-[#14591D]">things 500€</span>
             </h1>
           </div>
-          <p className="text-[22px] text-white text-center font-medium pt-[20px]">
+          <p className="text-[22px] font-inter text-white text-center font-medium pt-[20px]">
             KaliTrip allows you to organize your trips more efficiently,
             with personalized <br /> itineraries that adapt to your
             preferences and your budget .
@@ -111,46 +118,21 @@ const Hero = () => {
       {/* Filter */}
       <div className="-translate-y-20 pb-[20px] bg-white drop-shadow rounded-[20px] max-w-[1240px] mx-auto pt-[50px] px-[30px]">
         <div className="flex pb-[30px] border-b border-[#E6E6E6] justify-between items-center">
-          <div>
-            <p className="text-[12px] pb-[12px] font-semibold text-[#080705]">
-              Where are you Coming from
-            </p>
-            <div className="max-w-[240px] rounded-[13px] gap-x-[5px] border pr-4 py-[17px] pl-[15px] flex items-center justify-start text-[#080705] font-medium border-[#080705]">
-              <div>
-                <Location />
-              </div>
-              <input
-                placeholder="Enter Your Location..."
-                className="border-none placeholder:text-[#080705] font-medium text-[14px] leading-3 focus:outline-none decoration-none"
-                type="text"
-              />
-            </div>
-          </div>
+       
+           <LocationInput label="Where are you Coming from"/>
+           <LocationInput  label="Where do you want to go?"/>
+ 
+        
 
           <div>
-            <p className="text-[12px] pb-[12px] font-semibold text-[#080705]">
-              Where do you want to go?
-            </p>
-            <div className="max-w-[240px] rounded-[13px] gap-x-[5px] border pr-4 py-[17px] pl-[15px] flex items-center justify-start text-[#080705] font-medium border-[#080705]">
-              <div>
-                <Location />
-              </div>
-              <input
-                placeholder="Enter Your Location..."
-                className="border-none placeholder:text-[#080705] font-medium text-[14px] leading-3 focus:outline-none decoration-none"
-                type="text"
-              />
-            </div>
-          </div>
-
-          <div>
-            <SelectDate />
+            <SelectDateRange/>
+            {/* <SelectDate /> */}
           </div>
           <div>
-            <SelectTraverl />
+          <SelectTravelers onChange={handleTravelersChange} />
           </div>
           <div>
-            <SelectBudget />
+           <BudgetSelector/>
           </div>
         </div>
         <div className="flex justify-center flex-wrap px-20 gap-y-[30px] gap-x-[40px] border-b border-[#E6E6E6] py-[30px] items-center ">

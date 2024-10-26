@@ -24,6 +24,9 @@ import Image7 from "@/assets/images/footerImages/image7.png";
 import Image8 from "@/assets/images/footerImages/image-8.png";
 import Image9 from "@/assets/images/footerImages/image9.png";
 
+import CopyRightIcon from "@/assets/icons/CopyRightIcon.svg";
+import UpArrow from "@/assets/icons/UpArrow.svg";
+
 const Footer = () => {
   const socialLinks = [
     {
@@ -70,14 +73,14 @@ const Footer = () => {
         <Image src={CTA} alt="" />
 
         <div>
-          <h2 className="text-[48px] pb-[15px] font-semibold  leading-[110%] text-[#FDF7FA]">
+          <h2 className="text-[48px] pb-[15px] font-semibold font-montserrat  leading-[110%] text-[#FDF7FA]">
             Subscribe To The <br /> Newsletter
           </h2>
-          <p className="text-[#D8D8D8] pb-[50px] text-[18px] font-medium leading-[140%] ">
+          <p className="text-[#D8D8D8] font-inter  pb-[50px] text-[18px] font-medium leading-[140%] ">
             Surround yourself with the community and resources to help bring
             your vision to life.
           </p>
-          <div className="bg-white pl-4 flex items-center h-[60px] p-[5px] relative rounded-[12px] ">
+          <div className="bg-white pl-4 font-inter flex items-center h-[60px] p-[5px] relative rounded-[12px] ">
             <input
               placeholder="info@twintone.ai"
               type="text"
@@ -106,10 +109,10 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <h3 className="font-semibold text-[24px] mb-[30px]   text-[#FDF7FA] ">
+            <h3 className="font-semibold text-[24px] mb-[30px] font-montserrat  text-[#FDF7FA] ">
               Ease of use
             </h3>
-            <ul className="space-y-[20px]">
+            <ul className="space-y-[20px] font-inter">
               <li>
                 <p className="text-[#ABABAB]  cursor-pointer    hover:font-semibold hover:text-[#14591D] text-[18px]">
                   Welcome
@@ -138,10 +141,10 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h3 className="font-semibold text-[24px] mb-[30px]   text-[#FDF7FA] ">
+            <h3 className="font-semibold text-[24px] mb-[30px] font-montserrat   text-[#FDF7FA] ">
               Contact Info.
             </h3>
-            <ul className="space-y-[16px]">
+            <ul className="space-y-[16px] font-inter">
               <li className="flex  gap-x-[17px]">
                 <Phone />
                 <p className="text-[18px]   text-[#ABABAB]">
@@ -165,9 +168,24 @@ const Footer = () => {
           <div className="flex max-w-[266px] flex-wrap  gap-x-[10px]">
             {FooterImages.map((item, i) => (
               <div key={i} className="w-[82px]  h-[68px] ">
-                <Image key={i} className="w-full h-full"  alt="" src={item} />
+                <Image key={i} className="w-full h-full" alt="" src={item} />
               </div>
             ))}
+          </div>
+        </div>
+        <div className="max-w-[1240px] py-[10px] px-[20px] mx-auto mt-[17px] bg-[#FFFFFF]/10 backdrop-blur flex justify-between items-center rounded-[15px]">
+          <div className="flex items-center gap-x-2">
+            <CopyRightIcon />
+            <p className="font-inter text-[18px] font-medium text-[#ABABAB]">
+              2024 - Kalitrip Copyright All Right reserved
+            </p>
+          </div>
+          <div>
+            <a href="/#hero">
+            <button>
+              <UpArrow />
+            </button>
+            </a>
           </div>
         </div>
       </div>

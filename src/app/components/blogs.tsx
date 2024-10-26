@@ -28,10 +28,10 @@ const Blogs = () => {
 
   return (
     <div className="pt-[120px] px-10">
-      <h2 className="text-[#040F16] pb-[20px] text-[48px] text-center  font-semibold">
+      <h2 className="text-[#040F16] font-montserrat pb-[20px] text-[48px] text-center  font-semibold">
         Our Recent <span className="text-[#14591D]">Blogs</span>
       </h2>
-      <p className="text-[#767676] font-medium text-center text-[18px]">
+      <p className="text-[#767676] font-medium  font-inter text-center text-[18px]">
         Surround yourself with the community and resources to help <br /> bring
         your vision to life.
       </p>
@@ -41,14 +41,14 @@ const Blogs = () => {
 
         <div>
           <Image src={BlogCover} alt="" />
-          <div className="mt-[30px]  flex items-center w-[179px] text-heading-color font-semibold gap-x-[7px] justify-center  text-[14px] py-[10px] px-[20px] bg-[#040F16]/10 rounded-full">
+          <div className="mt-[30px]  font-inter flex items-center w-[179px] text-heading-color font-semibold gap-x-[7px] justify-center  text-[14px] py-[10px] px-[20px] bg-[#040F16]/10 rounded-full">
             <Calender />
             <p>24 October 2024</p>
           </div>
-          <h2 className="text-[24px] mt-[20px] font-semibold text-heading-color pb-[15px]">
+          <h2 className="text-[24px] mt-[20px] font-montserrat font-semibold text-heading-color pb-[15px]">
             Plan the Perfect Vacation.
           </h2>
-          <p className="text-[#767676] text-[14px] font-medium ">
+          <p className="text-[#767676] text-[14px] font-inter font-medium ">
             Planning a vacation can be overwhelming, but this post offers a
             step-by-step guide to help readers create a comprehensive travel
             itinerary. From choosing a destination to booking accommodations and
@@ -59,7 +59,7 @@ const Blogs = () => {
             this post offers a step-by-step guide to help readers create a
             comprehensive travel itinerary.
           </p>
-          <button className="px-[25px] mt-[40px] bg-[#14591D]  text-white text-[18px] py-[16px] rounded-[15px] rounded-tl-[0px]">
+          <button className="px-[25px] font-montserrat mt-[40px] bg-[#14591D]  text-white text-[18px] py-[16px] rounded-[15px] rounded-tl-[0px]">
             Read More
           </button>
         </div>
@@ -72,14 +72,14 @@ const Blogs = () => {
                 <Image src={item.img} alt=""  className="h-full w-full object-cover"/>
               </div>
               <div>
-                <div className=" flex items-center w-[179px] text-heading-color font-semibold gap-x-[7px] justify-center  text-[14px] py-[10px] px-[20px] bg-[#040F16]/10 rounded-full">
+                <div className=" font-inter flex items-center w-[179px] text-heading-color font-semibold gap-x-[7px] justify-center  text-[14px] py-[10px] px-[20px] bg-[#040F16]/10 rounded-full">
                   <Calender />
                   <p>24 October 2024</p>
                 </div>
-                <h2 className="text-[24px] leading-[100%] mt-[20px] font-semibold text-heading-color pb-[15px]">
+                <h2 className="text-[24px] font-montserrat leading-[100%] mt-[20px] font-semibold text-heading-color pb-[15px]">
                   {item.title}
                 </h2>
-                <p className="text-[#767676] leading-[140%] text-[14px] font-medium ">
+                <p className="text-[#767676] font-inter leading-[140%] text-[14px] font-medium ">
                   {item.desc}
                 </p>
               </div>

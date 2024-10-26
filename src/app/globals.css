@@ -6,7 +6,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
+::-webkit-scrollbar {
+  width: 5px;
+  height: 0px;
+}
 
+::-webkit-scrollbar-thumb {
+  background-color: #c4c4c4;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #8d8d8d;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.button-inner-shadow {
+  box-shadow: -9px -8px 8.9px 0px #00000040 inset;
+
+  box-shadow: 3px 3px 6.6px 0px #ffffff40 inset;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 :root {
   --background: #FDF7FA;
   --foreground: #040F16;
