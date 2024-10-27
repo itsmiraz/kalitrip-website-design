@@ -81,7 +81,7 @@ const Header = () => {
         <div className=" hidden md:flex bg-[#FDF7FA]/10  h-fit border border-[#FDF7FA]/40 rounded-full items-center gap-x-[15px] text-white px-[25px] py-4">
           <div className="flex gap-x-[7px] items-center">
             <Earth />
-            <p className="text-[18px] font-medium text-[#FDF7FA]">En</p>
+            <p className="text-[18px] font-medium font-clashDisplay text-[#FDF7FA]">En</p>
           </div>
           <ArrowDown />
         </div>

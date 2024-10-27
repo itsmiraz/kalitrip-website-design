@@ -7,7 +7,7 @@ const PricingPlan = () => {
 
   return (
     <div className="px-[20px] pb-[60px] pt-[60px] md:pt-[120px]">
-   <div className="max-w-[310px] md:max-w-[500px] mx-auto"> 
+   <div className="max-w-[310px] md:max-w-[1450px] mx-auto"> 
    <h2 className="text-[#040F16] font-clashDisplay text-[22px] md:text-[48px] text-center  font-semibold">
         Pick Your Pricing Plan
       </h2>
