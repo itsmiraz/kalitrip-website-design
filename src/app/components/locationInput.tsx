@@ -1,6 +1,6 @@
 import { ChangeEvent, useState } from "react";
 import Location from "@/assets/icons/Location.svg";
-import { Airport, AirportSuggestions, Region } from "@/index";
+import { Airport, AirportSuggestions, Region } from "@/constant";
 
 const LocationInput = ({ label }: {  label: string }) => {
   const [inputValue, setInputValue] = useState("");

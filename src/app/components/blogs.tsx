@@ -27,8 +27,8 @@ const Blogs = () => {
   ];
 
   return (
-    <div className="pt-[120px] px-10">
-      <h2 className="text-[#040F16] font-clashDisplay pb-[20px] text-[48px] text-center  font-semibold">
+    <div className="pt-[50px] md:pt-[120px] bg-[#945600]/5 px-10">
+      <h2 className="text-[#040F16] font-clashDisplay pb-[20px] text-[22px] md:text-[48px] text-center  font-semibold">
         Our Recent <span className="text-[#14591D]">Blogs</span>
       </h2>
       <p className="text-[#767676] font-medium  font-inter text-center text-[18px]">
@@ -36,7 +36,7 @@ const Blogs = () => {
         your vision to life.
       </p>
 
-      <div className="pt-[60px] place-items-center mx-auto grid grid-cols-2 gap-x-[50px] max-w-[1240px]">
+      <div className="pt-[60px] place-items-center mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-[50px] max-w-[1240px]">
         {/* cover */}
 
         <div>
@@ -72,14 +72,14 @@ const Blogs = () => {
                 <Image src={item.img} alt=""  className="h-full w-full object-cover"/>
               </div>
               <div>
-                <div className=" font-inter flex items-center w-[179px] text-heading-color font-semibold gap-x-[7px] justify-center  text-[14px] py-[10px] px-[20px] bg-[#040F16]/10 rounded-full">
+                <div className=" font-inter flex items-center w-[179px] text-heading-color font-semibold gap-x-[7px] justify-center  text-[10px] md:text-[14px] py-[10px] px-[20px] bg-[#040F16]/10 rounded-full">
                   <Calender />
                   <p>24 October 2024</p>
                 </div>
-                <h2 className="text-[24px] font-clashDisplay leading-[100%] mt-[20px] font-semibold text-heading-color pb-[15px]">
+                <h2 className="text-[18px] md:text-[24px] font-clashDisplay leading-[100%] mt-[20px] font-semibold text-heading-color pb-[15px]">
                   {item.title}
                 </h2>
-                <p className="text-[#767676] font-inter leading-[140%] text-[14px] font-medium ">
+                <p className="text-[#767676] font-inter leading-[140%] text-[10px] md:text-[14px] font-medium ">
                   {item.desc}
                 </p>
               </div>

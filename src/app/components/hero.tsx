@@ -15,11 +15,10 @@ import LocationInput from "./locationInput";
 import SelectDateRange from "./selectDateRange";
 import SelectTravelers, { TravelersCount } from "./selectTraveler";
 import BudgetSelector from "./budgetSelector";
-import { FilterOptions, navLinks } from "@/constant";
 import Link from "next/link";
+import { FilterOptions, navLinks } from "@/constant";
 
 const Hero = () => {
-
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -40,7 +39,6 @@ const Hero = () => {
       <div
         style={{
           backgroundImage: `url(${
-        
             isMobile ? MobileBackground.src : CoverImage.src
           })`,
           backgroundSize: "cover",
@@ -56,9 +54,9 @@ const Hero = () => {
         <MainHero />
       </div>
       {/* Filter */}
-    <div className="md:px-0 px-[20px]">
-    <Filter />
-    </div>
+      <div className="md:px-0 px-[20px]">
+        <Filter />
+      </div>
     </div>
   );
 };
@@ -103,17 +101,21 @@ const MainHero = () => {
     <div className="pt-[61px]">
       <div className="flex items-start justify-center">
         <div className="md:translate-x-24 translate-x-8">
-          <Image src={PlanIcon} className="md:size-[80px] size-[30px] " alt="" />
+          <Image
+            src={PlanIcon}
+            className="md:size-[80px] size-[30px] "
+            alt=""
+          />
         </div>
         <h1 className="text-[24px] md:text-[68px]  font-clashDisplay text-white text-center leading-[32px] md:leading-[110%] font-semibold">
           Why is it so absurd? <br /> to delight in many inanimate <br />{" "}
           <span className="text-[#14591D]">things 500€</span>
         </h1>
       </div>
-      <p className="text-[12px] md:text-[22px] font-inter text-white text-center md:leading-[140px] leading-[16px] font-medium pt-[10px] md:pt-[20px]">
+      <p className="text-[12px] md:text-[22px] font-inter text-white text-center md:leading-[30px] leading-[16px] font-medium pt-[10px] md:pt-[20px]">
         KaliTrip allows you to organize your trips more efficiently,
-        with personalized <br className="md:block hidden" /> itineraries that adapt to your
-        preferences and your budget .
+        with personalized <br className="md:block hidden" /> itineraries that adapt to your preferences and your
+        budget .
       </p>
     </div>
   );

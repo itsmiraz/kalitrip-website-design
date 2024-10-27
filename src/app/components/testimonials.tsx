@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
-import {  useEffect, useRef, useState } from "react";
-import { Swiper,  SwiperSlide } from "swiper/react";
+import { useEffect, useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -9,35 +9,14 @@ import "swiper/css/navigation";
 import Star from "@/assets/icons/star.svg";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import Profile from "@/assets/images/profile.png";
 import QuoteIcon from "@/assets/icons/QuoteIcon.svg";
 import Image from "next/image";
 import RightArrow from "@/assets/icons/LargeRightArrow.svg";
+import { TestimonialsData } from "@/constant";
 const Testimonials = () => {
-  const Data = [
-    {
-      desc: "Welcome to your premier destination for high-quality windows and doors that blend style, security, and energy efficiency. your premier destination for high-quality.",
-      profile: Profile,
-      name: "Phillip Lipshutz",
-      role: "Ui-Ux Designer",
-    },
-    {
-      desc: "Welcome to your premier destination for high-quality windows and doors that blend style, security, and energy efficiency. your premier destination for high-quality.",
-      profile: Profile,
-      name: "Phillip Lipshutz",
-      role: "Ui-Ux Designer",
-    },
-    {
-      desc: "Welcome to your premier destination for high-quality windows and doors that blend style, security, and energy efficiency. your premier destination for high-quality.",
-      profile: Profile,
-      name: "Phillip Lipshutz",
-      role: "Ui-Ux Designer",
-    },
-  ];
-
   const swiperRef = useRef<any>(null);
 
-  const handleLeftClick = () => { 
+  const handleLeftClick = () => {
     if (swiperRef.current) {
       swiperRef?.current?.swiper?.slidePrev();
     }
@@ -63,11 +42,15 @@ const Testimonials = () => {
     }
   }, [inView]);
   return (
-    <div ref={sectionRef} id="testimonials" className="py-[40px] mx-auto max-w-[1500px] mx-a md:py-[93px]">
+    <div
+      ref={sectionRef}
+      id="testimonials"
+      className="py-[40px] mx-auto max-w-[1500px] mx-a md:py-[93px]"
+    >
       {" "}
-      <div className="flex md:flex-row flex-col md:mb-[57px]  justify-center gap-[34px] md:justify-between md:px-20 items-center">
-        <h2 className="text-[24px] font-clashDisplay leading-[110%] md:text-[48px] font-semibold text-heading-color">
-          What our  customers <br /> Say About 
+      <div className="flex md:flex-row flex-col mb-[30px] md:mb-[57px]  justify-center gap-[34px] md:justify-between md:px-20 items-center">
+        <h2 className="text-[22px] md:text-start text-center font-clashDisplay leading-[110%] md:text-[48px] font-semibold text-heading-color">
+          What our customers <br /> Say About
           <span className="text-[#14591D]"> KaliTrip</span>
         </h2>
         <div className="gap-x-[21px] md:flex hidden items-center">
@@ -90,7 +73,7 @@ const Testimonials = () => {
           </button>
         </div>
       </div>
-      <div className="pl-10">
+      <div className="md:pl-10 pl-4">
         <Swiper
           ref={swiperRef}
           pagination={{
@@ -154,7 +137,7 @@ const Testimonials = () => {
           }}
           className="mySwiper "
         >
-          {Data.map((item, key) => (
+          {TestimonialsData.map((item, key) => (
             <SwiperSlide key={key}>
               <motion.div
                 initial={{ opacity: 0, x: -100 }}
@@ -166,6 +149,25 @@ const Testimonials = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+      </div>
+      <div className="gap-x-[21px] flex justify-center pt-[30px]  md:hidden items-center">
+        <button
+          className="text-center flex justify-center items-center text-[#14591D] hover:text-[white] rounded-full bg-[#F1F4F1]  size-[50px] hover:bg-[#14591D]"
+          onClick={handleLeftClick}
+        >
+          <div>
+            <RightArrow />
+          </div>
+        </button>
+
+        <button
+          className="text-center flex  rotate-180  justify-center items-center size-[50px] rounded-full text-[#14591D] hover:text-[white]  bg-[#F1F4F1] hover:bg-[#14591D] "
+          onClick={handleRightClick}
+        >
+          <div>
+            <RightArrow />
+          </div>
+        </button>
       </div>
     </div>
   );
@@ -179,28 +181,48 @@ const TestimonialCard = ({
   data: { profile: any; name: string; role: string; desc: string };
 }) => {
   return (
-    <div className="bg-white w-[605px] rounded-[20px] py-[40px] px-[30px]">
+    <div className="bg-white w-[312px] md:w-[605px] rounded-[20px] py-[20px] md:py-[40px] px-[15px] md:px-[30px]">
       <div>
-        <QuoteIcon />
-        <p className="text-[#4A4A4A] font-inter py-[40px] font-medium text-[18px]">
+        <div className="md:w-[50px] md:h-[37px] w-[30px] h-[22px]">
+          <QuoteIcon />
+        </div>
+        <p className="text-[#4A4A4A] font-inter py-[20px] md:py-[40px] font-medium text-[10px] md:text-[18px]">
           {data.desc}
         </p>
         <div className="flex justify-between items-center">
           <div className="flex  gap-x-[20px]">
-            <Image src={data.profile} alt="" />
+            <div className="md:w-[60px] w-[34px]">
+              <Image className="" src={data.profile} alt="" />
+            </div>
             <div>
-              <h3 className="text-[24px] font-clashDisplay font-semibold text-heading-color ">
+              <h3 className="text-[14px] md:text-[24px] font-clashDisplay font-semibold text-heading-color ">
                 {data.name}
               </h3>
-              <p className="text-[#4A4A4A] text-[16px] font-inter">{data.role}</p>
+              <p className="text-[#4A4A4A] text-[8px] md:text-[16px] font-inter">
+                {data.role}
+              </p>
             </div>
           </div>
           <div className="flex gap-x-[10px]">
-            <Star />
-            <Star />
-            <Star />
-            <Star />
-            <Star />
+            <div className="md:w-[26px] md:h-[26px] w-[12px] h-[12px]">
+              <Star />
+            </div>
+
+            <div className="md:w-[26px] md:h-[26px] w-[12px] h-[12px]">
+              <Star />
+            </div>
+
+            <div className="md:w-[26px] md:h-[26px] w-[12px] h-[12px]">
+              <Star />
+            </div>
+
+            <div className="md:w-[26px] md:h-[26px] w-[12px] h-[12px]">
+              <Star />
+            </div>
+
+            <div className="md:w-[26px] md:h-[26px] w-[12px] h-[12px]">
+              <Star />
+            </div>
           </div>
         </div>
       </div>
