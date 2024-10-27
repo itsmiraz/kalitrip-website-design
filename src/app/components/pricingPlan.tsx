@@ -6,12 +6,12 @@ const PricingPlan = () => {
 
 
   return (
-    <div className="px-[20px] py-[60px] pt-[120px]">
+    <div className="px-[20px] pb-[60px] pt-[60px] md:pt-[120px]">
    <div className="max-w-[310px] md:max-w-[500px] mx-auto"> 
    <h2 className="text-[#040F16] font-clashDisplay text-[22px] md:text-[48px] text-center  font-semibold">
         Pick Your Pricing Plan
       </h2>
-      <p className="text-center pb-[50px] font-inter font-medium text-[10px] md:text-[18px] text-[#767676] leading-[140%]">
+      <p className="text-center pb-[30px] md:pb-[50px] font-inter font-medium text-[10px] md:text-[18px] text-[#767676] leading-[140%]">
         Our Pricing Plan provides a selection of tailored options to suit
         various needs and budgets. <br className="md:block hidden" /> Whether you are an individual, small
         business, or large enterprise, each plan offers
@@ -23,7 +23,7 @@ const PricingPlan = () => {
         </button>
         <button className="md:text-[14px]  whitespace-nowrap text-[8px]">Annual billing</button>
       </div>
-      <div className="pt-[60px] gap-y-[20px] flex md:flex-row flex-col justify-center gap-x-[30px]">
+      <div className="pt-[30px] md:pt-[60px] gap-y-[20px] flex md:flex-row flex-col justify-center gap-x-[30px]">
         {plansData.map((item, i) => (
           <div
             className="max-w-[393px] rounded-[20px] p-[20px] bg-[#FFFFFF]"

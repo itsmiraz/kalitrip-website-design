@@ -129,7 +129,7 @@ const Filter = () => {
   };
   return (
     <div className="-translate-y-32 md:-translate-y-20 pb-[20px] bg-white drop-shadow rounded-[15px] md:rounded-[20px] md:max-w-[1240px] mx-auto pt-[20px] md:pt-[50px] px-[20px] md:px-[30px]">
-      <div className="md:flex-row gap-y-[20px] flex-col flex pb-[30px] border-b border-[#E6E6E6] justify-between items-center">
+      <div className="md:flex-row gap-x-[10px] gap-y-[20px] flex-col flex pb-[30px] border-b border-[#E6E6E6] justify-between items-center">
         <LocationInput label="Where are you Coming from" />
         <LocationInput label="Where do you want to go?" />
 

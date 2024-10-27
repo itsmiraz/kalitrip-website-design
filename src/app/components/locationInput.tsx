@@ -23,13 +23,13 @@ const LocationInput = ({ label }: {  label: string }) => {
   };
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full md:w-fit">
       <p className="text-[12px]  font-clashDisplay pb-[12px] font-semibold text-[#080705]">
         {label}
       </p>
 
       {/* ${inputValue && 'bg-[#ECECEC]'} */}
-      <div className={` w-full max-w-full md:max-w-[240px] font-inter rounded-[13px] gap-x-[5px] border pr-4 py-[17px] pl-[15px] flex items-center justify-start text-[#080705] font-medium border-[#080705]`}>
+      <div className={` w-full md:w-fit max-w-full md:max-w-[240px] font-inter rounded-[13px] gap-x-[5px] border pr-4 py-[17px] pl-[15px] flex items-center justify-start text-[#080705] font-medium border-[#080705]`}>
         <div>
           <Location />
         </div>

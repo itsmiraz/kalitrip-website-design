@@ -8,7 +8,7 @@ import { Productsdata } from "@/constant";
 const Products = () => {
   return (
     <div className="pt-[60px] md:pt-[120px]">
-      <h2 className="text-[#040F16] font-clashDisplay pb-[40px] text-[22px] md:text-[48px] text-center  font-semibold">
+      <h2 className="text-[#040F16] font-clashDisplay pb-[20px] md:pb-[40px] text-[22px] md:text-[48px] text-center  font-semibold">
         Trending products
       </h2>
       <div className="p-[3px] md:p-[5px] pr-6 md:pr-0 md:text-[14px] text-[8px] gap-x-[15px] md:gap-x-[40px] font-inter bg-[#14591D]/10 flex rounded-[25px] max-w-fit md:max-w-[484px]  mx-auto  border border-[#CECECE]">
@@ -20,10 +20,10 @@ const Products = () => {
         <button className="text-[#14591D] whitespace-nowrap">Sun glass</button>
         <button className="text-[#14591D] md:block hidden">Shirts</button>
       </div>
-      <div className="flex flex-wrap pt-[60px] gap-[16px] md:gap-[20px] justify-center items-center">
+      <div className="grid grid-cols-2 px-[16px] md:flex w-full flex-wrap pt-[30px] md:pt-[60px] gap-[16px] md:gap-[20px] justify-center items-center">
         {Productsdata.map((item, i) => (
           <div
-            className="max-w-[173px] md:max-w-[295px] border-[#CECECE] border bg-white rounded-[20px] p-[10px]"
+            className="max-w-full md:max-w-[295px] border-[#CECECE] border bg-white rounded-[20px] p-[10px]"
             key={i}
           >
             <div className="relative">

@@ -69,35 +69,39 @@ const Footer = () => {
 
   return (
     <div className="mt-[120px]">
-      <div className="max-w-[1240px] translate-y-36 gap-x-[128px] items-center flex justify-between py-[30px] px-[80px] rounded-[30px] bg-[#945600] mx-auto">
-        <Image src={CTA} alt="" />
+      <div className="px-[20px]">
+        <div className="w-full md:max-w-[1240px] translate-y-36 gap-x-[128px] items-center flex md:flex-row flex-col justify-between py-[30px] px-[20px] md:px-[80px] gap-y-[30px] rounded-[30px] bg-[#945600] mx-auto">
+          <Image src={CTA} alt="" />
 
-        <div>
-          <h2 className="text-[48px] pb-[15px] font-semibold font-clashDisplay  leading-[110%] text-[#FDF7FA]">
-            Subscribe To The <br /> Newsletter
-          </h2>
-          <p className="text-[#D8D8D8] font-inter  pb-[50px] text-[18px] font-medium leading-[140%] ">
-            Surround yourself with the community and resources to help bring
-            your vision to life.
-          </p>
-          <div className="bg-white pl-4 font-inter flex items-center h-[60px] p-[5px] relative rounded-[12px] ">
-            <input
-              placeholder="info@twintone.ai"
-              type="text"
-              className="placeholder:text-[#767676] border-none focus:outline-none "
-            />
-            <button className="absolute leading-[100%] font-bold text-[18px] px-[36px] rounded-[10px] bg-[#14591D] h-[50px] text-white right-1 top-1 ">
-              Get Notified
-            </button>
+          <div>
+            <h2 className="text-[22px]  md:text-start text-center md:text-[48px] pb-[15px] font-semibold font-clashDisplay  leading-[110%] text-[#FDF7FA]">
+              Subscribe To The <br className="md:block hidden" /> Newsletter
+            </h2>
+            <p className="text-[#D8D8D8] md:text-start text-center md:text-[18px] text-[10px] font-inter  pb-[50px] font-medium leading-[140%] ">
+              Surround yourself with the community and resources to help bring
+              your vision to life.
+            </p>
+            <div className="bg-white  h-[40px]  pl-4 font-inter flex items-center  md:h-[60px] p-[5px] relative rounded-[8px] md:rounded-[12px] ">
+              <input
+                placeholder="info@twintone.ai"
+                type="text"
+                className="placeholder:text-[#767676] border-none focus:outline-none "
+              />
+              <button className="absolute  leading-[100%] font-bold text-[10px] md:text-[18px] px-[12px] md:px-[36px]  rounded-[6px] md:rounded-[10px] bg-[#14591D] h-[30px] md:h-[50px] text-white right-1 top-1.5 md:top-1 ">
+                Get Notified
+              </button>
+            </div>
           </div>
         </div>
       </div>
       {/* Footer */}
-      <div className="bg-[#040F16]  pt-[260px]">
-        <div className="max-w-[1240px] flex justify-between mx-auto">
-          <div className="max-w-[192px]">
-            <Image src={Logo} alt="" />
-            <div className="flex mt-[40px] flex-wrap gap-[16px]">
+      <div className="bg-[#040F16] md:px-0 px-[20px] pb-[11px]  pt-[260px]">
+        <div className="max-w-[1240px] flex md:flex-row flex-col justify-center  md:justify-between mx-auto">
+          <div className="w-full max-w-full md:max-w-[192px] flex flex-col md:justify-start items-center justify-center ">
+            <div>
+              <Image src={Logo} alt="" />
+            </div>
+            <div className="flex mt-[40px] justify-center flex-wrap gap-[16px]">
               {socialLinks.map((item, i) => (
                 <div
                   className="bg-[#FDF7FA]/10 text-[#FDF7FA]/30 hover:text-[#FDF7FA] flex justify-center items-center hover:bg-[#14591D] w-[36px] h-[36px]  cursor-pointer rounded-full  border border-[#FDF7FA]/20 backdrop-blur"
@@ -108,11 +112,11 @@ const Footer = () => {
               ))}
             </div>
           </div>
-          <div>
-            <h3 className="font-semibold text-[24px] mb-[30px] font-clashDisplay  text-[#FDF7FA] ">
+          <div className="pt-[30px] mt-[30px] md:mt-0 md:pt-[0px]  border-t border-[#696969] md:border-none">
+            <h3 className="font-semibold text-[24px] mb-[30px] md:text-start text-center font-clashDisplay  text-[#FDF7FA] ">
               Ease of use
             </h3>
-            <ul className="space-y-[20px] font-inter">
+            <ul className="space-y-[20px] md:text-start text-center font-inter">
               <li>
                 <p className="text-[#ABABAB]  cursor-pointer    hover:font-semibold hover:text-[#14591D] text-[18px]">
                   Welcome
@@ -140,24 +144,26 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div>
-            <h3 className="font-semibold text-[24px] mb-[30px] font-clashDisplay   text-[#FDF7FA] ">
+          <div className="mt-[30px] md:mt-0">
+            <h3 className="font-semibold md:text-start text-center text-[24px] mb-[30px] font-clashDisplay   text-[#FDF7FA] ">
               Contact Info.
             </h3>
-            <ul className="space-y-[16px] font-inter">
-              <li className="flex  gap-x-[17px]">
+            <ul className="space-y-[16px] md:text-start text-center font-inter">
+              <li className="flex md:justify-start justify-center  gap-x-[17px]">
                 <Phone />
                 <p className="text-[18px]   text-[#ABABAB]">
                   +33 05 51 90 02 80
                 </p>
               </li>
-              <li className="flex  gap-x-[17px]">
-                <Mail />
+              <li className="flex md:justify-start justify-center  gap-x-[17px]">
+                <div>
+                  <Mail />
+                </div>
                 <p className="text-[18px]   text-[#ABABAB]">
                   Kalitrip@gmail.com
                 </p>
               </li>
-              <li className="flex  gap-x-[17px]">
+              <li className="flex md:justify-start justify-center  gap-x-[17px]">
                 <Location />
                 <p className="text-[18px]   text-[#ABABAB]">
                   85 rue Marie de Médicis, <br /> Blagnac, France.
@@ -165,9 +171,9 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="flex max-w-[266px] flex-wrap  gap-x-[10px]">
+          <div className="flex justify-center md:justify-start md:mt-0 mt-[40px] max-w-full md:max-w-[266px] flex-wrap gap-y-[10px] gap-x-[10px]">
             {FooterImages.map((item, i) => (
-              <div key={i} className="w-[82px]  h-[68px] ">
+              <div key={i} className="w-[114px] md:w-[82px]  h-[68px] ">
                 <Image key={i} className="w-full h-full" alt="" src={item} />
               </div>
             ))}
@@ -176,15 +182,15 @@ const Footer = () => {
         <div className="max-w-[1240px] py-[10px] px-[20px] mx-auto mt-[17px] bg-[#FFFFFF]/10 backdrop-blur flex justify-between items-center rounded-[15px]">
           <div className="flex items-center gap-x-2">
             <CopyRightIcon />
-            <p className="font-inter text-[18px] font-medium text-[#ABABAB]">
+            <p className="font-inter text-[10px] md:text-[18px] font-medium text-[#ABABAB]">
               2024 - Kalitrip Copyright All Right reserved
             </p>
           </div>
           <div>
             <a href="/#hero">
-            <button>
-              <UpArrow />
-            </button>
+              <button>
+                <UpArrow />
+              </button>
             </a>
           </div>
         </div>
