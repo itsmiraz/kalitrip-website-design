@@ -27,13 +27,15 @@ const LocationInput = ({ label }: {  label: string }) => {
       <p className="text-[12px]  font-clashDisplay pb-[12px] font-semibold text-[#080705]">
         {label}
       </p>
-      <div className="max-w-[240px] font-inter rounded-[13px] gap-x-[5px] border pr-4 py-[17px] pl-[15px] flex items-center justify-start text-[#080705] font-medium border-[#080705]">
+
+      {/* ${inputValue && 'bg-[#ECECEC]'} */}
+      <div className={` max-w-[240px] font-inter rounded-[13px] gap-x-[5px] border pr-4 py-[17px] pl-[15px] flex items-center justify-start text-[#080705] font-medium border-[#080705]`}>
         <div>
           <Location />
         </div>
         <div className="relative">
           <input
-            className="border-none truncate  placeholder:text-[#080705] font-medium text-[14px] leading-3 focus:outline-none decoration-none"
+            className="border-none bg-transparent truncate  placeholder:text-[#080705] font-medium text-[14px] leading-3 focus:outline-none decoration-none"
             type="text"
             placeholder="Enter Your Location..."
             value={inputValue}

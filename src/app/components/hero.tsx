@@ -15,6 +15,7 @@ import SelectDateRange from "./selectDateRange";
 import SelectTravelers, { TravelersCount } from "./selectTraveler";
 import BudgetSelector from "./budgetSelector";
 import { FilterOptions, navLinks } from "@/constant";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -135,9 +136,11 @@ const Filter = () => {
         ))}
       </div>
       <div className="flex justify-center gap-x-[20px] pt-[30px] items-center">
-        <button className="px-[25px] bg-[#14591D]  text-white text-[18px] py-[16px] rounded-[15px] rounded-tl-[0px]">
-          🚀 Let's go!
-        </button>
+        <Link href={"/result"}>
+          <button className="px-[25px] bg-[#14591D]  text-white text-[18px] py-[16px] rounded-[15px] rounded-tl-[0px]">
+            🚀 Let's go!
+          </button>
+        </Link>
         <button className="px-[25px] border border-[#12151A]/30 text-[#080705] text-[18px] py-[16px] rounded-[15px] rounded-tl-[0px]">
           🎉 Inspire me!
         </button>
