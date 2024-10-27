@@ -23,13 +23,13 @@ const LocationInput = ({ label }: {  label: string }) => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative w-full">
       <p className="text-[12px]  font-clashDisplay pb-[12px] font-semibold text-[#080705]">
         {label}
       </p>
 
       {/* ${inputValue && 'bg-[#ECECEC]'} */}
-      <div className={` max-w-[240px] font-inter rounded-[13px] gap-x-[5px] border pr-4 py-[17px] pl-[15px] flex items-center justify-start text-[#080705] font-medium border-[#080705]`}>
+      <div className={` w-full max-w-full md:max-w-[240px] font-inter rounded-[13px] gap-x-[5px] border pr-4 py-[17px] pl-[15px] flex items-center justify-start text-[#080705] font-medium border-[#080705]`}>
         <div>
           <Location />
         </div>
@@ -44,7 +44,7 @@ const LocationInput = ({ label }: {  label: string }) => {
         </div>
       </div>
       {showSuggestion && filteredSuggestions.length > 0 && (
-        <div className="absolute left-0 bg-white border border-gray-300 rounded-md mt-1 max-h-[200px] overflow-y-auto ">
+        <div className="absolute z-30 left-0 bg-white border border-gray-300 rounded-md mt-1 max-h-[200px] overflow-y-auto ">
           {filteredSuggestions.map((airport) => (
             <div
               key={airport.iata_code}

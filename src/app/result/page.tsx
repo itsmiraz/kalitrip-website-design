@@ -6,7 +6,7 @@ import Expertise from "./_components/expertise";
 
 const Result = () => {
   return (
-    <div>
+    <div className="bg-[#FDF7FA]/10 backdrop-blur-3xl">
       <Hero />
       <PlanResult />
       <BudgetBreakDown />

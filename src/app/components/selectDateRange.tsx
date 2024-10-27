@@ -38,14 +38,14 @@ const SelectDateRange = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative  w-full">
       <p className="text-[12px]  font-clashDisplay pb-[12px] font-semibold text-[#080705]">
         Select Dates
       </p>
-      <div className="relative">
+      <div className="relative md:w-fit w-full">
         {/* Custom UI */}
         <div
-          className="relative  font-inter h-[59px] text-[14px] leading-3 max-w-[240px] rounded-[13px] gap-x-[25px] border pr-4 py-[10px] pl-[15px] flex items-center justify-between text-[#080705] font-medium border-[#080705] cursor-pointer"
+          className="relative font-inter h-[59px] text-[14px] leading-3 w-full max-w-full md:max-w-[240px] rounded-[13px] gap-x-[25px] border pr-4 py-[10px] pl-[15px] flex items-center justify-between text-[#080705] font-medium border-[#080705] cursor-pointer"
         >
           <p className="truncate w-[120px]">{formatDateRange()}</p>
           <FaCalendarAlt />

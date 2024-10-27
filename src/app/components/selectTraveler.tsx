@@ -61,13 +61,13 @@ const SelectTravelers: React.FC<SelectTraverlProps> = ({ onChange }) => {
   };
 
   return (
-    <div className="relative w-[220px]" ref={dropdownRef}>
+    <div className="relative w-full md:w-[220px]" ref={dropdownRef}>
       <p className="text-[12px] pb-[12px] font-semibold text-[#080705]">
         Travelers
       </p>
       <div
         onClick={() => setIsOpen(!isOpen)}
-        className="relative   font-inter text-[14px] leading-3 max-w-[240px] rounded-[13px] gap-x-[25px] border pr-4 py-[16px] pl-[15px] flex items-center justify-between text-[#080705] font-medium border-[#080705] cursor-pointer"
+        className="relative   font-inter text-[14px] leading-3 max-w-full w-full md:max-w-[240px] rounded-[13px] gap-x-[25px] border pr-4 py-[16px] pl-[15px] flex items-center justify-between text-[#080705] font-medium border-[#080705] cursor-pointer"
       >
         <div className="flex items-center gap-x-2">
           <Users size={20} />
