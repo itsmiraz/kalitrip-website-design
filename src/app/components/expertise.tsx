@@ -64,22 +64,22 @@ const Expertise = () => {
         But the fault of these <br /> parties is their KaliTrip
       </h2>
       <div className="pt-[60px] max-w-[1240px] mx-auto grid grid-cols-3 gap-[30px]">
-        {
-            data.map((item,i)=><div className="rounded-[20px] p-[30px] flex flex-col justify-center items-center gap-y-[30px] bg-[#945600]/5" key={i}>
-
-                <div>
-                    {item.icon}
-                </div>
-                <div>
-                    <h3 className="text-[#040F16] font-clashDisplay text-center text-[24px] font-semibold">
-                        {item.title}
-                    </h3>
-                    <p className="pt-[15px] font-inter text-[#767676] font-medium text-[14px] text-center ">
-                        {item.desc}
-                    </p>
-                </div>
-            </div>)
-        }
+        {data.map((item, i) => (
+          <div
+            className="rounded-[20px] p-[30px] flex flex-col justify-center items-center gap-y-[30px] bg-[#945600]/5"
+            key={i}
+          >
+            <div>{item.icon}</div>
+            <div>
+              <h3 className="text-[#040F16] font-clashDisplay text-center text-[24px] font-semibold">
+                {item.title}
+              </h3>
+              <p className="pt-[15px] font-inter text-[#767676] font-medium text-[14px] text-center ">
+                {item.desc}
+              </p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

@@ -15,7 +15,9 @@
   background-color: #c4c4c4;
   border-radius: 2px;
 }
-
+.font-inter {
+  font-family: var(--font-inter);
+}
 ::-webkit-scrollbar-thumb:hover {
   background-color: #8d8d8d;
 }

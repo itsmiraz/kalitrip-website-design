@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 // import localFont from "next/font/local";
 import "./globals.css";
-import { clashDisplay, inter, montserrat, openSans } from "./fonts/fonts";
+import { clashDisplay, inter } from "./fonts";
 // app/fonts.ts
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${clashDisplay.variable} ${montserrat.variable} ${openSans.variable} `}
+      className={`${inter.variable} ${clashDisplay.variable} `}
     >
       <body
         className={`transition-all ease-in-out duration-300 max-w-[2000px] mx-auto antialiased`}
