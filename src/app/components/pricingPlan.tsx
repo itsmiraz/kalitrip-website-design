@@ -62,7 +62,7 @@ const PricingPlan = () => {
 
   return (
     <div className="pt-[120px]">
-      <h2 className="text-[#040F16] font-montserrat text-[48px] text-center  font-semibold">
+      <h2 className="text-[#040F16] font-clashDisplay text-[48px] text-center  font-semibold">
         Pick Your Pricing Plan
       </h2>
       <p className="text-center pb-[50px] font-inter font-medium text-[18px] text-[#767676] leading-[140%]">
@@ -92,7 +92,7 @@ const PricingPlan = () => {
             </div>
             <div className="pb-[40px]">
               <div
-                className="text-heading-color  font-montserrat pb-[16px] font-semibold text-[24px]"
+                className="text-heading-color  font-clashDisplay pb-[16px] font-semibold text-[24px]"
                 dangerouslySetInnerHTML={{ __html: item.price }}
               ></div>
               <p className="text-[16px] font-inter text-[#767676]">{item.price_note}</p>
@@ -112,7 +112,7 @@ const PricingPlan = () => {
                 ))}
               </ul>
             </div>
-            <button className="mt-[24px] font-montserrat py-[16px]  w-full ease-in-out duration-300 transition-all rounded-full font-medium hover:font-bold hover:text-white hover:border-none border gap-x-[5px] border-[#14591D]/15 flex justify-center items-center text-center bg-white hover:bg-[#14591D] text-heading-color ">
+            <button className="mt-[24px] font-clashDisplay py-[16px]  w-full ease-in-out duration-300 transition-all rounded-full font-medium hover:font-bold hover:text-white hover:border-none border gap-x-[5px] border-[#14591D]/15 flex justify-center items-center text-center bg-white hover:bg-[#14591D] text-heading-color ">
               Get Started <LeftArrow />{" "}
             </button>
           </div>

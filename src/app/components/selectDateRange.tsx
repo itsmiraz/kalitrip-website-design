@@ -39,7 +39,7 @@ const SelectDateRange = () => {
 
   return (
     <div className="relative">
-      <p className="text-[12px]  font-montserrat pb-[12px] font-semibold text-[#080705]">
+      <p className="text-[12px]  font-clashDisplay pb-[12px] font-semibold text-[#080705]">
         Select Dates
       </p>
       <div className="relative">

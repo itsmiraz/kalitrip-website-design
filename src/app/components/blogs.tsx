@@ -28,7 +28,7 @@ const Blogs = () => {
 
   return (
     <div className="pt-[120px] px-10">
-      <h2 className="text-[#040F16] font-montserrat pb-[20px] text-[48px] text-center  font-semibold">
+      <h2 className="text-[#040F16] font-clashDisplay pb-[20px] text-[48px] text-center  font-semibold">
         Our Recent <span className="text-[#14591D]">Blogs</span>
       </h2>
       <p className="text-[#767676] font-medium  font-inter text-center text-[18px]">
@@ -45,7 +45,7 @@ const Blogs = () => {
             <Calender />
             <p>24 October 2024</p>
           </div>
-          <h2 className="text-[24px] mt-[20px] font-montserrat font-semibold text-heading-color pb-[15px]">
+          <h2 className="text-[24px] mt-[20px] font-clashDisplay font-semibold text-heading-color pb-[15px]">
             Plan the Perfect Vacation.
           </h2>
           <p className="text-[#767676] text-[14px] font-inter font-medium ">
@@ -59,7 +59,7 @@ const Blogs = () => {
             this post offers a step-by-step guide to help readers create a
             comprehensive travel itinerary.
           </p>
-          <button className="px-[25px] font-montserrat mt-[40px] bg-[#14591D]  text-white text-[18px] py-[16px] rounded-[15px] rounded-tl-[0px]">
+          <button className="px-[25px] font-clashDisplay mt-[40px] bg-[#14591D]  text-white text-[18px] py-[16px] rounded-[15px] rounded-tl-[0px]">
             Read More
           </button>
         </div>
@@ -76,7 +76,7 @@ const Blogs = () => {
                   <Calender />
                   <p>24 October 2024</p>
                 </div>
-                <h2 className="text-[24px] font-montserrat leading-[100%] mt-[20px] font-semibold text-heading-color pb-[15px]">
+                <h2 className="text-[24px] font-clashDisplay leading-[100%] mt-[20px] font-semibold text-heading-color pb-[15px]">
                   {item.title}
                 </h2>
                 <p className="text-[#767676] font-inter leading-[140%] text-[14px] font-medium ">

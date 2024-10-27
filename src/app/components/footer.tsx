@@ -73,7 +73,7 @@ const Footer = () => {
         <Image src={CTA} alt="" />
 
         <div>
-          <h2 className="text-[48px] pb-[15px] font-semibold font-montserrat  leading-[110%] text-[#FDF7FA]">
+          <h2 className="text-[48px] pb-[15px] font-semibold font-clashDisplay  leading-[110%] text-[#FDF7FA]">
             Subscribe To The <br /> Newsletter
           </h2>
           <p className="text-[#D8D8D8] font-inter  pb-[50px] text-[18px] font-medium leading-[140%] ">
@@ -109,7 +109,7 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <h3 className="font-semibold text-[24px] mb-[30px] font-montserrat  text-[#FDF7FA] ">
+            <h3 className="font-semibold text-[24px] mb-[30px] font-clashDisplay  text-[#FDF7FA] ">
               Ease of use
             </h3>
             <ul className="space-y-[20px] font-inter">
@@ -141,7 +141,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h3 className="font-semibold text-[24px] mb-[30px] font-montserrat   text-[#FDF7FA] ">
+            <h3 className="font-semibold text-[24px] mb-[30px] font-clashDisplay   text-[#FDF7FA] ">
               Contact Info.
             </h3>
             <ul className="space-y-[16px] font-inter">

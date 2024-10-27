@@ -60,7 +60,7 @@ const Expertise = () => {
 
   return (
     <div className="pt-[100px] px-10">
-      <h2 className="font-semibold font-montserrat leading-[110%] text-center text-[48px] ">
+      <h2 className="font-semibold font-clashDisplay leading-[110%] text-center text-[48px] ">
         But the fault of these <br /> parties is their KaliTrip
       </h2>
       <div className="pt-[60px] max-w-[1240px] mx-auto grid grid-cols-3 gap-[30px]">
@@ -71,7 +71,7 @@ const Expertise = () => {
                     {item.icon}
                 </div>
                 <div>
-                    <h3 className="text-[#040F16] font-montserrat text-center text-[24px] font-semibold">
+                    <h3 className="text-[#040F16] font-clashDisplay text-center text-[24px] font-semibold">
                         {item.title}
                     </h3>
                     <p className="pt-[15px] font-inter text-[#767676] font-medium text-[14px] text-center ">

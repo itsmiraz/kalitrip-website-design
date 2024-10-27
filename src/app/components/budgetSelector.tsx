@@ -43,7 +43,7 @@ const BudgetSelector: React.FC<BudgetSelectorProps> = ({ onChange }) => {
 
   return (
     <div className="relative w-[200px]" ref={dropdownRef}>
-      <p className="text-[12px] font-montserrat pb-[12px] font-semibold text-[#080705]">
+      <p className="text-[12px] font-clashDisplay pb-[12px] font-semibold text-[#080705]">
         Budget
       </p>
       <div

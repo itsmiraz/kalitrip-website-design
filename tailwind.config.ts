@@ -11,8 +11,9 @@ const config: Config = {
     extend: {
       fontFamily: {
         inter: ['var(--font-inter)', 'sans-serif'],
-        montserrat: ['var(--font-montserrat)', 'sans-serif'],
+        montserrat: ['var(--font-clashDisplay)', 'sans-serif'],
         openSans: ['var(--font-open-sans)', 'sans-serif'],
+        clashDisplay: ['var(--font-clash-display)', 'sans-serif'], 
       },
       colors: {
         'heading-color':"#040F16",
