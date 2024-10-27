@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 "use client";
 import React, { useState } from "react";
 import FlightsIcon from "@/assets/icons/fligts.svg";
@@ -7,6 +8,13 @@ import Image from "next/image";
 import Flight from "@/assets/images/flights.png";
 import HotelImage from "@/assets/images/hotel.png";
 import DashedLineVertical from "@/assets/icons/dashedVerticalBorder.svg";
+import DashedLineHorizontal from "@/assets/icons/DashedBorderHorizontal.svg";
+
+import Accommodation from "@/assets/icons/Accomodations.svg";
+import CultruralActivites from "@/assets/icons/CulturalActivites.svg";
+import Transport from "@/assets/icons/Transportation.svg";
+import Gastronomy from "@/assets/icons/Gastronomy.svg";
+
 const PlanResult = () => {
   const [selectedDate, setSelectedDate] = useState("");
 
@@ -56,6 +64,10 @@ const PlanResult = () => {
 
       <div className="bg-[#0924AB]/5 p-[30px] max-w-[1240px] mx-auto rounded-[20px] ">
         <HotelsAndFlights />
+        <div className="mt-[50px] mb-[30px]">
+          <DashedLineHorizontal />
+        </div>
+        <Recommendations />
       </div>
     </div>
   );
@@ -114,6 +126,82 @@ const HotelsAndFlights = () => {
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  );
+};
+
+const Recommendations = () => {
+  return (
+    <div className="flex justify-between items-center">
+      {/* Accommodations */}
+      <div className="flex flex-col  md:max-w-[188px] justify-between items-start">
+        <Accommodation />
+        <h3 className="text-[18px]  pt-[20px]  font-clashDisplay font-semibold leading-[18px]">
+          Accommodation
+        </h3>
+        <p className="text-[14px] pt-[10px] font-medium font-inter">
+          Choose local hotels for an authentic experience
+        </p>
+        <p className="text-[#14591D] mt-[15px] rounded-[7px] bg-[#14591D]/10 py-[8px] px-[10px] text-[14px] font-semibold font-clashDisplay ">
+          Budget: 1965€ (39%)
+        </p>
+        <button className="mt-[24px] font-clashDisplay px-[20px] py-[8px]  ease-in-out duration-300 transition-all rounded-full font-medium  hover:text-white hover:border-none border gap-x-[5px] border-[#14591D]/15 flex justify-center items-center text-center  hover:bg-[#14591D] h-[34px] leading-[14px] text-heading-color ">
+          Book Now <LeftArrow />{" "}
+        </button>
+      </div>
+      <DashedLineVertical />
+
+      {/*   Cultural activities */}
+      <div className="flex flex-col  md:max-w-[188px] justify-between items-start">
+        <CultruralActivites />
+        <h3 className="text-[18px]  pt-[20px]  font-clashDisplay font-semibold leading-[18px]">
+          Cultural activities
+        </h3>
+        <p className="text-[14px] pt-[10px] font-medium font-inter">
+          Visit historic mosques, take part in a traditional weaving workshop
+        </p>
+        <p className="text-[#14591D] py-[8px] px-[10px] text-[14px] font-semibold font-clashDisplay bg-[]">
+          Budget: 1000€ (20%)
+        </p>
+        <button className="mt-[24px] font-clashDisplay px-[20px] py-[8px]  ease-in-out duration-300 transition-all rounded-full font-medium  hover:text-white hover:border-none border gap-x-[5px] border-[#14591D]/15 flex justify-center items-center text-center  hover:bg-[#14591D] h-[34px] leading-[14px] text-heading-color ">
+          Book Now <LeftArrow />{" "}
+        </button>
+      </div>
+      <DashedLineVertical />
+
+      {/* Transport */}
+      <div className="flex flex-col  md:max-w-[188px] justify-between items-start">
+        <Transport />
+        <h3 className="text-[18px]  pt-[20px]  font-clashDisplay font-semibold leading-[18px]">
+          Transport
+        </h3>
+        <p className="text-[14px] pt-[10px] font-medium font-inter">
+          Use rickshaws for short trips around town
+        </p>
+        <p className="text-[#14591D] py-[8px] px-[10px] text-[14px] font-semibold font-clashDisplay bg-[]">
+          Budget: 1505€ (30%)
+        </p>
+        <button className="mt-[24px] font-clashDisplay px-[20px] py-[8px]  ease-in-out duration-300 transition-all rounded-full font-medium  hover:text-white hover:border-none border gap-x-[5px] border-[#14591D]/15 flex justify-center items-center text-center  hover:bg-[#14591D] h-[34px] leading-[14px] text-heading-color ">
+          Book Now <LeftArrow />{" "}
+        </button>
+      </div>
+      <DashedLineVertical />
+      {/* Gastronomy */}
+      <div className="flex flex-col  md:max-w-[188px] justify-between items-start">
+        <Gastronomy />
+        <h3 className="text-[18px]  pt-[20px]  font-clashDisplay font-semibold leading-[18px]">
+          Gastronomy
+        </h3>
+        <p className="text-[14px] pt-[10px] font-medium font-inter">
+          Try Dhaka's hilsa fish and biryani
+        </p>
+        <p className="text-[#14591D] py-[8px] px-[10px] text-[14px] font-semibold font-clashDisplay bg-[]">
+          Budget: 530€ (11%)
+        </p>
+        <button className="mt-[24px] font-clashDisplay px-[20px] py-[8px]  ease-in-out duration-300 transition-all rounded-full font-medium  hover:text-white hover:border-none border gap-x-[5px] border-[#14591D]/15 flex justify-center items-center text-center  hover:bg-[#14591D] h-[34px] leading-[14px] text-heading-color ">
+          Book Now <LeftArrow />{" "}
+        </button>
       </div>
     </div>
   );
