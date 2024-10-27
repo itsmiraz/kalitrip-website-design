@@ -161,7 +161,7 @@ const Recommendations = () => {
         <p className="text-[14px] pt-[10px] font-medium font-inter">
           Visit historic mosques, take part in a traditional weaving workshop
         </p>
-        <p className="text-[#14591D] py-[8px] px-[10px] text-[14px] font-semibold font-clashDisplay bg-[]">
+        <p className="text-[#14591D] mt-[15px] rounded-[7px] bg-[#14591D]/10 py-[8px] px-[10px] text-[14px] font-semibold font-clashDisplay ">
           Budget: 1000€ (20%)
         </p>
         <button className="mt-[24px] font-clashDisplay px-[20px] py-[8px]  ease-in-out duration-300 transition-all rounded-full font-medium  hover:text-white hover:border-none border gap-x-[5px] border-[#14591D]/15 flex justify-center items-center text-center  hover:bg-[#14591D] h-[34px] leading-[14px] text-heading-color ">
@@ -179,7 +179,7 @@ const Recommendations = () => {
         <p className="text-[14px] pt-[10px] font-medium font-inter">
           Use rickshaws for short trips around town
         </p>
-        <p className="text-[#14591D] py-[8px] px-[10px] text-[14px] font-semibold font-clashDisplay bg-[]">
+        <p className="text-[#14591D] mt-[15px] rounded-[7px] bg-[#14591D]/10 py-[8px] px-[10px] text-[14px] font-semibold font-clashDisplay ">
           Budget: 1505€ (30%)
         </p>
         <button className="mt-[24px] font-clashDisplay px-[20px] py-[8px]  ease-in-out duration-300 transition-all rounded-full font-medium  hover:text-white hover:border-none border gap-x-[5px] border-[#14591D]/15 flex justify-center items-center text-center  hover:bg-[#14591D] h-[34px] leading-[14px] text-heading-color ">
@@ -196,7 +196,7 @@ const Recommendations = () => {
         <p className="text-[14px] pt-[10px] font-medium font-inter">
           Try Dhaka's hilsa fish and biryani
         </p>
-        <p className="text-[#14591D] py-[8px] px-[10px] text-[14px] font-semibold font-clashDisplay bg-[]">
+        <p className="text-[#14591D] mt-[15px] rounded-[7px] bg-[#14591D]/10 py-[8px] px-[10px] text-[14px] font-semibold font-clashDisplay ">
           Budget: 530€ (11%)
         </p>
         <button className="mt-[24px] font-clashDisplay px-[20px] py-[8px]  ease-in-out duration-300 transition-all rounded-full font-medium  hover:text-white hover:border-none border gap-x-[5px] border-[#14591D]/15 flex justify-center items-center text-center  hover:bg-[#14591D] h-[34px] leading-[14px] text-heading-color ">
