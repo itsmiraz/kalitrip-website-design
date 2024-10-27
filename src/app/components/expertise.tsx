@@ -10,7 +10,7 @@ const Expertise = () => {
       <div className="pt-[60px] md:max-w-[1240px] mx-auto flex flex-wrap justify-center items-center md:grid grid-cols-2 md:grid-cols-3 gap-[16px] md:gap-[30px]">
         {HomeExpertiseData.map((item, i) => (
           <div
-            className="rounded-[10px] md:w-fit w-[173px] md:rounded-[20px] px-[10px] py-[15px] md:py-[30px] md:px-[30px] flex flex-col justify-center items-center gap-[20px] md:gap-y-[30px] bg-[#945600]/5"
+            className="rounded-[10px] md:w-fit w-[163px] md:rounded-[20px] px-[10px] py-[15px] md:py-[30px] md:px-[30px] flex flex-col justify-center items-center gap-[20px] md:gap-y-[30px] bg-[#945600]/5"
             key={i}
           >
             <div className="md:w-[70px] md:h-[70px] w-[40px] h-[40px]" >{item.icon}</div>

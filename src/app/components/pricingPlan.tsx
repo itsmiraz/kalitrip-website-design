@@ -23,7 +23,7 @@ const PricingPlan = () => {
         </button>
         <button className="md:text-[14px]  whitespace-nowrap text-[8px]">Annual billing</button>
       </div>
-      <div className="pt-[30px] md:pt-[60px] gap-y-[20px] flex md:flex-row flex-col justify-center gap-x-[30px]">
+      <div className="pt-[30px] md:pt-[60px] gap-y-[20px] flex md:flex-row flex-wrap flex-col justify-center gap-x-[30px]">
         {plansData.map((item, i) => (
           <div
             className="max-w-[393px] rounded-[20px] p-[20px] bg-[#FFFFFF]"

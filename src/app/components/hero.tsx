@@ -81,7 +81,9 @@ const Header = () => {
         <div className=" hidden md:flex bg-[#FDF7FA]/10  h-fit border border-[#FDF7FA]/40 rounded-full items-center gap-x-[15px] text-white px-[25px] py-4">
           <div className="flex gap-x-[7px] items-center">
             <Earth />
-            <p className="text-[18px] font-medium font-clashDisplay text-[#FDF7FA]">En</p>
+            <p className="text-[18px] font-medium font-clashDisplay text-[#FDF7FA]">
+              En
+            </p>
           </div>
           <ArrowDown />
         </div>
@@ -114,8 +116,8 @@ const MainHero = () => {
       </div>
       <p className="text-[12px] md:text-[22px] font-inter text-white text-center md:leading-[30px] leading-[16px] font-medium pt-[10px] md:pt-[20px]">
         KaliTrip allows you to organize your trips more efficiently,
-        with personalized <br className="md:block hidden" /> itineraries that adapt to your preferences and your
-        budget .
+        with personalized <br className="md:block hidden" /> itineraries that
+        adapt to your preferences and your budget .
       </p>
     </div>
   );
@@ -129,18 +131,23 @@ const Filter = () => {
   };
   return (
     <div className="-translate-y-32 md:-translate-y-20 pb-[20px] bg-white drop-shadow rounded-[15px] md:rounded-[20px] md:max-w-[1240px] mx-auto pt-[20px] md:pt-[50px] px-[20px] md:px-[30px]">
-      <div className="md:flex-row gap-x-[10px] gap-y-[20px] flex-col flex pb-[30px] border-b border-[#E6E6E6] justify-between items-center">
-        <LocationInput label="Where are you Coming from" />
-        <LocationInput label="Where do you want to go?" />
+      <div className="md:flex-row  flex-wrap gap-x-[10px] gap-y-[20px] flex-col flex pb-[30px] border-b border-[#E6E6E6] md:justify-center lg:justify-between items-center">
+        <div className="  w-full md:w-fit">
+          <LocationInput label="Where are you Coming from" />
+        </div>
 
-        <div className="w-full">
+        <div className="  w-full md:w-fit">
+          <LocationInput label="Where do you want to go?" />
+        </div>
+
+        <div className="md:w-fit w-full">
           <SelectDateRange />
           {/* <SelectDate /> */}
         </div>
-        <div className="w-full">
+        <div className="md:w-fit w-full">
           <SelectTravelers onChange={handleTravelersChange} />
         </div>
-        <div className="w-full">
+        <div className="md:w-fit w-full">
           <BudgetSelector />
         </div>
       </div>

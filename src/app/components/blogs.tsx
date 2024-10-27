@@ -2,8 +2,7 @@ import React from "react";
 import BlogCover from "@/assets/images/blogCover.png";
 import Image from "next/image";
 import Calender from "@/assets/icons/Calender.svg";
-
-import LeftArrow from '@/assets/icons/LeftArrow.svg'
+import LeftArrow from "@/assets/icons/LeftArrow.svg";
 const Blogs = () => {
   const otherBlogs = [
     {
@@ -38,7 +37,7 @@ const Blogs = () => {
         your vision to life.
       </p>
 
-      <div className="pt-[60px] w-full place-items-center mx-auto grid grid-cols-1 md:grid-cols-2 gap-y-[30px] gap-x-[50px] md:max-w-[1240px]">
+      <div className="pt-[60px] w-full place-items-center mx-auto grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-y-[30px] gap-x-[50px] md:max-w-[1240px]">
         {/* cover */}
 
         <div>
@@ -62,7 +61,7 @@ const Blogs = () => {
             comprehensive travel itinerary.
           </p>
           <button className="px-[17px] md:px-[25px] flex items-center gap-x-2 font-clashDisplay mt-[40px] bg-[#14591D]  text-white text-[12px] md:text-[18px] py-[9px] md:py-[16px] rounded-[15px] rounded-tl-[0px]">
-            Read More <LeftArrow/>
+            Read More <LeftArrow />
           </button>
         </div>
 
@@ -70,8 +69,12 @@ const Blogs = () => {
         <div className="space-y-[40px]">
           {otherBlogs.map((item, i) => (
             <div className="flex gap-x-[20px]" key={i}>
-              <div className="w-[164px] md:w-[200px] h-[110px] md:h-[145px] overflow-hidden  rounded-[20px]" >
-                <Image src={item.img} alt=""  className="h-full w-full object-cover"/>
+              <div className="w-[164px] md:w-[200px] h-[110px] md:h-[145px] overflow-hidden  rounded-[20px]">
+                <Image
+                  src={item.img}
+                  alt=""
+                  className="h-full w-full object-cover"
+                />
               </div>
               <div>
                 <div className=" font-inter flex items-center w-fit md:w-[179px] text-heading-color font-semibold gap-x-[7px] justify-center  text-[10px] md:text-[14px] py-[8px] md:py-[10px] px-[20px] bg-[#040F16]/10 rounded-full">

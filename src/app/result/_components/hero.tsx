@@ -77,7 +77,7 @@ const Filter = () => {
       <h2 className="text-center  pb-[50px] text-[36px] text-heading-color font-semibold font-clashDisplay">
         Travel Itinerary
       </h2>
-      <div className="flex pb-[30px] border-b border-[#E6E6E6] justify-between items-center">
+      <div className="flex flex-wrap pb-[30px] border-b border-[#E6E6E6] justify-between items-center">
         <LocationInput label="Where are you Coming from" />
         <LocationInput label="Where do you want to go?" />
 
