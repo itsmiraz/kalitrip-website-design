@@ -7,10 +7,10 @@ const Expertise = () => {
       <h2 className="font-semibold font-clashDisplay leading-[110%] text-center text-[22px] md:text-[48px] ">
         But the fault of these <br className="md:block hidden" /> parties is their KaliTrip
       </h2>
-      <div className="pt-[60px] md:max-w-[1240px] mx-auto flex flex-wrap justify-center items-center md:grid grid-cols-2 lg:grid-cols-3 gap-[16px] md:gap-[30px]">
+      <div className="pt-[60px] md:max-w-[1240px] mx-auto justify-center items-center grid grid-cols-2 lg:grid-cols-3 gap-[16px] md:gap-[30px]">
         {HomeExpertiseData.map((item, i) => (
           <div
-            className="rounded-[10px] md:w-fit w-[163px] md:rounded-[20px] px-[10px] py-[15px] md:py-[30px] md:px-[30px] flex flex-col justify-center items-center gap-[20px] md:gap-y-[30px] bg-[#945600]/5"
+            className="rounded-[10px] md:w-fit md:rounded-[20px] px-[10px] py-[15px] md:py-[30px] md:px-[30px] flex flex-col justify-center items-center gap-[20px] md:gap-y-[30px] bg-[#945600]/5"
             key={i}
           >
             <div className="md:w-[70px] md:h-[70px] w-[40px] h-[40px]" >{item.icon}</div>

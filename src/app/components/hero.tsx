@@ -102,7 +102,7 @@ const MainHero = () => {
   return (
     <div className="pt-[61px]">
       <div className="flex items-start justify-center">
-        <div className="md:translate-x-14 lg:translate-x-24 translate-x-8">
+        <div className="md:translate-x-14 lg:translate-x-24 translate-x-2">
           <Image
             src={PlanIcon}
             className="md:size-[50px] lg:size-[80px] size-[30px] "
@@ -168,11 +168,11 @@ const Filter = () => {
       </div>
       <div className="flex justify-center gap-x-[20px] pt-[30px] items-center">
         <Link href={"/result"}>
-          <button className="px-[12px] md:px-[25px] bg-[#14591D]  text-white text-[12px]  md:text-[18px] py-[9px] h-fit font-clashDisplay md:py-[16px] rounded-[15px] rounded-tl-[0px]">
+          <button className="px-[12px] md:px-[25px] bg-[#14591D]  text-white text-[12px]  md:text-[18px] py-[9px] h-fit font-clashDisplay md:py-[16px] rounded-[10px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
             🚀 Let's go!
           </button>
         </Link>
-        <button className="px-[12px] md:px-[25px] border border-[#12151A]/30 text-[#080705] text-[12px]  md:text-[18px] py-[9px] h-fit font-clashDisplay md:py-[16px] rounded-[15px] rounded-tl-[0px]">
+        <button className="px-[12px] md:px-[25px] border border-[#12151A]/30 text-[#080705] text-[12px]  md:text-[18px] py-[9px] h-fit font-clashDisplay md:py-[16px] rounded-[10px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
           🎉 Inspire me!
         </button>
       </div>

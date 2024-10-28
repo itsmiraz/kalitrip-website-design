@@ -28,7 +28,7 @@ const Blogs = () => {
   ];
 
   return (
-    <div className="pt-[50px] md:pt-[120px] bg-[#945600]/5 px-[20px] md:px-10">
+    <div className="pt-[50px] md:pt-[120px] bg-[#945600]/5 px-[16px] md:px-10">
       <h2 className="text-[#040F16] font-clashDisplay pb-[10px] md:pb-[20px] text-[22px] md:text-[48px] text-center  font-semibold">
         Our Recent <span className="text-[#14591D]">Blogs</span>
       </h2>
@@ -60,7 +60,7 @@ const Blogs = () => {
             this post offers a step-by-step guide to help readers create a
             comprehensive travel itinerary.
           </p>
-          <button className="px-[17px] md:px-[25px] flex items-center gap-x-2 font-clashDisplay mt-[40px] bg-[#14591D]  text-white text-[12px] md:text-[18px] py-[9px] md:py-[16px] rounded-[15px] rounded-tl-[0px]">
+          <button className="px-[17px] whitespace-nowrap md:px-[25px] flex items-center gap-x-2 font-clashDisplay mt-[40px] bg-[#14591D]  text-white text-[12px] md:text-[18px] py-[9px] md:py-[16px] rounded-[10px] md:rounded-[15px] rounded-tl-[0px]   md:rounded-tl-[0px]">
             Read More <LeftArrow />
           </button>
         </div>
@@ -81,7 +81,7 @@ const Blogs = () => {
                   <Calender />
                   <p>24 October 2024</p>
                 </div>
-                <h2 className="text-[18px] md:text-[24px] font-clashDisplay leading-[19px] md:leading-[100%] mt-[20px] font-semibold text-heading-color pb-[15px]">
+                <h2 className="text-[18px]  md:text-[24px] font-clashDisplay leading-[19px] md:leading-[100%] mt-[15px] md:mt-[20px] font-semibold text-heading-color pb-[15px]">
                   {item.title}
                 </h2>
                 <p className="text-[#767676] font-inter leading-[140%] text-[10px] md:text-[14px] font-medium ">

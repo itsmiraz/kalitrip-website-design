@@ -113,45 +113,45 @@ const Footer = () => {
             </div>
           </div>
           <div className="pt-[30px] mt-[30px] md:mt-0 md:pt-[0px]  border-t border-[#696969] md:border-none">
-            <h3 className="font-semibold text-[24px] mb-[30px] md:text-start text-center font-clashDisplay  text-[#FDF7FA] ">
+            <h3 className="font-semibold text-[16px] md:text-[24px] mb-[30px] md:text-start text-center font-clashDisplay  text-[#FDF7FA] ">
               Ease of use
             </h3>
             <ul className="space-y-[20px] md:text-start text-center font-inter">
               <li>
-                <p className="text-[#ABABAB]  cursor-pointer    hover:font-semibold hover:text-[#14591D] text-[18px]">
+                <p className="text-[#ABABAB]  cursor-pointer    hover:font-semibold hover:text-[#14591D] text-[12px] md:text-[18px]">
                   Welcome
                 </p>
               </li>
               <li>
-                <p className="text-[#ABABAB]  cursor-pointer    hover:font-semibold hover:text-[#14591D] text-[18px]">
+                <p className="text-[#ABABAB]  cursor-pointer    hover:font-semibold hover:text-[#14591D] text-[12px] md:text-[18px]">
                   Features
                 </p>
               </li>
               <li>
-                <p className="text-[#ABABAB]   cursor-pointer   hover:font-semibold hover:text-[#14591D] text-[18px]">
+                <p className="text-[#ABABAB]   cursor-pointer   hover:font-semibold hover:text-[#14591D] text-[12px] md:text-[18px]">
                   Testimonials
                 </p>
               </li>
               <li>
-                <p className="text-[#ABABAB]   cursor-pointer   hover:font-semibold hover:text-[#14591D] text-[18px]">
+                <p className="text-[#ABABAB]   cursor-pointer   hover:font-semibold hover:text-[#14591D] text-[12px] md:text-[18px]">
                   Blog
                 </p>
               </li>
               <li>
-                <p className="text-[#ABABAB]  cursor-pointer    hover:font-semibold hover:text-[#14591D] text-[18px]">
+                <p className="text-[#ABABAB]  cursor-pointer    hover:font-semibold hover:text-[#14591D] text-[12px] md:text-[18px]">
                   Boutique
                 </p>
               </li>
             </ul>
           </div>
           <div className="mt-[30px] md:mt-0">
-            <h3 className="font-semibold md:text-start text-center text-[24px] mb-[30px] font-clashDisplay   text-[#FDF7FA] ">
+            <h3 className="font-semibold md:text-start text-center text-[16px] md:text-[24px] mb-[30px] font-clashDisplay   text-[#FDF7FA] ">
               Contact Info.
             </h3>
             <ul className="space-y-[16px] md:text-start text-center font-inter">
               <li className="flex md:justify-start justify-center  gap-x-[17px]">
                 <Phone />
-                <p className="text-[18px]   text-[#ABABAB]">
+                <p className="text-[12px] md:text-[18px]   text-[#ABABAB]">
                   +33 05 51 90 02 80
                 </p>
               </li>
@@ -159,13 +159,13 @@ const Footer = () => {
                 <div>
                   <Mail />
                 </div>
-                <p className="text-[18px]   text-[#ABABAB]">
+                <p className="text-[12px] md:text-[18px]   text-[#ABABAB]">
                   Kalitrip@gmail.com
                 </p>
               </li>
               <li className="flex md:justify-start justify-center  gap-x-[17px]">
                 <Location />
-                <p className="text-[18px]   text-[#ABABAB]">
+                <p className="text-[12px] md:text-[18px]   text-[#ABABAB]">
                   85 rue Marie de Médicis, <br /> Blagnac, France.
                 </p>
               </li>
@@ -173,8 +173,8 @@ const Footer = () => {
           </div>
           <div className="flex justify-center md:justify-start md:mt-0 mt-[40px] max-w-full md:max-w-[266px] flex-wrap gap-y-[10px] gap-x-[10px]">
             {FooterImages.map((item, i) => (
-              <div key={i} className="w-[114px] md:w-[82px]  h-[68px] ">
-                <Image key={i} className="w-full h-full" alt="" src={item} />
+              <div key={i} className="w-[114px] md:w-[82px] rounded-[7px] md:rounded-[10px] overflow-hidden h-[68px] ">
+                <Image key={i} className="w-full object-cover h-full" alt="" src={item} />
               </div>
             ))}
           </div>

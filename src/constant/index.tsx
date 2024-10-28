@@ -498,7 +498,7 @@ export const navLinks = [
     {
       name: "Basic Plan",
       price:
-        "<span class='text-[#040F16] text-[38px]  font-semibold'>$1,600/</span>Monthly",
+        "<span class='text-[#040F16] text-[28px] md:text-[38px]  font-semibold'>$1,600/</span>Monthly",
       price_note:
         "The price can vary widely depending on factors like the destination.",
       includes: [
@@ -516,7 +516,7 @@ export const navLinks = [
     {
       name: "Premium Plan",
       price:
-        "<span class='text-[#040F16] text-[38px]  font-semibold'>$2,200/</span>Monthly",
+        "<span class='text-[#040F16] text-[28px] md:text-[38px]  font-semibold'>$2,200/</span>Monthly",
       price_note:
         "The price can vary widely depending on factors like the destination.",
       includes: [
@@ -534,7 +534,7 @@ export const navLinks = [
     {
       name: "Business Plan",
       price:
-        "<span class='text-[#040F16] text-[38px]  font-semibold'>$3,500/</span>Monthly",
+        "<span class='text-[#040F16] text-[28px] md:text-[38px]  font-semibold'>$3,500/</span>Monthly",
       price_note:
         "The price can vary widely depending on factors like the destination.",
       includes: [

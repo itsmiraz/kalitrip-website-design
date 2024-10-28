@@ -33,7 +33,7 @@ const PricingPlan = () => {
               <div>
                 <PlanIcon />
               </div>
-              <h3 className="text-[24px] font-inter font-bold text-[#040F16]">
+              <h3 className="text-[17px] md:text-[24px] font-inter font-bold text-[#040F16]">
                 {item.name}
               </h3>
             </div>
@@ -42,7 +42,7 @@ const PricingPlan = () => {
                 className="text-heading-color  font-clashDisplay pb-[16px] font-semibold text-[24px]"
                 dangerouslySetInnerHTML={{ __html: item.price }}
               ></div>
-              <p className="text-[16px] font-inter text-[#767676]">{item.price_note}</p>
+              <p className="text-[12px] md:text-[16px] font-inter text-[#767676]">{item.price_note}</p>
             </div>
             <div className="bg-[#FBF8F5] font-inter w-full rounded-[12px] py-[28px] px-[24px] ">
               <p className="text-[16px] font-bold">Includes:</p>
@@ -52,7 +52,7 @@ const PricingPlan = () => {
                 <div>
                 <Check />
                 </div>
-                    <p className="text-[#767676] text-[16px] leading-[150%] ">
+                    <p className="text-[#767676] text-[12px] md:text-[16px] leading-[150%] ">
                       {include}
                     </p>
                   </li>

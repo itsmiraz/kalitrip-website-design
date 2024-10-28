@@ -107,7 +107,7 @@ const HotelsAndFlights = () => {
               <h3 className="text-[12px] pb-[7px] pt-[10px] md:text-[18px] font-clashDisplay font-semibold leading-[18px]">
                 Paris-Dhaka flight
               </h3>
-              <p className="text-[8px] md:text-[14px] font-medium font-inter">
+              <p className="text-[8px] mb-[15px]  md:text-[14px] font-medium font-inter">
                 800€/round-trip ticket
               </p>
 
@@ -130,7 +130,7 @@ const HotelsAndFlights = () => {
                 Nascent Gardenia Boutique <br className="md:block hidden" />{" "}
                 Guest House
               </h3>
-              <p className="text-[8px] md:text-[14px] font-medium font-inter">
+              <p className="text-[8px]  mb-[15px]  md:text-[14px] font-medium font-inter">
                 50€/Per Night
               </p>
 
