@@ -38,18 +38,18 @@ const Expertise = () => {
   return (
     <div>
       {" "}
-      <div className="pt-[60px] max-w-[1240px] mx-auto flex flex-wrap justify-center items-center gap-[30px]">
+      <div className="px-[16px] pb-[16px] md:pb-[60px]  md pt-[16px] md:pt-[60px] w-full md:max-w-[1240px] mx-auto flex flex-wrap justify-center items-center gap-[16px] md:gap-[30px]">
         {data.map((item, i) => (
           <div
-            className="rounded-[20px] p-[30px] md:w-[393px] flex flex-col justify-center items-center gap-y-[30px] bg-[#945600]/5"
+            className="rounded-[10px] md:rounded-[20px] px-[10px] py-[15px] md:py-[30px] md:px-[30px]  w-[163px] md:w-[393px] flex flex-col justify-center items-center gap-y-[30px] bg-[#945600]/5"
             key={i}
           >
-            <div>{item.icon}</div>
+            <div className="md:w-[70px] w-[40px] h-[40px] md:h-[70px]">{item.icon}</div>
             <div>
-              <h3 className="text-[#040F16] font-clashDisplay text-center text-[24px] font-semibold">
+            <h3 className="text-[#040F16] font-clashDisplay text-center text-[14px] md:text-[24px] md:leading-normal leading-[14px] font-semibold">
                 {item.title}
               </h3>
-              <p className="pt-[15px] font-inter text-[#767676] font-medium text-[14px] text-center ">
+              <p className="pt-[7px] md:pt-[15px] font-inter text-[#767676] font-medium text-[8px] md:text-[14px] text-center ">
                 {item.desc}
               </p>
             </div>

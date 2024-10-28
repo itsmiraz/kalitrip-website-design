@@ -20,7 +20,7 @@ const Products = () => {
         <button className="text-[#14591D] whitespace-nowrap">Sun glass</button>
         <button className="text-[#14591D] md:block hidden">Shirts</button>
       </div>
-      <div className="grid grid-cols-2 px-[16px] md:flex w-full flex-wrap pt-[30px] md:pt-[60px] gap-[16px] md:gap-[20px] justify-center items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 px-[16px] md:flex w-full flex-wrap pt-[30px] md:pt-[60px] gap-[16px] md:gap-[20px] justify-center items-center">
         {Productsdata.map((item, i) => (
           <div
             className="max-w-full md:max-w-[295px] border-[#CECECE] border bg-white rounded-[20px] p-[10px]"

@@ -67,7 +67,7 @@ const Header = () => {
   return (
     <div className="flex  mx-auto justify-between items-center">
       <Image src={Logo} alt="" className="max-w-[110px] md:max-w-[170px]" />
-      <ul className="hidden md:flex gap-x-[40px] translate-x-20  items-center">
+      <ul className="hidden lg:flex gap-x-[40px] translate-x-20  items-center">
         {navLinks.map((item, i) => (
           <li key={i}>
             {" "}
@@ -102,21 +102,21 @@ const MainHero = () => {
   return (
     <div className="pt-[61px]">
       <div className="flex items-start justify-center">
-        <div className="md:translate-x-24 translate-x-8">
+        <div className="md:translate-x-14 lg:translate-x-24 translate-x-8">
           <Image
             src={PlanIcon}
-            className="md:size-[80px] size-[30px] "
+            className="md:size-[50px] lg:size-[80px] size-[30px] "
             alt=""
           />
         </div>
-        <h1 className="text-[24px] md:text-[68px]  font-clashDisplay text-white text-center leading-[32px] md:leading-[110%] font-semibold">
+        <h1 className="text-[24px] md:text-[42px] lg:text-[68px]  font-clashDisplay text-white text-center leading-[32px] md:leading-[110%] font-semibold">
           Why is it so absurd? <br /> to delight in many inanimate <br />{" "}
           <span className="text-[#14591D]">things 500€</span>
         </h1>
       </div>
       <p className="text-[12px] md:text-[22px] font-inter text-white text-center md:leading-[30px] leading-[16px] font-medium pt-[10px] md:pt-[20px]">
         KaliTrip allows you to organize your trips more efficiently,
-        with personalized <br className="md:block hidden" /> itineraries that
+        with personalized <br className="md:lg hidden" /> itineraries that
         adapt to your preferences and your budget .
       </p>
     </div>
@@ -159,7 +159,7 @@ const Filter = () => {
               selected === item.label
                 ? "text-[#FDF7FA] bg-[#14591D]"
                 : "bg-[#ECECEC] text-[#767676]"
-            } font-semibold cursor-pointer transition-all ease-in-out duration-300 text-[8px] md:text-[16px] rounded-full px-[25px] py-[12px]`}
+            } font-semibold cursor-pointer transition-all ease-in-out duration-300 text-[8px] md:text-[16px] rounded-full px-[15px] md:px-[25px] py-[9px] md:py-[12px]`}
             key={i}
           >
             {item.label}
