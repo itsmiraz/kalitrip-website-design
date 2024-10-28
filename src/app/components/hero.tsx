@@ -87,10 +87,10 @@ const Header = () => {
           </div>
           <ArrowDown />
         </div>
-        <button className="md:px-[25px] px-[17px] border border-[#FDF7FA]/30  whitespace-nowrap text-[12px]  md:text-[18px] text-white  py-[9px] h-fit md:py-[16px] rounded-[15px] rounded-tl-[0px]">
+        <button className="md:px-[25px] px-[17px] border border-[#FDF7FA]/30  whitespace-nowrap text-[12px]  md:text-[18px] text-white  py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px]">
           Sign Up
         </button>
-        <button className="md:px-[25px] px-[17px] bg-[#14591D]  text-white text-[12px]  md:text-[18px] py-[9px] h-fit md:py-[16px] rounded-[15px] rounded-tl-[0px]">
+        <button className="md:px-[25px] px-[17px] bg-[#14591D]  text-white text-[12px]  md:text-[18px] py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px]">
           Login
         </button>
       </div>

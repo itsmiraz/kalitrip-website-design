@@ -8,9 +8,9 @@ const Result = () => {
   return (
     <div className="bg-[#FDF7FA]/10 backdrop-blur-3xl">
       <Hero />
-      <PlanResult />
+      {/* <PlanResult />
       <BudgetBreakDown />
-      <Expertise />
+      <Expertise /> */}
     </div>
   );
 };
