@@ -9,11 +9,13 @@ import Flight from "@/assets/images/flights.png";
 import HotelImage from "@/assets/images/hotel.png";
 import DashedLineVertical from "@/assets/icons/dashedVerticalBorder.svg";
 import DashedLineHorizontal from "@/assets/icons/DashedBorderHorizontal.svg";
+import DashedLineHorizontalSmall from "@/assets/icons/DashedLineHorizontalSmall.svg";
 
 import Accommodation from "@/assets/icons/Accomodations.svg";
 import CultruralActivites from "@/assets/icons/CulturalActivites.svg";
 import Transport from "@/assets/icons/Transportation.svg";
 import Gastronomy from "@/assets/icons/Gastronomy.svg";
+import { RoundedButton } from "@/components/ui/buttons";
 
 const PlanResult = () => {
   const [selectedDate, setSelectedDate] = useState("");
@@ -109,9 +111,10 @@ const HotelsAndFlights = () => {
               <p className="text-[8px] md:text-[14px] font-medium font-inter">
                 800€/round-trip ticket
               </p>
-              <button className="mt-[24px] font-clashDisplay px-[20px] py-[8px]  ease-in-out duration-300 transition-all rounded-full font-medium  hover:text-white hover:border-none border gap-x-[5px] border-[#14591D]/15 flex justify-center items-center text-center  hover:bg-[#14591D] h-[34px] leading-[14px] text-heading-color ">
+              {/* <button className="mt-[24px]  text-[8px] md:text-[14px] font-clashDisplay px-[20px] py-[8px]  ease-in-out duration-300 transition-all rounded-full font-medium  hover:text-white hover:border-none border gap-x-[5px] border-[#14591D]/15 flex justify-center items-center text-center  hover:bg-[#14591D] h-fit whitespace-nowrap md:h-[34px] leading-[14px] text-heading-color ">
                 Book Now <LeftArrow />{" "}
-              </button>
+              </button> */}
+              <RoundedButton/>
             </div>
             <div>
               <Image src={Flight} alt="" />
@@ -127,14 +130,17 @@ const HotelsAndFlights = () => {
                 <HotelssIcon />
               </div>
               <h3 className="text-[12px] pb-[7px] pt-[10px] leading-[13px] md:text-[18px] font-clashDisplay font-semibold md:leading-[18px]">
-                Nascent Gardenia Boutique <br /> Guest House
+                Nascent Gardenia Boutique <br className="md:block hidden" />{" "}
+                Guest House
               </h3>
-              <p className="text-[14px] font-medium font-inter">
+              <p className="text-[8px] md:text-[14px] font-medium font-inter">
                 50€/Per Night
               </p>
-              <button className="mt-[24px] font-clashDisplay px-[20px] py-[8px]  ease-in-out duration-300 transition-all rounded-full font-medium  hover:text-white hover:border-none border gap-x-[5px] border-[#14591D]/15 flex justify-center items-center text-center  hover:bg-[#14591D] h-[34px] leading-[14px] text-heading-color ">
+              {/* <button className="mt-[24px]  text-[8px] md:text-[14px] font-clashDisplay px-[20px] py-[8px]  ease-in-out duration-300 transition-all rounded-full font-medium  hover:text-white hover:border-none border gap-x-[5px] border-[#14591D]/15 flex justify-center items-center text-center  hover:bg-[#14591D] h-fit whitespace-nowrap md:h-[34px] leading-[14px] text-heading-color ">
                 Book Now <LeftArrow />{" "}
-              </button>
+              </button> */}
+              <RoundedButton/>
+           
             </div>
             <div>
               <Image src={HotelImage} alt="" />
@@ -150,8 +156,10 @@ const Recommendations = () => {
   return (
     <div className="flex-wrap flex md:flex-row justify-between items-center">
       {/* Accommodations */}
-      <div className="flex flex-col max-w-[134px]  md:max-w-[188px] justify-between items-start">
-        <Accommodation />
+      <div className="flex py-[20px] flex-col max-w-[134px]  md:max-w-[188px] justify-between items-start">
+        <div className="md:w-[45px] md:h-[45px] w-[25px] h-[25px]">
+          <Accommodation />
+        </div>
         <h3 className="text-[12px] md:text-[18px]  pt-[20px]  font-clashDisplay font-semibold leading-[18px]">
           Accommodation
         </h3>
@@ -161,15 +169,24 @@ const Recommendations = () => {
         <p className="text-[#14591D] mt-[15px] rounded-[7px] bg-[#14591D]/10 py-[8px] px-[10px] text-[8px] md:text-[14px] font-semibold font-clashDisplay ">
           Budget: 1965€ (39%)
         </p>
-        <button className="mt-[24px] whitespace-nowrap font-clashDisplay px-[20px] py-[8px]  ease-in-out duration-300 transition-all rounded-full font-medium  hover:text-white hover:border-none border gap-x-[5px] border-[#14591D]/15 flex justify-center items-center text-center  hover:bg-[#14591D] h-[34px] leading-[14px] text-heading-color ">
-          Book Now <LeftArrow />{" "}
-        </button>
+        {/* <button className="mt-[24px]  text-[8px] md:text-[14px] font-clashDisplay px-[20px] py-[7px] md:py-[8px] leading-[8px]  ease-in-out duration-300 transition-all rounded-full font-medium  hover:text-white hover:border-none border gap-x-[5px] border-[#14591D]/15 flex justify-center items-center text-center  hover:bg-[#14591D] h-fit whitespace-nowrap md:h-[34px] md:leading-[14px] text-heading-color ">
+          Book Now <div className="w-[8px] h-[8px] md:w-[18px] md:h-[18px] ">
+          <LeftArrow  /></div>{" "}
+        </button> */}
+              <RoundedButton/>
+
+        <div className="md:hidden block">
+          <DashedLineHorizontalSmall />
+        </div>
       </div>
       <DashedLineVertical />
 
       {/*   Cultural activities */}
       <div className="flex flex-col  max-w-[134px]    md:max-w-[188px] justify-between items-start">
-        <CultruralActivites />
+        <div className="md:w-[45px] md:h-[45px] w-[25px] h-[25px]">
+          <CultruralActivites />
+        </div>
+
         <h3 className="text-[12px] md:text-[18px]  pt-[20px]  font-clashDisplay font-semibold leading-[18px]">
           Cultural activities
         </h3>
@@ -179,17 +196,22 @@ const Recommendations = () => {
         <p className="text-[#14591D] mt-[15px] rounded-[7px] bg-[#14591D]/10 py-[8px] px-[10px] text-[8px] md:text-[14px] font-semibold font-clashDisplay ">
           Budget: 1000€ (20%)
         </p>
-        <button className="mt-[24px]  whitespace-nowrap font-clashDisplay px-[20px] py-[8px]  ease-in-out duration-300 transition-all rounded-full font-medium  hover:text-white hover:border-none border gap-x-[5px] border-[#14591D]/15 flex justify-center items-center text-center  hover:bg-[#14591D] h-[34px] leading-[14px] text-heading-color ">
+        {/* <button className="mt-[24px]  text-[8px] md:text-[14px] font-clashDisplay px-[20px] py-[8px]  ease-in-out duration-300 transition-all rounded-full font-medium  hover:text-white hover:border-none border gap-x-[5px] border-[#14591D]/15 flex justify-center items-center text-center  hover:bg-[#14591D] h-fit whitespace-nowrap md:h-[34px] leading-[14px] text-heading-color ">
           Book Now <LeftArrow />{" "}
-        </button>
+        </button> */}
+              <RoundedButton/>
+
       </div>
-   <div className="md:inline-block hidden">
-   <DashedLineVertical />
-   </div>
+      <div className="md:inline-block hidden">
+        <DashedLineVertical />
+      </div>
 
       {/* Transport */}
       <div className="flex flex-col   max-w-[134px]   md:max-w-[188px] justify-between items-start">
-        <Transport />
+        <div className="md:w-[45px] md:h-[45px] w-[25px] h-[25px]">
+          <Transport />
+        </div>
+
         <h3 className="text-[12px] md:text-[18px]  pt-[20px]  font-clashDisplay font-semibold leading-[18px]">
           Transport
         </h3>
@@ -199,14 +221,19 @@ const Recommendations = () => {
         <p className="text-[#14591D] mt-[15px] rounded-[7px] bg-[#14591D]/10 py-[8px] px-[10px] text-[8px] md:text-[14px] font-semibold font-clashDisplay ">
           Budget: 1505€ (30%)
         </p>
-        <button className="mt-[24px]  whitespace-nowrap font-clashDisplay px-[20px] py-[8px]  ease-in-out duration-300 transition-all rounded-full font-medium  hover:text-white hover:border-none border gap-x-[5px] border-[#14591D]/15 flex justify-center items-center text-center  hover:bg-[#14591D] h-[34px] leading-[14px] text-heading-color ">
+        {/* <button className="mt-[24px]  text-[8px] md:text-[14px] font-clashDisplay px-[20px] py-[8px]  ease-in-out duration-300 transition-all rounded-full font-medium  hover:text-white hover:border-none border gap-x-[5px] border-[#14591D]/15 flex justify-center items-center text-center  hover:bg-[#14591D] h-fit whitespace-nowrap md:h-[34px] leading-[14px] text-heading-color ">
           Book Now <LeftArrow />{" "}
-        </button>
+        </button> */}
+              <RoundedButton/>
+
       </div>
       <DashedLineVertical />
       {/* Gastronomy */}
       <div className="flex flex-col   max-w-[134px]   md:max-w-[188px] justify-between items-start">
-        <Gastronomy />
+        <div className="md:w-[45px] md:h-[45px] w-[25px] h-[25px]">
+          <Gastronomy />
+        </div>
+
         <h3 className="text-[12px] md:text-[18px]  pt-[20px]  font-clashDisplay font-semibold leading-[18px]">
           Gastronomy
         </h3>
@@ -216,9 +243,11 @@ const Recommendations = () => {
         <p className="text-[#14591D] mt-[15px] rounded-[7px] bg-[#14591D]/10 py-[8px] px-[10px] text-[8px] md:text-[14px] font-semibold font-clashDisplay ">
           Budget: 530€ (11%)
         </p>
-        <button className="mt-[24px] whitespace-nowrap font-clashDisplay px-[20px] py-[8px]  ease-in-out duration-300 transition-all rounded-full font-medium  hover:text-white hover:border-none border gap-x-[5px] border-[#14591D]/15 flex justify-center items-center text-center  hover:bg-[#14591D] h-[34px] leading-[14px] text-heading-color ">
+        {/* <button className="mt-[24px]  text-[8px] md:text-[14px] font-clashDisplay px-[20px] py-[8px]  ease-in-out duration-300 transition-all rounded-full font-medium  hover:text-white hover:border-none border gap-x-[5px] border-[#14591D]/15 flex justify-center items-center text-center  hover:bg-[#14591D] h-fit whitespace-nowrap md:h-[34px] leading-[14px] text-heading-color ">
           Book Now <LeftArrow />{" "}
-        </button>
+        </button> */}
+              <RoundedButton/>
+
       </div>
     </div>
   );

@@ -49,7 +49,9 @@ const Products = () => {
                 {item.price}
               </p>
               <button className="py-[8px] md:text-[14px] font-clashDisplay h-fit  w-full ease-in-out duration-300 transition-all rounded-full font-medium hover:font-bold hover:text-white hover:border-none border gap-x-[5px] border-[#14591D]/15 flex text-[8px] justify-center items-center text-center bg-white hover:bg-[#14591D] text-heading-color ">
-                Buy Now <LeftArrow />{" "}
+                Buy Now   <div className="w-[8px] h-[8px] md:w-[18px] md:h-[18px] ">
+        <LeftArrow />
+      </div>{" "}
               </button>
             </div>
           </div>
