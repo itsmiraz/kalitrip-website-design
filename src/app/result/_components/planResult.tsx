@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import FlightsIcon from "@/assets/icons/fligts.svg";
 import HotelssIcon from "@/assets/icons/hotels.svg";
-import LeftArrow from "@/assets/icons/LeftArrow.svg";
 import Image from "next/image";
 import Flight from "@/assets/images/flights.png";
 import HotelImage from "@/assets/images/hotel.png";
@@ -62,7 +61,7 @@ const PlanResult = () => {
               selectedDate === item.title
                 ? "bg-[#14591D] text-[#FDF7FA] font-bold border-none"
                 : "text-[#14591D] border"
-            } transition-all whitespace-nowrap ease-in-out duration-300 px-[20px] leading-[14px] font-inter h-fit py-[18px]  border-[#14591D]/15 rounded-[50px] `}
+            } transition-all whitespace-nowrap ease-in-out duration-300 px-[15px] md:px-[20px]  leading-[10px] md:leading-[14px] text-[10px] md:text-[14px] font-inter h-fit py-[10px] md:py-[18px]  border-[#14591D]/15 rounded-[50px] `}
             onClick={() => setSelectedDate(item.title)}
           >
             {item.title}
@@ -111,10 +110,8 @@ const HotelsAndFlights = () => {
               <p className="text-[8px] md:text-[14px] font-medium font-inter">
                 800€/round-trip ticket
               </p>
-              {/* <button className="mt-[24px]  text-[8px] md:text-[14px] font-clashDisplay px-[20px] py-[8px]  ease-in-out duration-300 transition-all rounded-full font-medium  hover:text-white hover:border-none border gap-x-[5px] border-[#14591D]/15 flex justify-center items-center text-center  hover:bg-[#14591D] h-fit whitespace-nowrap md:h-[34px] leading-[14px] text-heading-color ">
-                Book Now <LeftArrow />{" "}
-              </button> */}
-              <RoundedButton/>
+
+              <RoundedButton />
             </div>
             <div>
               <Image src={Flight} alt="" />
@@ -136,11 +133,8 @@ const HotelsAndFlights = () => {
               <p className="text-[8px] md:text-[14px] font-medium font-inter">
                 50€/Per Night
               </p>
-              {/* <button className="mt-[24px]  text-[8px] md:text-[14px] font-clashDisplay px-[20px] py-[8px]  ease-in-out duration-300 transition-all rounded-full font-medium  hover:text-white hover:border-none border gap-x-[5px] border-[#14591D]/15 flex justify-center items-center text-center  hover:bg-[#14591D] h-fit whitespace-nowrap md:h-[34px] leading-[14px] text-heading-color ">
-                Book Now <LeftArrow />{" "}
-              </button> */}
-              <RoundedButton/>
-           
+
+              <RoundedButton />
             </div>
             <div>
               <Image src={HotelImage} alt="" />
@@ -160,22 +154,19 @@ const Recommendations = () => {
         <div className="md:w-[45px] md:h-[45px] w-[25px] h-[25px]">
           <Accommodation />
         </div>
-        <h3 className="text-[12px] md:text-[18px]  pt-[20px]  font-clashDisplay font-semibold leading-[18px]">
+        <h3 className="text-[12px] md:text-[18px] pt-[10px] md:pt-[20px]  font-clashDisplay font-semibold leading-[12px]  md:leading-[18px]">
           Accommodation
         </h3>
-        <p className="text-[8px] md:text-[14px] pt-[10px] font-medium font-inter">
+        <p className="text-[8px] md:text-[14px] pt-[7px] md:pt-[10px] font-medium font-inter">
           Choose local hotels for an authentic experience
         </p>
-        <p className="text-[#14591D] mt-[15px] rounded-[7px] bg-[#14591D]/10 py-[8px] px-[10px] text-[8px] md:text-[14px] font-semibold font-clashDisplay ">
+        <p className="text-[#14591D] mb-[15px] md:mb-[24px]  mt-[10px] md:mt-[15px] rounded-[7px] bg-[#14591D]/10 md:py-[8px] py-[5px] px-[7px] md:px-[10px] text-[8px] md:text-[14px] font-semibold font-clashDisplay ">
           Budget: 1965€ (39%)
         </p>
-        {/* <button className="mt-[24px]  text-[8px] md:text-[14px] font-clashDisplay px-[20px] py-[7px] md:py-[8px] leading-[8px]  ease-in-out duration-300 transition-all rounded-full font-medium  hover:text-white hover:border-none border gap-x-[5px] border-[#14591D]/15 flex justify-center items-center text-center  hover:bg-[#14591D] h-fit whitespace-nowrap md:h-[34px] md:leading-[14px] text-heading-color ">
-          Book Now <div className="w-[8px] h-[8px] md:w-[18px] md:h-[18px] ">
-          <LeftArrow  /></div>{" "}
-        </button> */}
-              <RoundedButton/>
 
-        <div className="md:hidden block">
+        <RoundedButton />
+
+        <div className="md:hidden pt-[20px] block">
           <DashedLineHorizontalSmall />
         </div>
       </div>
@@ -187,20 +178,20 @@ const Recommendations = () => {
           <CultruralActivites />
         </div>
 
-        <h3 className="text-[12px] md:text-[18px]  pt-[20px]  font-clashDisplay font-semibold leading-[18px]">
+        <h3 className="text-[12px] md:text-[18px] pt-[10px] md:pt-[20px]  font-clashDisplay font-semibold leading-[12px]  md:leading-[18px]">
           Cultural activities
         </h3>
-        <p className="text-[8px] md:text-[14px] pt-[10px] font-medium font-inter">
+        <p className="text-[8px] md:text-[14px] pt-[7px] md:pt-[10px] font-medium font-inter">
           Visit historic mosques, take part in a traditional weaving workshop
         </p>
-        <p className="text-[#14591D] mt-[15px] rounded-[7px] bg-[#14591D]/10 py-[8px] px-[10px] text-[8px] md:text-[14px] font-semibold font-clashDisplay ">
+        <p className="text-[#14591D] mb-[15px] md:mb-[24px]  mt-[10px] md:mt-[15px] rounded-[7px] bg-[#14591D]/10 md:py-[8px] py-[5px] px-[7px] md:px-[10px] text-[8px] md:text-[14px] font-semibold font-clashDisplay ">
           Budget: 1000€ (20%)
         </p>
-        {/* <button className="mt-[24px]  text-[8px] md:text-[14px] font-clashDisplay px-[20px] py-[8px]  ease-in-out duration-300 transition-all rounded-full font-medium  hover:text-white hover:border-none border gap-x-[5px] border-[#14591D]/15 flex justify-center items-center text-center  hover:bg-[#14591D] h-fit whitespace-nowrap md:h-[34px] leading-[14px] text-heading-color ">
-          Book Now <LeftArrow />{" "}
-        </button> */}
-              <RoundedButton/>
 
+        <RoundedButton />
+        <div className="md:hidden pt-[20px] block">
+          <DashedLineHorizontalSmall />
+        </div>
       </div>
       <div className="md:inline-block hidden">
         <DashedLineVertical />
@@ -212,20 +203,17 @@ const Recommendations = () => {
           <Transport />
         </div>
 
-        <h3 className="text-[12px] md:text-[18px]  pt-[20px]  font-clashDisplay font-semibold leading-[18px]">
+        <h3 className="text-[12px] md:text-[18px] pt-[10px] md:pt-[20px]  font-clashDisplay font-semibold leading-[12px]  md:leading-[18px]">
           Transport
         </h3>
-        <p className="text-[8px] md:text-[14px] pt-[10px] font-medium font-inter">
+        <p className="text-[8px] md:text-[14px] pt-[7px] md:pt-[10px] font-medium font-inter">
           Use rickshaws for short trips around town
         </p>
-        <p className="text-[#14591D] mt-[15px] rounded-[7px] bg-[#14591D]/10 py-[8px] px-[10px] text-[8px] md:text-[14px] font-semibold font-clashDisplay ">
+        <p className="text-[#14591D] mb-[15px] md:mb-[24px]  mt-[10px] md:mt-[15px] rounded-[7px] bg-[#14591D]/10 md:py-[8px] py-[5px] px-[7px] md:px-[10px] text-[8px] md:text-[14px] font-semibold font-clashDisplay ">
           Budget: 1505€ (30%)
         </p>
-        {/* <button className="mt-[24px]  text-[8px] md:text-[14px] font-clashDisplay px-[20px] py-[8px]  ease-in-out duration-300 transition-all rounded-full font-medium  hover:text-white hover:border-none border gap-x-[5px] border-[#14591D]/15 flex justify-center items-center text-center  hover:bg-[#14591D] h-fit whitespace-nowrap md:h-[34px] leading-[14px] text-heading-color ">
-          Book Now <LeftArrow />{" "}
-        </button> */}
-              <RoundedButton/>
 
+        <RoundedButton />
       </div>
       <DashedLineVertical />
       {/* Gastronomy */}
@@ -234,21 +222,21 @@ const Recommendations = () => {
           <Gastronomy />
         </div>
 
-        <h3 className="text-[12px] md:text-[18px]  pt-[20px]  font-clashDisplay font-semibold leading-[18px]">
+        <h3 className="text-[12px] md:text-[18px] pt-[10px] md:pt-[20px]  font-clashDisplay font-semibold leading-[12px]  md:leading-[18px]">
           Gastronomy
         </h3>
-        <p className="text-[8px] md:text-[14px] pt-[10px] font-medium font-inter">
+        <p className="text-[8px] md:text-[14px] pt-[7px] md:pt-[10px] font-medium font-inter">
           Try Dhaka's hilsa fish and biryani
         </p>
-        <p className="text-[#14591D] mt-[15px] rounded-[7px] bg-[#14591D]/10 py-[8px] px-[10px] text-[8px] md:text-[14px] font-semibold font-clashDisplay ">
+        <p className="text-[#14591D] mb-[15px] md:mb-[24px]  mt-[10px] md:mt-[15px] rounded-[7px] bg-[#14591D]/10 md:py-[8px] py-[5px] px-[7px] md:px-[10px] text-[8px] md:text-[14px] font-semibold font-clashDisplay ">
           Budget: 530€ (11%)
         </p>
-        {/* <button className="mt-[24px]  text-[8px] md:text-[14px] font-clashDisplay px-[20px] py-[8px]  ease-in-out duration-300 transition-all rounded-full font-medium  hover:text-white hover:border-none border gap-x-[5px] border-[#14591D]/15 flex justify-center items-center text-center  hover:bg-[#14591D] h-fit whitespace-nowrap md:h-[34px] leading-[14px] text-heading-color ">
-          Book Now <LeftArrow />{" "}
-        </button> */}
-              <RoundedButton/>
 
+        <RoundedButton />
       </div>
     </div>
   );
 };
+
+
+

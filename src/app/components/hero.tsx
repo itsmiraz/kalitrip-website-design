@@ -87,10 +87,10 @@ const Header = () => {
           </div>
           <ArrowDown />
         </div>
-        <button className="md:px-[25px] px-[17px] border border-[#FDF7FA]/30  whitespace-nowrap text-[12px]  md:text-[18px] text-white  py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px]">
+        <button className="md:px-[25px] px-[17px] border border-[#FDF7FA]/30  whitespace-nowrap text-[12px]  md:text-[18px] text-white  py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
           Sign Up
         </button>
-        <button className="md:px-[25px] px-[17px] bg-[#14591D]  text-white text-[12px]  md:text-[18px] py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px]">
+        <button className="md:px-[25px] px-[17px] bg-[#14591D]  text-white text-[12px]  md:text-[18px] py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
           Login
         </button>
       </div>
@@ -116,7 +116,7 @@ const MainHero = () => {
       </div>
       <p className="text-[12px] md:text-[22px] font-inter text-white text-center md:leading-[30px] leading-[16px] font-medium pt-[10px] md:pt-[20px]">
         KaliTrip allows you to organize your trips more efficiently,
-        with personalized <br className="md:lg hidden" /> itineraries that
+        with personalized <br className="lg:block hidden" /> itineraries that
         adapt to your preferences and your budget .
       </p>
     </div>
