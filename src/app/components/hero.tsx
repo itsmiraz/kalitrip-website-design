@@ -48,7 +48,9 @@ const Hero = () => {
         className="h-[573px] md:h-[913px] px-[20px] md:px-10 pt-[20px]"
       >
         {/* Header */}
-        <Header />
+       <div>
+       <Header />
+       </div>
 
         {/* Hero */}
         <MainHero />
@@ -65,7 +67,7 @@ export default Hero;
 
 const Header = () => {
   return (
-    <div className="flex  mx-auto justify-between items-center">
+    <div className="flex px-0 md:px-[20px]  mx-auto justify-between items-center">
       <Image src={Logo} alt="" className="max-w-[110px] md:max-w-[170px]" />
       <ul className="hidden lg:flex gap-x-[40px] translate-x-20  items-center">
         {navLinks.map((item, i) => (
@@ -81,16 +83,16 @@ const Header = () => {
         <div className=" hidden md:flex bg-[#FDF7FA]/10  h-fit border border-[#FDF7FA]/40 rounded-full items-center gap-x-[15px] text-white px-[25px] py-4">
           <div className="flex gap-x-[7px] items-center">
             <Earth />
-            <p className="text-[18px] font-medium font-clashDisplay text-[#FDF7FA]">
+            <p className="text-[18px] md:leading-[18px] font-medium font-clashDisplay text-[#FDF7FA]">
               En
             </p>
           </div>
           <ArrowDown />
         </div>
-        <button className="md:px-[25px] px-[17px] border border-[#FDF7FA]/30  whitespace-nowrap text-[12px]  md:text-[18px] text-white  py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
+        <button className="md:px-[25px] px-[17px] md:leading-[18px] border border-[#FDF7FA]/30  whitespace-nowrap text-[12px]  md:text-[18px] text-white  py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
           Sign Up
         </button>
-        <button className="md:px-[25px] px-[17px] bg-[#14591D]  text-white text-[12px]  md:text-[18px] py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
+        <button className="md:px-[25px] px-[17px] md:leading-[18px] bg-[#14591D]  text-white text-[12px]  md:text-[18px] py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
           Login
         </button>
       </div>
