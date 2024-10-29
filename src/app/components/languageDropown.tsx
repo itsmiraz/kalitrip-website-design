@@ -39,12 +39,12 @@ function LanguageDropdown() {
       </div>
 
       {isDropdownOpen && (
-        <div className="absolute mt-2 w-32 bg-[#FDF7FA]/10 backdrop-blur text-white rounded-[12px] shadow-lg">
+        <div className="absolute  pt-2  mt-2 w-32 bg-gray-200 backdrop-blur text-gray-800 rounded-[12px] shadow-lg">
           {languages.map((language) => (
             <div
               key={language.short}
               onClick={() => handleLanguageSelect(language)}
-              className="px-4 py-2 text-white cursor-pointer "
+              className="px-4 py-1 font-clashDisplay text-gray-800 cursor-pointer "
             >
               {language.name}
             </div>

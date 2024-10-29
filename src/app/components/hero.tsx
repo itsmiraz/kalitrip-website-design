@@ -47,9 +47,9 @@ const Hero = () => {
         className="h-[573px] md:h-[913px] px-[20px] md:px-10 pt-[20px]"
       >
         {/* Header */}
-       <div>
-       <Header />
-       </div>
+        <div>
+          <Header />
+        </div>
 
         {/* Hero */}
         <MainHero />
@@ -65,33 +65,98 @@ const Hero = () => {
 export default Hero;
 
 const Header = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+  const handleDropdownToggle = () => {
+    setIsDropdownOpen((prev) => !prev);
+  };
+
+  useEffect(()=>{
+    const handleResize = ()=>setIsLargeScreen(window.innerWidth >= 1200  )
+
+    handleResize()
+    window.addEventListener('resize',handleResize)
+    return ()=> window.removeEventListener('resize', handleResize)
+
+
+  },[])
+
   return (
-    <div className="flex px-0 md:px-[20px]  mx-auto justify-between items-center">
-      <Image src={Logo} alt="" className="max-w-[110px] md:max-w-[170px]" />
-      <ul className="hidden   lg:flex md:gap-[20px] lg:gap-x-[40px] translate-x-20  items-center">
-        {navLinks.map((item, i) => (
+    <div className="flex px-0 lg:px-[20px] mx-auto justify-between items-center">
+      <Image src={Logo} alt="Logo" className="max-w-[110px] md:max-w-[170px]" />
+      <ul className={`hidden ${isLargeScreen ?'translate-x-20':""} lg: md:translate-x-10 lg:flex md:gap-[20px] lg:gap-x-[40px] items-center`}>
+        {navLinks.slice(0, !isLargeScreen ? 2 : 4).map((item, i) => (
           <li key={i}>
-            {" "}
-            <p className="md:text-[14px] lg:text-[18px]  transition-all duration-300 ease-in-out font-clashDisplay cursor-pointer hover:text-[#14591D]  text-[#FDF7FA]">
+            <p className="md:text-[14px] lg:text-[18px] transition-all duration-300 ease-in-out font-clashDisplay cursor-pointer hover:text-[#14591D] text-[#FDF7FA]">
               {item.label}
-            </p>{" "}
+            </p>
           </li>
         ))}
+        {
+          !isLargeScreen && 
+        
+        <li className="relative" onMouseEnter={()=>setIsDropdownOpen(true)}>
+          <p className="md:text-[14px] lg:text-[18px] transition-all duration-300 ease-in-out font-clashDisplay cursor-pointer hover:text-[#14591D] text-[#FDF7FA]">
+            More
+          </p>
+          {isDropdownOpen && (
+            <ul
+              onMouseLeave={handleDropdownToggle}
+              className="absolute overflow-hidden top-full mt-2 bg-white shadow-lg rounded-md text-black"
+            >
+              {navLinks.slice(2).map((item, i) => (
+                <li key={i} className="px-4 py-2 font-clashDisplay cursor-pointer hover:bg-gray-200">
+                  {item.label}
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+}
       </ul>
       <div className="flex gap-x-[20px]">
-        <div className=" hidden md:flex ">
-          <LanguageDropdown/>
+        <div className="hidden md:flex">
+          <LanguageDropdown />
         </div>
-        <button className="md:px-[25px] px-[17px] md:leading-[18px] border border-[#FDF7FA]/30  whitespace-nowrap text-[12px]  md:text-[18px] text-white  py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
+        <button className="md:px-[25px] px-[17px] md:leading-[18px] border border-[#FDF7FA]/30 whitespace-nowrap text-[12px] md:text-[18px] text-white py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
           Sign Up
         </button>
-        <button className="md:px-[25px] px-[17px] md:leading-[18px] bg-[#14591D]  text-white text-[12px]  md:text-[18px] py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
+        <button className="md:px-[25px] px-[17px] md:leading-[18px] bg-[#14591D] text-white text-[12px] md:text-[18px] py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
           Login
         </button>
       </div>
     </div>
   );
 };
+
+// const Header = () => {
+//   return (
+//     <div className="flex px-0 md:px-[20px]  mx-auto justify-between items-center">
+//       <Image src={Logo} alt="" className="max-w-[110px] md:max-w-[170px]" />
+//       <ul className="hidden   lg:flex md:gap-[20px] lg:gap-x-[40px] translate-x-20  items-center">
+//         {navLinks.map((item, i) => (
+//           <li key={i}>
+//             {" "}
+//             <p className="md:text-[14px] lg:text-[18px]  transition-all duration-300 ease-in-out font-clashDisplay cursor-pointer hover:text-[#14591D]  text-[#FDF7FA]">
+//               {item.label}
+//             </p>{" "}
+//           </li>
+//         ))}
+//       </ul>
+//       <div className="flex gap-x-[20px]">
+//         <div className=" hidden md:flex ">
+//           <LanguageDropdown/>
+//         </div>
+//         <button className="md:px-[25px] px-[17px] md:leading-[18px] border border-[#FDF7FA]/30  whitespace-nowrap text-[12px]  md:text-[18px] text-white  py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
+//           Sign Up
+//         </button>
+//         <button className="md:px-[25px] px-[17px] md:leading-[18px] bg-[#14591D]  text-white text-[12px]  md:text-[18px] py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
+//           Login
+//         </button>
+//       </div>
+//     </div>
+//   );
+// };
 
 const MainHero = () => {
   return (
