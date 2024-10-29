@@ -68,7 +68,7 @@ const Header = () => {
   return (
     <div className="flex px-0 md:px-[20px]  mx-auto justify-between items-center">
       <Image src={Logo} alt="" className="max-w-[110px] md:max-w-[170px]" />
-      <ul className="hidden  lg:flex md:gap-[20px] lg:gap-x-[40px] translate-x-20  items-center">
+      <ul className="hidden   lg:flex md:gap-[20px] lg:gap-x-[40px] translate-x-20  items-center">
         {navLinks.map((item, i) => (
           <li key={i}>
             {" "}
