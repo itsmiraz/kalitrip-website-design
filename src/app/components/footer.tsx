@@ -26,6 +26,7 @@ import Image9 from "@/assets/images/footerImages/image9.png";
 
 import CopyRightIcon from "@/assets/icons/CopyRightIcon.svg";
 import UpArrow from "@/assets/icons/UpArrow.svg";
+import { ImageIcon } from "../result/_components/footer";
 
 const Footer = () => {
   const socialLinks = [
@@ -173,11 +174,7 @@ const Footer = () => {
           </div>
           <div className="flex justify-center md:justify-start md:mt-0 mt-[40px] max-w-full md:max-w-[266px] flex-wrap gap-y-[10px] gap-x-[10px]">
             {FooterImages.map((item, i) => (
-           <div key={i} >
-               <div key={i} className="w-[114px] md:w-[82px] rounded-[7px] md:rounded-[10px] overflow-hidden h-[68px] ">
-                <Image key={i} className="w-full object-cover h-full" alt="" src={item} />
-              </div>
-           </div>
+              <ImageIcon item={item} i={i} key={i} />
             ))}
           </div>
         </div>

@@ -1,4 +1,7 @@
-import React from "react";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import Logo from "@/assets/images/logo.webp";
 
@@ -22,6 +25,8 @@ import Image6 from "@/assets/images/footerImages/image6.png";
 import Image7 from "@/assets/images/footerImages/image7.png";
 import Image8 from "@/assets/images/footerImages/image-8.png";
 import Image9 from "@/assets/images/footerImages/image9.png";
+
+import HoverOverLayIcon from "@/assets/icons/OverlayIcon.svg";
 
 import CopyRightIcon from "@/assets/icons/CopyRightIcon.svg";
 import UpArrow from "@/assets/icons/UpArrow.svg";
@@ -145,19 +150,7 @@ const Footer = () => {
           </div>
           <div className="flex justify-center md:justify-start md:mt-0 mt-[40px] max-w-full md:max-w-[266px] flex-wrap gap-y-[10px] gap-x-[10px]">
             {FooterImages.map((item, i) => (
-              <div key={i}>
-                <div
-                  key={i}
-                  className="w-[114px] md:w-[82px] rounded-[7px] md:rounded-[10px] overflow-hidden h-[68px] "
-                >
-                  <Image
-                    key={i}
-                    className="w-full object-cover h-full"
-                    alt=""
-                    src={item}
-                  />
-                </div>
-              </div>
+              <ImageIcon i={i} key={i} item={item} />
             ))}
           </div>
         </div>
@@ -182,3 +175,35 @@ const Footer = () => {
 };
 
 export default Footer;
+
+export const ImageIcon = ({ item, i }: { item: any; i: number }) => {
+  const [isHovered, setisHovered] = useState(false);
+
+  return (
+    <div
+      className="relative cursor-pointer rounded-[7px]  overflow-hidden"
+      onMouseEnter={() => setisHovered(true)}
+      onMouseLeave={() => setisHovered(false)}
+      key={i}
+    >
+      <div
+        key={i}
+        className="relative  z-10 w-[114px] md:w-[82px] md:rounded-[10px] overflow-hidden h-[68px] "
+      >
+        <Image
+          key={i}
+          className="w-full object-cover h-full"
+          alt=""
+          src={item}
+        />
+      </div>
+      {isHovered && (
+        <div className="bg-[#14591D]/85 absolute top-0 left-0 z-30 w-full h-full">
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+            <HoverOverLayIcon />
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
