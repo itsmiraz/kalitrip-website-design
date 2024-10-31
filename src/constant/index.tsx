@@ -8,6 +8,8 @@ import Filter from "@/assets/icons/expertise/SpecelizedFilter.svg";
 import DirectLink from "@/assets/icons/expertise/DirectLink.svg";
 import Trending from "@/assets/icons/expertise/Trending.svg";
 import Tshirt from "@/assets/images/products/t-shirt.png";
+import Shoes from "@/assets/images/products/shoes.png";
+import SunGlass from "@/assets/images/products/sunglass.png";
 import Profile from "@/assets/images/profile.png";
 
 
@@ -577,13 +579,13 @@ export const navLinks = [
       price: "$35.05",
     },
     {
-      img: Tshirt,
+      img: Shoes,
       title: "Pippi Tee White T-Shirt",
       desc: "The Pippi Tee White T-Shirt is a perfect blend of simplicity and style, making it an essential addition to any wardrobe.",
       price: "$35.05",
     },
     {
-      img: Tshirt,
+      img: SunGlass,
       title: "Pippi Tee White T-Shirt",
       desc: "The Pippi Tee White T-Shirt is a perfect blend of simplicity and style, making it an essential addition to any wardrobe.",
       price: "$35.05",
