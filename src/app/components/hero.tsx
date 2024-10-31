@@ -16,6 +16,8 @@ import BudgetSelector from "./budgetSelector";
 import Link from "next/link";
 import { FilterOptions, navLinks } from "@/constant";
 import LanguageDropdown from "./languageDropown";
+import Menu from "@/assets/icons/Menu.svg";
+import Close from "@/assets/icons/Close.svg";
 
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -71,20 +73,23 @@ const Header = () => {
     setIsDropdownOpen((prev) => !prev);
   };
 
-  useEffect(()=>{
-    const handleResize = ()=>setIsLargeScreen(window.innerWidth >= 1200  )
+  useEffect(() => {
+    const handleResize = () => setIsLargeScreen(window.innerWidth >= 1200);
 
-    handleResize()
-    window.addEventListener('resize',handleResize)
-    return ()=> window.removeEventListener('resize', handleResize)
-
-
-  },[])
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  const [isOpen, setisOpen] = useState(false);
 
   return (
     <div className="flex px-0 lg:px-[20px] mx-auto justify-between items-center">
       <Image src={Logo} alt="Logo" className="max-w-[110px] md:max-w-[170px]" />
-      <ul className={`hidden ${isLargeScreen ?'translate-x-20':""} lg: md:translate-x-10 lg:flex md:gap-[20px] lg:gap-x-[40px] items-center`}>
+      <ul
+        className={`hidden ${
+          isLargeScreen ? "translate-x-20" : ""
+        } lg: md:translate-x-10 lg:flex md:gap-[20px] lg:gap-x-[40px] items-center`}
+      >
         {navLinks.slice(0, !isLargeScreen ? 2 : 4).map((item, i) => (
           <li key={i}>
             <p className="md:text-[14px] lg:text-[18px] transition-all duration-300 ease-in-out font-clashDisplay cursor-pointer hover:text-[#14591D] text-[#FDF7FA]">
@@ -92,39 +97,59 @@ const Header = () => {
             </p>
           </li>
         ))}
-        {
-          !isLargeScreen && 
-        
-        <li className="relative" onMouseEnter={()=>setIsDropdownOpen(true)}>
-          <p className="md:text-[14px] lg:text-[18px] transition-all duration-300 ease-in-out font-clashDisplay cursor-pointer hover:text-[#14591D] text-[#FDF7FA]">
-            More
-          </p>
-          {isDropdownOpen && (
-            <ul
-              onMouseLeave={handleDropdownToggle}
-              className="absolute overflow-hidden top-full mt-2 bg-white shadow-lg rounded-md text-black"
-            >
-              {navLinks.slice(2).map((item, i) => (
-                <li key={i} className="px-4 py-2 font-clashDisplay cursor-pointer hover:bg-gray-200">
-                  {item.label}
-                </li>
-              ))}
-            </ul>
-          )}
-        </li>
-}
+        {!isLargeScreen && (
+          <li className="relative" onMouseEnter={() => setIsDropdownOpen(true)}>
+            <p className="md:text-[14px] lg:text-[18px] transition-all duration-300 ease-in-out font-clashDisplay cursor-pointer hover:text-[#14591D] text-[#FDF7FA]">
+              More
+            </p>
+            {isDropdownOpen && (
+              <ul
+                onMouseLeave={handleDropdownToggle}
+                className="absolute overflow-hidden top-full mt-2 bg-white shadow-lg rounded-md text-black"
+              >
+                {navLinks.slice(2).map((item, i) => (
+                  <li
+                    key={i}
+                    className="px-4 py-2 font-clashDisplay cursor-pointer hover:bg-gray-200"
+                  >
+                    {item.label}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        )}
       </ul>
-      <div className="flex gap-x-[20px]">
+      <div className="flex items-center gap-x-[20px]">
         <div className="hidden md:flex">
           <LanguageDropdown />
         </div>
-        <button className="md:px-[25px] px-[17px] md:leading-[18px] border border-[#FDF7FA]/30 whitespace-nowrap text-[12px] md:text-[18px] text-white py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
+        <button className="md:px-[25px] leading-[12px] px-[17px] md:leading-[18px] border border-[#FDF7FA]/30 whitespace-nowrap text-[12px] md:text-[18px] text-white py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
           Sign Up
         </button>
-        <button className="md:px-[25px] px-[17px] md:leading-[18px] bg-[#14591D] text-white text-[12px] md:text-[18px] py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
+        <button className="md:px-[25px] leading-[12px] px-[17px] md:leading-[18px] bg-[#14591D] text-white text-[12px] md:text-[18px] py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
           Login
         </button>
+        <div onClick={() => setisOpen(!isOpen)} className="md:hidden block">
+        {isOpen ? (
+          <div className="w-[20px] text-white h-[20px]">
+            <Close />
+          </div>
+        ) : (
+          <div className="w-[20px] text-white h-[20px]">
+            <Menu />
+          </div>
+        )}
       </div>
+      </div>
+     {
+      isOpen &&  <div className="w-32 bg-white z-50 px-4 py-2 rounded-[12px]  absolute top-14 right-4">
+      {navLinks.map((item, i) => (
+        <p key={i} className="md:text-[14px] lg:text-[18px] transition-all duration-300 ease-in-out font-clashDisplay cursor-pointer hover:text-[#14591D] text-[#1a1a1a]">{item.label}</p>
+      ))}
+    </div>
+     }
+     
     </div>
   );
 };
@@ -187,7 +212,7 @@ const Filter = () => {
   // const [selected, setselected] = useState("");
   const [selected, setSelected] = useState<string[]>([]);
 
-  const handleFilterClick = (label:string) => {
+  const handleFilterClick = (label: string) => {
     setSelected((prevSelected) =>
       prevSelected.includes(label)
         ? prevSelected.filter((item) => item !== label)
@@ -241,7 +266,7 @@ const Filter = () => {
             🚀 Let's go!
           </button>
         </Link>
-  
+
         <button className="md:px-[25px] px-[17px] md:leading-[18px] border       border-[#12151A]/30 text-[#080705]  whitespace-nowrap text-[12px] md:text-[18px] py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
           🎉 Inspire me!
         </button>

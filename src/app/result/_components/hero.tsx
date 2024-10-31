@@ -23,6 +23,7 @@ import MailIcon from "@/assets/icons/MailFillIcon.svg";
 import { useEffect, useState } from "react";
 import LanguageDropdown from "@/app/components/languageDropown";
 
+
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
 
@@ -65,6 +66,7 @@ const Hero = () => {
 export default Hero;
 
 const Header = () => {
+
   return (
     <div className="flex px-[20px] md:px-10 pb-[20px]  mx-auto justify-between items-center">
       <Link href={"/"}>
@@ -72,27 +74,22 @@ const Header = () => {
       </Link>
 
       <div className="flex  items-center gap-x-[20px]">
-        {/* <div className="hidden md:flex  h-fit text-[#040F16] bg-[#040F16]/10 border border-[#FDF7FA]/40 rounded-full items-center gap-x-[15px] px-[25px] py-4">
-          <div className="flex text-[#040F16] gap-x-[7px] items-center">
-            <Earth />
-            <p className="text-[18px] leading-[15px] font-clashDisplay font-medium ">
-              En
-            </p>
-          </div>
-          <ArrowDown />
-        </div> */}
+     
 
         <div className="hidden md:flex">
-          <LanguageDropdown variant={'dark'} />
+          <LanguageDropdown variant={"dark"} />
         </div>
 
         {/* border border-[#040F16]/30 text-[#040F16]  */}
-        <button className="md:px-[25px] px-[17px] md:leading-[18px] border       border-[#12151A]/30 text-[#080705]  whitespace-nowrap text-[12px] md:text-[18px] py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
+        <button className="md:px-[25px] px-[17px] md:leading-[18px] border    leading-[12px]     border-[#12151A]/30 text-[#080705]  whitespace-nowrap text-[12px] md:text-[18px] py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
           Sign Up
         </button>
-        <button className="md:px-[25px] px-[17px] md:leading-[18px] bg-[#14591D] text-white text-[12px] md:text-[18px] py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
+        <button className="md:px-[25px] px-[17px] md:leading-[18px] bg-[#14591D] text-white text-[12px] leading-[12px] md:text-[18px] py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
           Login
         </button>
+
+
+       
       </div>
     </div>
   );
