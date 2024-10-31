@@ -8,6 +8,7 @@ import Filter from "@/assets/icons/expertise/SpecelizedFilter.svg";
 import DirectLink from "@/assets/icons/expertise/DirectLink.svg";
 import Trending from "@/assets/icons/expertise/Trending.svg";
 import Tshirt from "@/assets/images/products/t-shirt.png";
+import Shirt from "@/assets/images/products/shirt.png";
 import Shoes from "@/assets/images/products/shoes.png";
 import SunGlass from "@/assets/images/products/sunglass.png";
 import Profile from "@/assets/images/profile.png";
@@ -570,30 +571,33 @@ export const navLinks = [
       role: "Ui-Ux Designer",
     },
   ];
-
   export const Productsdata = [
     {
-      img: Tshirt,
-      title: "Pippi Tee White T-Shirt",
-      desc: "The Pippi Tee White T-Shirt is a perfect blend of simplicity and style, making it an essential addition to any wardrobe.",
-      price: "$35.05",
+        img: Tshirt,
+        title: "Pippi Tee White T-Shirt",
+        desc: "The Pippi Tee White T-Shirt is a perfect blend of simplicity and style, making it an essential addition to any wardrobe.",
+        price: "$35.05",
+        category: "T-shirt"
     },
     {
-      img: Shoes,
-      title: "Pippi Tee White T-Shirt",
-      desc: "The Pippi Tee White T-Shirt is a perfect blend of simplicity and style, making it an essential addition to any wardrobe.",
-      price: "$35.05",
+        img: Shoes,
+        title: "Casual Shoes",
+        desc: "Stylish and comfortable casual shoes perfect for any occasion.",
+        price: "$55.00",
+        category: "Shoes"
     },
     {
-      img: SunGlass,
-      title: "Pippi Tee White T-Shirt",
-      desc: "The Pippi Tee White T-Shirt is a perfect blend of simplicity and style, making it an essential addition to any wardrobe.",
-      price: "$35.05",
+        img: SunGlass,
+        title: "Classic Sunglasses",
+        desc: "The perfect accessory to add a touch of class to any outfit.",
+        price: "$25.99",
+        category: "Sun glass"
     },
     {
-      img: Tshirt,
-      title: "Pippi Tee White T-Shirt",
-      desc: "The Pippi Tee White T-Shirt is a perfect blend of simplicity and style, making it an essential addition to any wardrobe.",
-      price: "$35.05",
-    },
-  ];
+        img: Shirt,
+        title: "Casual Tee Blue Shirt",
+        desc: "A versatile black T-shirt, perfect for any casual look.",
+        price: "$29.99",
+        category: "Shirts"
+    }
+];
