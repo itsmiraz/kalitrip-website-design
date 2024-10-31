@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Earth from "@/assets/icons/Earth.svg";
 import ArrowDown from "@/assets/icons/ArrowDown.svg";
 
-function LanguageDropdown() {
+function LanguageDropdown({variant}:{variant?:string}) {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState<string>("En");
 
@@ -25,14 +25,18 @@ function LanguageDropdown() {
     // Add logic to update the app language if needed
   };
 
+  const GetClassName = ()=>{
+    return variant === 'dark' ? 'text-[#040F16] border-[#FDF7FA]/40 bg-[#040F16]/10':"bg-[#FDF7FA]/10 border-[#FDF7FA]/40  text-[#FDF7FA]"
+  }
+
   return (
     <div className="relative inline-block">
       <div
-        className="flex bg-[#FDF7FA]/10 h-fit border border-[#FDF7FA]/40 rounded-full items-center gap-x-[10px] text-white px-[25px] py-4 cursor-pointer"
+        className={`flex ${GetClassName()} h-fit border  rounded-full items-center gap-x-[10px] px-[25px] py-4 cursor-pointer`}
         onClick={toggleDropdown}
       >
         <Earth />
-        <p className="text-[18px] md:leading-[18px] font-medium font-clashDisplay text-[#FDF7FA]">
+        <p className="text-[18px] md:leading-[18px] font-medium font-clashDisplay ">
           {selectedLanguage}
         </p>
         <ArrowDown/>

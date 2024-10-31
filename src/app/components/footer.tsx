@@ -26,7 +26,6 @@ import Image9 from "@/assets/images/footerImages/image9.png";
 
 import CopyRightIcon from "@/assets/icons/CopyRightIcon.svg";
 import UpArrow from "@/assets/icons/UpArrow.svg";
-import { div } from "framer-motion/client";
 
 const Footer = () => {
   const socialLinks = [

@@ -5,8 +5,8 @@ import CoverImage from "@/assets/images/result-page-hero-cover.webp";
 import MobileCoverImage from "@/assets/images/result-page-hero-cover.webp";
 import Logo from "@/assets/images/logo-black.png";
 import Image from "next/image";
-import Earth from "@/assets/icons/Earth.svg";
-import ArrowDown from "@/assets/icons/ArrowDown.svg";
+// import Earth from "@/assets/icons/Earth.svg";
+// import ArrowDown from "@/assets/icons/ArrowDown.svg";
 import { FilterOptions } from "@/constant";
 import Link from "next/link";
 import LocationInput from "@/app/components/locationInput";
@@ -21,6 +21,7 @@ import ShareIcon from "@/assets/icons/Share.svg";
 import SaveIcon from "@/assets/icons/Save.svg";
 import MailIcon from "@/assets/icons/MailFillIcon.svg";
 import { useEffect, useState } from "react";
+import LanguageDropdown from "@/app/components/languageDropown";
 
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -67,11 +68,11 @@ const Header = () => {
   return (
     <div className="flex px-[20px] md:px-10 pb-[20px]  mx-auto justify-between items-center">
       <Link href={"/"}>
-      <Image src={Logo} alt="" className="max-w-[110px] md:max-w-[170px]" />
+        <Image src={Logo} alt="" className="max-w-[110px] md:max-w-[170px]" />
       </Link>
 
       <div className="flex  items-center gap-x-[20px]">
-        <div className="hidden md:flex  h-fit text-[#040F16] bg-[#040F16]/10 border border-[#FDF7FA]/40 rounded-full items-center gap-x-[15px] px-[25px] py-4">
+        {/* <div className="hidden md:flex  h-fit text-[#040F16] bg-[#040F16]/10 border border-[#FDF7FA]/40 rounded-full items-center gap-x-[15px] px-[25px] py-4">
           <div className="flex text-[#040F16] gap-x-[7px] items-center">
             <Earth />
             <p className="text-[18px] leading-[15px] font-clashDisplay font-medium ">
@@ -79,11 +80,17 @@ const Header = () => {
             </p>
           </div>
           <ArrowDown />
+        </div> */}
+
+        <div className="hidden md:flex">
+          <LanguageDropdown variant={'dark'} />
         </div>
-        <button className="md:px-[25px] px-[17px] border border-[#040F16]/30  whitespace-nowrap text-[12px]  md:text-[18px] text-[#040F16]  py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px]">
+
+        {/* border border-[#040F16]/30 text-[#040F16]  */}
+        <button className="md:px-[25px] px-[17px] md:leading-[18px] border       border-[#12151A]/30 text-[#080705]  whitespace-nowrap text-[12px] md:text-[18px] py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
           Sign Up
         </button>
-        <button className="md:px-[25px] px-[17px] bg-[#14591D]  text-white text-[12px]  md:text-[18px] py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px]">
+        <button className="md:px-[25px] px-[17px] md:leading-[18px] bg-[#14591D] text-white text-[12px] md:text-[18px] py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
           Login
         </button>
       </div>
@@ -131,9 +138,9 @@ const Filter = () => {
         ))}
       </div>
       <div className="flex justify-center  gap-x-[20px] pt-[30px] items-center">
-      <button className="px-[12px] md:px-[25px] bg-[#14591D]  text-white text-[12px]  md:text-[18px] py-[9px] h-fit font-clashDisplay md:py-[16px] rounded-[15px] rounded-tl-[0px]">
-          Modify 
-          </button>
+        <button className="md:px-[25px] px-[17px] md:leading-[18px] bg-[#14591D] text-white text-[12px] md:text-[18px] py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
+          Modify <span className="md:inline-block hidden">Search</span>
+        </button>
         <div className="flex items-center gap-x-[20px] ">
           <p className="text-heading-color md:text-[18px] text-[12px] items-center flex font-semibold font-clashDisplay">
             Share :{" "}
@@ -143,11 +150,9 @@ const Filter = () => {
               <ShareIcon />
             </div>
             <div className="w-[25px] h-[25px] md:w-[36px] md:h-[36px]">
-
               <SaveIcon />
             </div>
             <div className="w-[25px] h-[25px] md:w-[36px] md:h-[36px]">
-
               <MailIcon />
             </div>
           </div>

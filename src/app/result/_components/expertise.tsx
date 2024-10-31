@@ -38,7 +38,7 @@ const Expertise = () => {
   return (
     <div>
       {" "}
-      <div className="px-[16px] pb-[16px] md:pb-[60px]  md pt-[16px] md:pt-[60px] w-full md:max-w-[1240px] mx-auto flex flex-wrap justify-center items-center gap-[16px] md:gap-[30px]">
+      <div className="px-[16px] pb-[16px] md:pb-[60px]   w-full md:max-w-[1440px] mx-auto flex flex-wrap justify-center items-center gap-[16px] md:gap-[30px]">
         {data.map((item, i) => (
           <div
             className="rounded-[10px] md:rounded-[20px] px-[10px] py-[15px] md:py-[30px] md:px-[30px]  w-[163px] md:w-[393px] flex flex-col justify-center items-center gap-y-[30px] bg-[#945600]/5"
