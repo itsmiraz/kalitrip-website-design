@@ -22,10 +22,9 @@
   background-color: #8d8d8d;
 }
 
-.dashed-border{
-  border: 1.4px dashed #D9D9D9
+.dashed-border {
+  border: 1.4px dashed #d9d9d9;
 }
-
 
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -43,8 +42,8 @@ html {
   scroll-behavior: smooth;
 }
 :root {
-  --background: #FDF7FA;
-  --foreground: #040F16;
+  --background: #fdf7fa;
+  --foreground: #040f16;
 }
 /* styles/globals.css */
 /* .font-mont {
@@ -61,18 +60,19 @@ html {
 
 /* styles.css or globals.css */
 .linier-gradient-left-to-right {
-  background: linear-gradient(126.27deg, #0052CC -281.63%, #001B2E 42.23%);
+  background: linear-gradient(126.27deg, #0052cc -281.63%, #001b2e 42.23%);
 }
 .linier-gradient-left-to-right-always {
-  background: linear-gradient(126.27deg, #0052CC -281.63%, #001B2E 42.23%);
+  background: linear-gradient(126.27deg, #0052cc -281.63%, #001b2e 42.23%);
 }
 
 .linier-gradient-right-to-left {
-  background: linear-gradient(200deg, #0052CC -281.63%, #001B2E 42.23%);
+  background: linear-gradient(200deg, #0052cc -281.63%, #001b2e 42.23%);
 }
 
 /* Hide gradients on mobile devices */
-@media (max-width: 767px) { /* Adjust the breakpoint as needed */
+@media (max-width: 767px) {
+  /* Adjust the breakpoint as needed */
   .linier-gradient-left-to-right {
     background: none; /* Remove the background gradient */
   }
@@ -86,7 +86,6 @@ html {
   backdrop-filter: blur(54px);
 
   box-shadow: 0px 0px 14px 0px rgba(247, 249, 251, 0.1) inset;
-  
 }
 
 body {
@@ -100,14 +99,6 @@ body {
     text-wrap: balance;
   }
 }
-
-
-
-
-
-
-
-
 
 /* css for slider animation */
 @keyframes slide-left {
@@ -135,8 +126,6 @@ body {
 .slider:hover {
   animation-play-state: paused;
 }
-
-
 
 /* for animating the border bubbles */
 @keyframes bubble-move-top {
@@ -173,7 +162,6 @@ body {
   animation: bubble-move-bottom 20s linear infinite;
 }
 
-
 /* funnel card glowing gradienet */
 @keyframes bubble-move-diagonal {
   0% {
@@ -197,26 +185,70 @@ body {
   animation: bubble-move-diagonal 15s linear infinite;
 }
 
-
-
 /* ai power house */
 @keyframes bubble-move-diagonal-ai-power-house {
   0% {
-    transform: translate(0, 0) rotate(0deg) ; /* Start at the top-left */
+    transform: translate(0, 0) rotate(0deg); /* Start at the top-left */
   }
   25% {
     transform: translate(100%, 0); /* Move to the top-right */
   }
   50% {
-    transform: translate(100%, 100%)  rotate(90deg); /* Move to the bottom-right */
+    transform: translate(100%, 100%) rotate(90deg); /* Move to the bottom-right */
   }
   75% {
-    transform: translate(0, 110%)  rotate(180deg);/* Move to the bottom-left */
+    transform: translate(0, 110%) rotate(180deg); /* Move to the bottom-left */
   }
   100% {
-    transform: translate(0, 0) ; /* Complete the loop back to the start */
+    transform: translate(0, 0); /* Complete the loop back to the start */
   }
 }
 .animate-ai-power-gradient-animation {
   animation: bubble-move-diagonal-ai-power-house 20s linear infinite;
+}
+
+.heroFilterBgShadow {
+  box-shadow: 0px -5px 100px 0px #72727226;
+}
+
+/* .custom-shadow-pricing-card {
+  border: 1px solid;
+
+  border-image-source: linear-gradient(
+    135deg,
+    rgba(4, 15, 22, 0.24) 0%,
+    rgba(4, 15, 22, 0.06) 40.63%,
+    rgba(4, 15, 22, 0.04) 47.8%,
+    rgba(4, 15, 22, 0.04) 52.71%,
+    rgba(4, 15, 22, 0.16) 98.66%
+  );
+} */
+.custom-gradient-border {
+  position: relative;
+  border-radius: 20px;
+}
+
+.custom-gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 20px; /* Match the card's border radius */
+  padding: 2px; /* Adjust border thickness here */
+  background: linear-gradient(
+    135deg,
+    rgba(4, 15, 22, 0.24) 0%,
+    rgba(4, 15, 22, 0.06) 40.63%,
+    rgba(4, 15, 22, 0.04) 47.8%,
+    rgba(4, 15, 22, 0.04) 52.71%,
+    rgba(4, 15, 22, 0.16) 98.66%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+
+.custom-gradient-border:hover::before {
+  display: none; /* Hide gradient on hover */
 }

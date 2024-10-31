@@ -14,7 +14,7 @@ interface SelectTraverlProps {
 const SelectTravelers: React.FC<SelectTraverlProps> = ({ onChange }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [travelers, setTravelers] = useState<TravelersCount>({
-    adults: 1,
+    adults: 0,
     children: 0,
     infants: 0
   });

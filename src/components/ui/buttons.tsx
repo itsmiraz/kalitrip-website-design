@@ -1,4 +1,5 @@
 import LeftArrow from "@/assets/icons/LeftArrow.svg";
+import { ReactNode } from "react";
 
 export const RoundedButton = () => {
   return (
@@ -9,4 +10,28 @@ export const RoundedButton = () => {
       </div>{" "}
     </button>
   );
+};
+
+export const Button = ({
+  variant = 'outline',
+  children,
+  outlineColor = '#FDF7FA',
+  textColor = 'white',
+}:{
+  children:ReactNode,
+  variant:string,
+  outlineColor:string,
+  textColor:string
+}) => {
+  const baseStyles =
+    'md:px-[25px] px-[17px] md:leading-[18px] text-[12px] md:text-[18px] py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px] whitespace-nowrap';
+
+  const outlineStyles = `border border-[${outlineColor}]/30 text-[${textColor}]`;
+  const fillStyles = `bg-[#14591D] text-[${textColor}]`;
+
+  const combinedStyles = `${baseStyles} ${
+    variant === 'fill' ? fillStyles : outlineStyles
+  }`;
+
+  return <button className={combinedStyles}>{children}</button>;
 };

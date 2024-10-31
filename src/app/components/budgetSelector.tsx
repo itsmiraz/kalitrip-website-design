@@ -7,7 +7,7 @@ interface BudgetSelectorProps {
 
 const BudgetSelector: React.FC<BudgetSelectorProps> = ({ onChange }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedBudget, setSelectedBudget] = useState<number>(500);
+  const [selectedBudget, setSelectedBudget] = useState<number>(0);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const budgetOptions = [

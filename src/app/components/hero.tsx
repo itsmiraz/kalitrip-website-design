@@ -184,13 +184,22 @@ const MainHero = () => {
 };
 
 const Filter = () => {
-  const [selected, setselected] = useState("");
+  // const [selected, setselected] = useState("");
+  const [selected, setSelected] = useState<string[]>([]);
+
+  const handleFilterClick = (label:string) => {
+    setSelected((prevSelected) =>
+      prevSelected.includes(label)
+        ? prevSelected.filter((item) => item !== label)
+        : [...prevSelected, label]
+    );
+  };
 
   const handleTravelersChange = (travelers: TravelersCount) => {
     console.log("Selected travelers:", travelers);
   };
   return (
-    <div className="-translate-y-32 md:-translate-y-20 pb-[20px] bg-white drop-shadow rounded-[15px] md:rounded-[20px] md:max-w-[1240px] mx-auto pt-[20px] md:pt-[50px] px-[20px] md:px-[30px]">
+    <div className="-translate-y-32 heroFilterBgShadow md:-translate-y-20 pb-[20px] bg-white rounded-[15px] md:rounded-[20px] md:max-w-[1240px] mx-auto pt-[20px] md:pt-[50px] px-[20px] md:px-[30px]">
       <div className="md:flex-row  flex-wrap gap-x-[10px] gap-y-[20px] flex-col flex pb-[30px] border-b border-[#E6E6E6] md:justify-center lg:justify-between items-center">
         <div className="  w-full md:w-fit">
           <LocationInput label="Where are you Coming from" />
@@ -211,12 +220,12 @@ const Filter = () => {
           <BudgetSelector />
         </div>
       </div>
-      <div className="flex  justify-center flex-wrap px-[17px] md:px-20 gap-y-[20px] md:gap-y-[30px] gap-x-[20px] md:gap-x-[40px] border-b border-[#E6E6E6] py-[30px] items-center ">
+      <div className="flex justify-center flex-wrap px-[17px] md:px-20 gap-y-[20px] md:gap-y-[30px] gap-x-[20px] md:gap-x-[40px] border-b border-[#E6E6E6] py-[30px] items-center">
         {FilterOptions.map((item, i) => (
           <div
-            onClick={() => setselected(item.label)}
+            onClick={() => handleFilterClick(item.label)}
             className={`${
-              selected === item.label
+              selected.includes(item?.label)
                 ? "text-[#FDF7FA] bg-[#14591D]"
                 : "bg-[#ECECEC] text-[#767676]"
             } font-semibold cursor-pointer transition-all ease-in-out duration-300 text-[8px] md:text-[16px] rounded-full px-[15px] md:px-[25px] py-[9px] md:py-[12px]`}
@@ -228,11 +237,12 @@ const Filter = () => {
       </div>
       <div className="flex justify-center gap-x-[20px] pt-[30px] items-center">
         <Link href={"/result"}>
-          <button className="px-[12px] md:px-[25px] bg-[#14591D]  text-white text-[12px]  md:text-[18px] py-[9px] h-fit font-clashDisplay md:py-[16px] rounded-[10px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
+          <button className="md:px-[25px] px-[17px] md:leading-[18px] bg-[#14591D] text-white text-[12px] md:text-[18px] py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
             🚀 Let's go!
           </button>
         </Link>
-        <button className="px-[12px] md:px-[25px] border border-[#12151A]/30 text-[#080705] text-[12px]  md:text-[18px] py-[9px] h-fit font-clashDisplay md:py-[16px] rounded-[10px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
+  
+        <button className="md:px-[25px] px-[17px] md:leading-[18px] border       border-[#12151A]/30 text-[#080705]  whitespace-nowrap text-[12px] md:text-[18px] py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
           🎉 Inspire me!
         </button>
       </div>

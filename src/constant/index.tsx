@@ -29,24 +29,14 @@ export const navLinks = [
     },
   ];
 
-
- export const FilterOptions = [
-    {
-      label: "🌿 Eco-responsible itinerary",
-    },
-    {
-      label: "🏞️ Nature and adventure",
-    },
-    {
-      label: "🏛️ Cultural discovery",
-    },
-    {
-      label: "🎲 Random discovery",
-    },
-    {
-      label: "🌟 Popular destinations",
-    },
+  export const FilterOptions = [
+    { label: "🌿 Eco-responsible itinerary" },
+    { label: "🏞️ Nature and adventure" },
+    { label: "🏛️ Cultural discovery" },
+    { label: "🎲 Random discovery" },
+    { label: "🌟 Popular destinations" },
   ];
+  
 
   export interface Airport {
     name: string;

@@ -123,15 +123,15 @@ const Testimonials = () => {
             },
 
             1500: {
-              slidesPerView: 2.2,
+              slidesPerView: 2,
               spaceBetween: 20,
             },
             1600: {
-              slidesPerView: 2.2,
+              slidesPerView: 2,
               spaceBetween: 20,
             },
             1800: {
-              slidesPerView: 2.2,
+              slidesPerView: 2,
               spaceBetween: 20,
             },
           }}
