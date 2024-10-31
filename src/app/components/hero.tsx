@@ -162,10 +162,10 @@ const MainHero = () => {
   return (
     <div className="pt-[61px]">
       <div className="flex items-start justify-center">
-        <div className="md:translate-x-14 lg:translate-x-24 translate-x-2">
+        <div className="md:translate-x-14 lg:translate-x-24 translate-x-4">
           <Image
             src={PlanIcon}
-            className="md:size-[50px] lg:size-[80px] size-[30px] "
+            className="md:w-[50px] lg:w-[80px] w-[30px] "
             alt=""
           />
         </div>
