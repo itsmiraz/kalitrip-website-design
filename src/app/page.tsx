@@ -14,8 +14,10 @@ export default function Home() {
       <PricingPlan />
       <Products />
       <Testimonials />
-      <Blogs />
-     <Footer/> 
+      <div className="bg-[#945600]/5">
+        <Blogs />
+        <Footer />
+      </div>
     </div>
   );
 }

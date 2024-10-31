@@ -63,10 +63,10 @@ const Products = () => {
           </div>
         ))}
       </div>
-      <div>
-        <button className="px-[21px] md:px-[25px] font-clashDisplay flex justify-center mt-[60px] items-center mx-auto gap-x-2  bg-[#14591D]  text-white text-[12px] md:text-[18px] py-[9px] h-fit md:py-[16px] rounded-[15px] rounded-tl-[0px]">
+      <div className="mt-[60px]">
+        <button className="md:px-[25px] flex justify-center items-center mx-auto px-[17px] md:leading-[18px] bg-[#14591D] text-white text-[12px] md:text-[18px] py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
           See More{" "}
-          <span className="text-white">
+          <span className="text-white w-[18px] h-[18px]">
             <LeftArrow />
           </span>
         </button>
