@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import Image from "next/image";
 import Logo from "@/assets/images/logo.webp";
 
@@ -26,56 +26,54 @@ import Image9 from "@/assets/images/footerImages/image9.png";
 import CopyRightIcon from "@/assets/icons/CopyRightIcon.svg";
 import UpArrow from "@/assets/icons/UpArrow.svg";
 const Footer = () => {
-    const socialLinks = [
-        {
-          link: "/",
-          icon: <XICon />,
-        },
-        {
-          link: "/",
-          icon: <Facebook />,
-        },
-        {
-          link: "/",
-          icon: <Insta />,
-        },
-        {
-          link: "/",
-          icon: <Youtube />,
-        },
-        {
-          link: "/",
-          icon: <Tiktok />,
-        },
-        {
-          link: "/",
-          icon: <Discord />,
-        },
-      ];
-    
-      const FooterImages = [
-        Image1,
-        Image2,
-        Image3,
-        Image4,
-        Image5,
-        Image6,
-        Image7,
-        Image8,
-        Image9,
-      ];
-    
+  const socialLinks = [
+    {
+      link: "/",
+      icon: <XICon />,
+    },
+    {
+      link: "/",
+      icon: <Facebook />,
+    },
+    {
+      link: "/",
+      icon: <Insta />,
+    },
+    {
+      link: "/",
+      icon: <Youtube />,
+    },
+    {
+      link: "/",
+      icon: <Tiktok />,
+    },
+    {
+      link: "/",
+      icon: <Discord />,
+    },
+  ];
+
+  const FooterImages = [
+    Image1,
+    Image2,
+    Image3,
+    Image4,
+    Image5,
+    Image6,
+    Image7,
+    Image8,
+    Image9,
+  ];
+
   return (
     <div>
-
-
-<div className="bg-[#040F16] md:px-0 px-[20px] pb-[11px]   pt-[40px]">
+      <div className="bg-[#040F16] md:px-0 px-[20px] pb-[11px]  pt-[60px]">
         <div className="max-w-[1240px] flex md:flex-row flex-col justify-center  md:justify-between mx-auto">
           <div className="w-full max-w-full md:max-w-[192px] flex flex-col md:justify-start items-center justify-center ">
             <div>
               <Image src={Logo} alt="" />
             </div>
-            <div className="flex mt-[40px] justify-center flex-wrap gap-[16px]">
+            <div className="flex mt-[40px] justify-center md:justify-start flex-wrap gap-[16px]">
               {socialLinks.map((item, i) => (
                 <div
                   className="bg-[#FDF7FA]/10 text-[#FDF7FA]/30 hover:text-[#FDF7FA] flex justify-center items-center hover:bg-[#14591D] w-[36px] h-[36px]  cursor-pointer rounded-full  border border-[#FDF7FA]/20 backdrop-blur"
@@ -92,27 +90,27 @@ const Footer = () => {
             </h3>
             <ul className="space-y-[20px] md:text-start text-center font-inter">
               <li>
-                <p className="text-[#ABABAB]  cursor-pointer    hover:font-semibold hover:text-[#14591D] text-[12px] md:text-[18px]">
+                <p className="text-[#ABABAB]  cursor-pointer    hover:font-semibold hover:text-[#14591D] text-[12px] md:leading-[18px]  md:text-[18px]">
                   Welcome
                 </p>
               </li>
               <li>
-                <p className="text-[#ABABAB]  cursor-pointer    hover:font-semibold hover:text-[#14591D] text-[12px] md:text-[18px]">
+                <p className="text-[#ABABAB]  cursor-pointer    hover:font-semibold hover:text-[#14591D] text-[12px]  md:leading-[18px] md:text-[18px]">
                   Features
                 </p>
               </li>
               <li>
-                <p className="text-[#ABABAB]   cursor-pointer   hover:font-semibold hover:text-[#14591D] text-[12px] md:text-[18px]">
+                <p className="text-[#ABABAB]   cursor-pointer   hover:font-semibold hover:text-[#14591D] text-[12px]  md:leading-[18px] md:text-[18px]">
                   Testimonials
                 </p>
               </li>
               <li>
-                <p className="text-[#ABABAB]   cursor-pointer   hover:font-semibold hover:text-[#14591D] text-[12px] md:text-[18px]">
+                <p className="text-[#ABABAB]   cursor-pointer   hover:font-semibold hover:text-[#14591D] text-[12px]  md:leading-[18px] md:text-[18px]">
                   Blog
                 </p>
               </li>
               <li>
-                <p className="text-[#ABABAB]  cursor-pointer    hover:font-semibold hover:text-[#14591D] text-[12px] md:text-[18px]">
+                <p className="text-[#ABABAB]  cursor-pointer    hover:font-semibold hover:text-[#14591D] text-[12px]  md:leading-[18px] md:text-[18px]">
                   Boutique
                 </p>
               </li>
@@ -146,9 +144,19 @@ const Footer = () => {
             </ul>
           </div>
           <div className="flex justify-center md:justify-start md:mt-0 mt-[40px] max-w-full md:max-w-[266px] flex-wrap gap-y-[10px] gap-x-[10px]">
-          {FooterImages.map((item, i) => (
-              <div key={i} className="w-[114px] md:w-[82px] rounded-[7px] md:rounded-[10px] overflow-hidden h-[68px] ">
-                <Image key={i} className="w-full object-cover h-full" alt="" src={item} />
+            {FooterImages.map((item, i) => (
+              <div key={i}>
+                <div
+                  key={i}
+                  className="w-[114px] md:w-[82px] rounded-[7px] md:rounded-[10px] overflow-hidden h-[68px] "
+                >
+                  <Image
+                    key={i}
+                    className="w-full object-cover h-full"
+                    alt=""
+                    src={item}
+                  />
+                </div>
               </div>
             ))}
           </div>
@@ -169,9 +177,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

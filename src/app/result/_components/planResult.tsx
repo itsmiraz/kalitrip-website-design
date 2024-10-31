@@ -22,38 +22,38 @@ const PlanResult = () => {
   const Dates = [
     {
       title: "Day 1-2",
-      id: Math.random().toString(),
+      id: '1',
     },
     {
       title: "Day 3-5",
-      id: Math.random().toString(),
+      id: '2',
     },
     {
       title: "Day 6-7",
-      id: Math.random().toString(),
+      id: '3',
     },
     {
       title: "Day 8-10",
-      id: Math.random().toString(),
+      id: '4',
     },
     {
-      title: "Day 11-14",
-      id: Math.random().toString(),
+      title: "Day 12-14",
+      id: '5',
     },
     {
-      title: "Day 11-14",
-      id: Math.random().toString(),
+      title: "Day 14-16",
+      id:'6',
     },
     {
-      title: "Day 11-14",
-      id: Math.random().toString(),
+      title: "Day 17-15",
+      id: '9',
     },
   ];
 
   return (
     <div className="px-4">
       {/* Dates */}
-      <div className="flex overflow-x-auto mb-[50px] justify-center gap-x-[20px] items-center">
+      <div className="flex overflow-x-auto mb-[50px] justify-start md:justify-center gap-x-[20px] items-center">
         {Dates.map((item) => (
           <button
             key={item.id}
@@ -71,7 +71,7 @@ const PlanResult = () => {
 
       {/* result */}
 
-      <div className="bg-[#0924AB]/5 overflow-hidden py-[20px] md:py-[30px] md:px-[30px] px-[15px] md:p-[30px] max-w-[full] md:max-w-[1240px] mx-auto rounded-[20px] ">
+      <div className="bg-[#0924AB]/5 overflow-hidden py-[20px] md:py-[30px] md:px-[20px] px-[15px] md:p-[30px] max-w-[full] md:max-w-[1240px] mx-auto rounded-[20px] ">
         <HotelsAndFlights />
         <div className="mt-[50px]  mb-[30px]">
           <DashedLineHorizontal />

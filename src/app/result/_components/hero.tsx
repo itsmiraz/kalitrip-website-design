@@ -103,7 +103,7 @@ const Filter = () => {
     console.log("Selected travelers:", travelers);
   };
   return (
-    <div className="-translate-y-20 pb-[20px] bg-white drop-shadow rounded-[20px] max-w-[1240px] mx-auto pt-[20px] md:pt-[50px] px-[20px] md:px-[30px]">
+    <div className="-translate-y-20 pb-[20px] bg-white heroFilterBgShadow rounded-[20px] max-w-[1240px] mx-auto pt-[20px] md:pt-[50px] px-[20px] md:px-[30px]">
       <h2 className="text-center  md:block hidden pb-[50px] text-[36px] text-heading-color font-semibold font-clashDisplay">
         Travel Itinerary
       </h2>
@@ -138,7 +138,7 @@ const Filter = () => {
         ))}
       </div>
       <div className="flex justify-center  gap-x-[20px] pt-[30px] items-center">
-        <button className="md:px-[25px] px-[17px] md:leading-[18px] bg-[#14591D] text-white text-[12px] md:text-[18px] py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
+        <button className="md:px-[25px] px-[17px] md:leading-[18px] bg-[#14591D] text-white text-[12px] md:text-[18px] py-[9px] leading-[12px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
           Modify <span className="md:inline-block hidden">Search</span>
         </button>
         <div className="flex items-center gap-x-[20px] ">
