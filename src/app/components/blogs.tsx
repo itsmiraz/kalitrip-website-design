@@ -32,7 +32,7 @@ const Blogs = () => {
   ];
 
   return (
-    <div className="pt-[50px] md:pt-[120px]  px-[16px] md:px-10">
+    <div className="pt-[50px] md:pt-[80px]  px-[16px] md:px-10">
       <h2 className="text-[#040F16] font-clashDisplay pb-[10px] md:pb-[20px] text-[22px] md:text-[48px] text-center  font-semibold">
         Our Recent <span className="text-[#14591D]">Blogs</span>
       </h2>
@@ -87,10 +87,10 @@ const Blogs = () => {
                   <Calender />
                   <p>24 October 2024</p>
                 </div>
-                <h2 className="text-[18px]  md:text-[24px] font-clashDisplay leading-[19px] md:leading-[24px] mt-[15px] md:mt-[20px] font-semibold text-heading-color pb-[15px]">
+                <h2 className="text-[18px]  md:text-[24px] font-clashDisplay leading-[19px] md:leading-[24px] mt-[15px] md:mt-[20px] font-semibold text-heading-color pb-[10px]">
                   {item.title}
                 </h2>
-                <p className="text-[#767676] font-inter leading-[140%] text-[10px] md:text-[14px] font-medium ">
+                <p className="text-[#767676] font-inter leading-[120%] text-[10px] md:text-[14px] font-medium ">
                   {item.desc}
                 </p>
               </div>

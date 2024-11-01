@@ -77,7 +77,7 @@ const TabComponent = ({ activeTab, setActiveTab }:{activeTab:string,setActiveTab
     const tabs = ["All", "T-shirt", "Shoes", "Sun glass", "Shirts"];
 
     return (
-        <div className="p-[3px] md:p-[5px] pr-1 md:pr-0 md:text-[14px] text-[8px] gap-x-[15px] md:gap-x-[8px] font-inter bg-[#14591D]/10 flex rounded-[50px] max-w-fit md:max-w-fit mx-auto border border-[#CECECE]">
+        <div className="p-[3px] md:p-[5px] pr-1 md:pr-1 md:text-[14px] text-[8px] gap-x-[15px] md:gap-x-[8px] font-inter bg-[#14591D]/10 flex rounded-[50px] max-w-fit md:max-w-fit mx-auto border border-[#CECECE]">
             {tabs.map((tab) => (
                 <button
                     key={tab}

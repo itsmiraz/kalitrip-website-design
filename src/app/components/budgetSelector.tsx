@@ -52,7 +52,7 @@ const BudgetSelector: React.FC<BudgetSelectorProps> = ({ onChange }) => {
       >
         <div className="flex items-center gap-x-2">
           <DollarSign size={20} />
-          <span>Up to {formatBudget(selectedBudget)}</span>
+          <span>{selectedBudget}</span>
         </div>
         <ChevronDown className={`transform transition-transform ${isOpen ? 'rotate-180' : ''}`} />
       </div>

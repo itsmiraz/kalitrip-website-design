@@ -181,7 +181,7 @@ const TestimonialCard = ({
   data: { profile: any; name: string; role: string; desc: string };
 }) => {
   return (
-    <div className="bg-white w-[312px] md:w-[605px] rounded-[20px] py-[20px] md:py-[40px] px-[15px] md:px-[30px]">
+    <div className="bg-white w-[312px] md:w-[625px] rounded-[20px] py-[20px] md:py-[40px] px-[15px] md:px-[30px]">
       <div>
         <div className="md:w-[50px] md:h-[37px] w-[30px] h-[22px]">
           <QuoteIcon />
