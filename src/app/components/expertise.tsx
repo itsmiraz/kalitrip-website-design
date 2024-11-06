@@ -11,7 +11,7 @@ const Expertise = () => {
         {HomeExpertiseData.map((item, i) => (
           <div
 
-            className={` ${HomeExpertiseData.length === (i+1) && 'col-span-2 md:col-span-1  mx-auto md:max-w-full max-w-[183px]'}  rounded-[10px]  h-fit md:h-[259px] md:w-fit md:rounded-[20px] px-[10px] py-[15px] md:py-[30px] md:px-[20px] flex flex-col justify-center items-center gap-[20px] md:gap-y-[30px] bg-[#945600]/5`}
+            className={` ${HomeExpertiseData.length === (i+1) && 'col-span-2 md:col-span-1   mx-auto md:max-w-full max-w-[183px]'}  rounded-[10px]  h-fit md:h-[259px] md:w-fit md:rounded-[20px] px-[10px] py-[15px] md:py-[30px] md:px-[20px] flex flex-col justify-center items-center gap-[20px] md:gap-y-[30px] bg-[#945600]/5`}
             key={i}
           >
             <div className="md:w-[70px] md:h-[70px] w-[40px] h-[40px]" >{item.icon}</div>

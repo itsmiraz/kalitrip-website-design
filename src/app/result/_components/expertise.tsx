@@ -41,7 +41,7 @@ const Expertise = () => {
       <div className="px-[16px] pb-[16px] md:pb-[60px] place-items-center place-content-center   w-full md:max-w-[1440px] mx-auto grid-cols-2 grid md:flex flex-wrap justify-center items-center gap-[16px] md:gap-[30px]">
         {data.map((item, i) => (
           <div
-            className={`${data.length === (i+1) && 'col-span-2 mx-auto max-w-[190px] md:max-w-fit '} rounded-[10px] md:rounded-[20px] px-[10px] py-[15px] md:py-[30px] md:px-[30px] h-full  w-full md:h-fit md:w-[393px] flex flex-col justify-center items-center gap-y-[30px] bg-[#945600]/5`}
+            className={`${data.length === (i+1) && 'col-span-2 md:col-span-1 mx-auto md:mx-0 max-w-[190px] md:max-w-fit '} rounded-[10px] md:rounded-[20px] px-[10px] py-[15px] md:py-[30px] md:px-[30px] h-full  w-full md:h-[274px] md:w-[393px] flex flex-col justify-center items-center gap-y-[30px] bg-[#945600]/5`}
             key={i}
           >
             <div className="md:w-[70px] w-[40px] h-[40px] md:h-[70px]">{item.icon}</div>
