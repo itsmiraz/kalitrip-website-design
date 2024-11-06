@@ -159,10 +159,10 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <div className="max-w-[1240px] py-[10px] px-[20px] mx-auto mt-[37px] bg-[#FFFFFF]/10 backdrop-blur flex justify-between items-center rounded-[15px]">
+        <div className="max-w-[1240px] py-[10px] px-[20px] mx-auto mt-[50px] bg-[#FFFFFF]/10 backdrop-blur flex justify-between items-center rounded-[15px]">
           <div className="flex items-center gap-x-2">
             <CopyRightIcon />
-            <p className="font-inter text-[10px] md:text-[18px] font-medium text-[#ABABAB]">
+            <p className="font-inter text-[12px] md:text-[18px] font-medium text-[#ABABAB]">
               2024 - Kalitrip Copyright All Right reserved
             </p>
           </div>

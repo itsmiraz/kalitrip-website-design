@@ -33,7 +33,7 @@ const Blogs = () => {
 
   return (
     <div className="pt-[50px] md:pt-[80px]  px-[16px] md:px-10">
-      <h2 className="text-[#040F16] font-clashDisplay pb-[10px] md:pb-[20px] text-[22px] md:text-[48px] text-center  font-semibold">
+      <h2 className="text-[#040F16] font-clashDisplay text-[22px] md:text-[48px] text-center  font-semibold">
         Our Recent <span className="text-[#14591D]">Blogs</span>
       </h2>
       <p className="text-[#767676] font-medium  font-inter text-center text-[10px] md:text-[18px]">
@@ -41,7 +41,7 @@ const Blogs = () => {
         your vision to life.
       </p>
 
-      <div className="pt-[60px] w-full place-items-center mx-auto grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-y-[30px] gap-x-[50px] md:max-w-[1240px]">
+      <div className="pt-[20px] md:pt-[60px] w-full place-items-center mx-auto grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-y-[60px] md:gap-y-[30px] gap-x-[50px] md:max-w-[1240px]">
         {/* cover */}
 
         <div>
@@ -64,7 +64,7 @@ const Blogs = () => {
             this post offers a step-by-step guide to help readers create a
             comprehensive travel itinerary.
           </p>
-          <button className="md:px-[25px] gap-x-1 mt-[40px] flex justify-center items-center px-[17px] md:leading-[18px] bg-[#14591D] text-white text-[12px] md:text-[18px] py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
+          <button className="md:px-[25px] gap-x-1 mt-[20px] md:mt-[40px] flex justify-center items-center px-[17px] md:leading-[18px] bg-[#14591D] text-white text-[12px] md:text-[18px] py-[9px] h-fit md:py-[16px] rounded-[7px] md:rounded-[15px] rounded-tl-[0px] md:rounded-tl-[0px]">
             Read More   <span className="md:w-[18px] md:h-[18px] w-[15px] h-[15px]"><LeftArrow/></span>
           </button>
         </div>

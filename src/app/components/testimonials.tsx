@@ -48,7 +48,7 @@ const Testimonials = () => {
       className="py-[40px] mx-auto max-w-[1500px] mx-a md:py-[93px]"
     >
       {" "}
-      <div className="flex md:flex-row flex-col mb-[30px] md:mb-[57px]  justify-center gap-[34px] md:justify-between md:px-20 items-center">
+      <div className="flex md:flex-row flex-col mb-[30px] md:mb-[57px]  justify-center gap-[34px] md:justify-between md:px-10 items-center">
         <h2 className="text-[22px] md:text-start text-center font-clashDisplay leading-[110%] md:text-[48px] font-semibold text-heading-color">
           What our customers <br /> Say About
           <span className="text-[#14591D]"> KaliTrip</span>
@@ -181,7 +181,7 @@ const TestimonialCard = ({
   data: { profile: any; name: string; role: string; desc: string };
 }) => {
   return (
-    <div className="bg-white w-[312px] md:w-[625px] rounded-[20px] py-[20px] md:py-[40px] px-[15px] md:px-[30px]">
+    <div className="bg-white w-[312px] md:w-[685px] rounded-[20px] py-[20px] md:py-[40px] px-[15px] md:px-[30px]">
       <div>
         <div className="md:w-[50px] md:h-[37px] w-[30px] h-[22px]">
           <QuoteIcon />
@@ -203,7 +203,7 @@ const TestimonialCard = ({
               </p>
             </div>
           </div>
-          <div className="flex gap-x-[10px]">
+          <div className="flex gap-x-[6px] md:gap-x-[10px]">
             <div className="md:w-[26px] md:h-[26px] w-[12px] h-[12px]">
               <Star />
             </div>

@@ -122,7 +122,7 @@ const Activities = () => {
           </ul>
           <RoundedButton />
         </div>
-        <div className="flex md:w-fit w-full md:flex-row gap-[16px] flex-col">
+        <div className="grid grid-cols-2 md:flex  md:w-fit w-full md:flex-row gap-[16px] flex-col">
           <Image className="md:w-fit w-full" src={ActivityImage1} alt="" />
           <Image className="md:w-fit w-full" src={ActivityImage2} alt="" />
           <Image className="md:w-fit w-full" src={ActivityImage3} alt="" />

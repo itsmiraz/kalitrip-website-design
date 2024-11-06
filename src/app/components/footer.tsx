@@ -69,9 +69,9 @@ const Footer = () => {
   ];
 
   return (
-    <div className="mt-[0px]">
-      <div className="px-[20px]">
-        <div className="w-full md:max-w-[1240px] translate-y-36 gap-x-[128px] items-center flex md:flex-row flex-col justify-between py-[30px] px-[20px] md:px-[80px] gap-y-[30px] rounded-[30px] bg-[#945600] mx-auto">
+    <div className="mt-[0px] ">
+      <div className="px-[20px] mt-0 pt-0">
+        <div className="w-full md:max-w-[1240px] translate-y-28 gap-x-[128px] items-center flex md:flex-row flex-col justify-between py-[30px] px-[20px] md:px-[80px] gap-y-[30px] rounded-[30px] bg-[#945600] mx-auto">
           <Image src={CTA} alt="" />
 
           <div>
@@ -183,10 +183,10 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <div className="max-w-[1240px] py-[10px] px-[20px] mx-auto mt-[37px] bg-[#FFFFFF]/10 backdrop-blur flex justify-between items-center rounded-[15px]">
+        <div className="max-w-[1240px] py-[10px] px-[20px] mx-auto mt-[50px] bg-[#FFFFFF]/10 backdrop-blur flex justify-between items-center rounded-[15px]">
           <div className="flex items-center gap-x-2">
             <CopyRightIcon />
-            <p className="font-inter text-[10px] md:text-[18px] font-medium text-[#ABABAB]">
+            <p className="font-inter text-[12px] md:text-[18px] font-medium text-[#ABABAB]">
               2024 - Kalitrip Copyright All Right reserved
             </p>
           </div>

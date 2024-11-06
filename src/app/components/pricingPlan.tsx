@@ -69,7 +69,7 @@ const PricingPlan = () => {
             </div>
             <button className="mt-[24px] font-clashDisplay py-[16px] w-full ease-in-out duration-300 transition-all rounded-full font-medium  hover:text-white hover:border-none border gap-x-[5px] border-[#14591D]/15 flex justify-center items-center text-center bg-white hover:bg-[#14591D] text-heading-color">
               Get Started
-              <div className="w-[8px] h-[8px] md:w-[18px] md:h-[18px] ">
+              <div className="w-[18px] h-[18px] md:w-[18px] md:h-[18px] ">
                 <LeftArrow />
               </div>
             </button>
