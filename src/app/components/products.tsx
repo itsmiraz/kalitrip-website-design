@@ -13,7 +13,7 @@ const Products = () => {
     const filteredProducts = activeTab === "All" ? Productsdata : Productsdata.filter(item => item.category === activeTab);
 
     return (
-        <div className="pt-[60px] md:pt-[60px]">
+        <div className="pt-[0px] md:pt-[60px]">
             <h2 className="text-[#040F16] font-clashDisplay pb-[20px] md:pb-[40px] text-[22px] md:text-[48px] text-center font-semibold">
                 Trending products
             </h2>
@@ -21,10 +21,10 @@ const Products = () => {
                 <TabComponent activeTab={activeTab} setActiveTab={setActiveTab} />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 px-[16px] md:flex w-full flex-wrap pt-[30px] md:pt-[60px] gap-[16px] md:gap-[20px] justify-center items-center">
+            <div className="grid grid-cols-2 md:grid-cols-2 px-[16px] md:flex w-full flex-wrap pt-[30px] md:pt-[60px] gap-[16px] md:gap-[20px] justify-center items-center">
                 {filteredProducts.map((item, i) => (
                     <div
-                        className="max-w-full md:max-w-[295px] border-[#CECECE] border bg-[#f5f5f5f]/90 hover:bg-white cursor-pointer hover:-drop-shadow-md hover:border-none transition-all ease-in-out duration-300 rounded-[20px] p-[10px]"
+                        className="max-w-full flex flex-col justify-between md:h-fit h-[323px] md:max-w-[295px] border-[#CECECE] border bg-[#f5f5f5f]/90 hover:bg-white cursor-pointer hover:-drop-shadow-md hover:border-none transition-all ease-in-out duration-300 rounded-[20px] p-[10px]"
                         key={i}
                     >
                         <div className="relative">
@@ -33,18 +33,18 @@ const Products = () => {
                                 <CartIcon />
                             </div>
                         </div>
-                        <div className="pt-[20px] md:pt-[30px] px-[5px]">
+                        <div className="pt-[20px] md:pt-[30px] px-[1px]">
                             <div className="md:mx-0 mx-auto flex justify-center items-center md:justify-start">
                                 <Colors />
                             </div>
-                            <h3 className="text-center md:text-start text-[14px] md:text-[20px] font-clashDisplay pt-[20px] md:leading-[20px] font-semibold text-heading-color">
-                                {item.title}
+                            <h3 className="text-center truncate md:text-start text-[14px] md:text-[20px] font-clashDisplay pt-[10px] md:pt-[20px] md:leading-[20px] font-semibold text-heading-color">
+                                {item.title} 
                             </h3>
-                            <p className="text-[8px] pt-[10px] md:text-start text-center md:text-[12px] leading-[140%] font-inter text-[#767676]">
+                            <p className="text-[8px] pt-[8px] md:pt-[10px] md:text-start text-center md:text-[12px] leading-[140%] font-inter text-[#767676]">
                                 {item.desc}
                             </p>
                         </div>
-                        <div className="flex pt-[25px] gap-x-[10px] items-center">
+                        <div className="flex pt-[15px] md:pt-[25px] gap-x-[10px] items-center">
                             <p className="bg-black whitespace-nowrap font-clashDisplay h-fit text-white text-[8px] md:text-[14px] font-semibold px-[16px] py-[10px] rounded-full">
                                 {item.price}
                             </p>

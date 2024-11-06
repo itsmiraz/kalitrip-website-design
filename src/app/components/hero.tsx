@@ -131,25 +131,29 @@ const Header = () => {
           Login
         </button>
         <div onClick={() => setisOpen(!isOpen)} className="md:hidden block">
-        {isOpen ? (
-          <div className="w-[20px] text-white h-[20px]">
-            <Close />
-          </div>
-        ) : (
-          <div className="w-[20px] text-white h-[20px]">
-            <Menu />
-          </div>
-        )}
+          {isOpen ? (
+            <div className="w-[20px] text-white h-[20px]">
+              <Close />
+            </div>
+          ) : (
+            <div className="w-[20px] text-white h-[20px]">
+              <Menu />
+            </div>
+          )}
+        </div>
       </div>
-      </div>
-     {
-      isOpen &&  <div className="w-32 bg-white z-50 px-4 py-2 rounded-[12px]  absolute top-14 right-4">
-      {navLinks.map((item, i) => (
-        <p key={i} className="md:text-[14px] lg:text-[18px] transition-all duration-300 ease-in-out font-clashDisplay cursor-pointer hover:text-[#14591D] text-[#1a1a1a]">{item.label}</p>
-      ))}
-    </div>
-     }
-     
+      {isOpen && (
+        <div className="w-32 bg-white z-50 px-4 py-2 rounded-[12px]  absolute top-14 right-4">
+          {navLinks.map((item, i) => (
+            <p
+              key={i}
+              className="md:text-[14px] lg:text-[18px] transition-all duration-300 ease-in-out font-clashDisplay cursor-pointer hover:text-[#14591D] text-[#1a1a1a]"
+            >
+              {item.label}
+            </p>
+          ))}
+        </div>
+      )}
     </div>
   );
 };
@@ -224,7 +228,7 @@ const Filter = () => {
     console.log("Selected travelers:", travelers);
   };
   return (
-    <div className="-translate-y-32 heroFilterBgShadow md:-translate-y-20 pb-[20px] bg-white rounded-[15px] md:rounded-[20px] md:max-w-[1240px] mx-auto pt-[20px] md:pt-[50px] px-[20px] md:px-[30px]">
+    <div className="-translate-y-20 heroFilterBgShadow md:-translate-y-20 pb-[20px] bg-white rounded-[15px] md:rounded-[20px] md:max-w-[1240px] mx-auto pt-[20px] md:pt-[50px] px-[20px] md:px-[30px]">
       <div className="md:flex-row  flex-wrap gap-x-[10px] gap-y-[20px] flex-col flex pb-[30px] border-b border-[#E6E6E6] md:justify-center lg:justify-between items-center">
         <div className="  w-full md:w-fit">
           <LocationInput label="Where are you Coming from" />
@@ -245,7 +249,7 @@ const Filter = () => {
           <BudgetSelector />
         </div>
       </div>
-      <div className="flex justify-center flex-wrap px-[17px] md:px-20 gap-y-[20px] md:gap-y-[30px] gap-x-[20px] md:gap-x-[40px] border-b border-[#E6E6E6] py-[30px] items-center">
+      <div className="flex justify-center flex-wrap px-[0px] md:px-20 gap-y-[15px] md:gap-y-[30px] gap-x-[15px] md:gap-x-[40px] border-b border-[#E6E6E6] py-[30px] items-center">
         {FilterOptions.map((item, i) => (
           <div
             onClick={() => handleFilterClick(item.label)}
@@ -253,7 +257,7 @@ const Filter = () => {
               selected.includes(item?.label)
                 ? "text-[#FDF7FA] bg-[#14591D]"
                 : "bg-[#ECECEC] text-[#767676]"
-            } font-semibold cursor-pointer transition-all ease-in-out duration-300 text-[8px] md:text-[16px] rounded-full px-[15px] md:px-[25px] py-[9px] md:py-[12px]`}
+            } font-semibold cursor-pointer transition-all ease-in-out duration-300 text-[12px] md:text-[16px] rounded-full px-[15px] md:px-[25px] py-[9px] md:py-[12px]`}
             key={i}
           >
             {item.label}

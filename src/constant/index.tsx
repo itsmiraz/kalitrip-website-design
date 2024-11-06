@@ -571,32 +571,33 @@ export const navLinks = [
       role: "Ui-Ux Designer",
     },
   ];
+  
   export const Productsdata = [
     {
         img: Tshirt,
         title: "Pippi Tee White T-Shirt",
-        desc: "The Pippi Tee White T-Shirt is a perfect blend of simplicity and style, making it an essential addition to any wardrobe.",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,",
         price: "$35.05",
         category: "T-shirt"
     },
     {
         img: Shoes,
         title: "Casual Shoes",
-        desc: "Stylish and comfortable casual shoes perfect for any occasion.",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,",
         price: "$55.00",
         category: "Shoes"
     },
     {
         img: SunGlass,
         title: "Classic Sunglasses",
-        desc: "The perfect accessory to add a touch of class to any outfit.",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,",
         price: "$25.99",
         category: "Sun glass"
     },
     {
         img: Shirt,
         title: "Casual Tee Blue Shirt",
-        desc: "A versatile black T-shirt, perfect for any casual look.",
+        desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,",
         price: "$29.99",
         category: "Shirts"
     }
