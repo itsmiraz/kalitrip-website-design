@@ -92,7 +92,7 @@ const Header = () => {
       >
         {navLinks.slice(0, !isLargeScreen ? 2 : 4).map((item, i) => (
           <li key={i}>
-            <p className="md:text-[14px] lg:text-[18px] transition-all duration-300 ease-in-out font-clashDisplay cursor-pointer hover:text-[#14591D] text-[#FDF7FA]">
+            <p className="md:text-[14px] hover:font-semibold lg:text-[18px] transition-all duration-300 ease-in-out font-clashDisplay cursor-pointer hover:text-[#14591D] text-[#FDF7FA]">
               {item.label}
             </p>
           </li>

@@ -39,7 +39,9 @@ function LanguageDropdown({variant}:{variant?:string}) {
         <p className="text-[18px] md:leading-[18px] font-medium font-clashDisplay ">
           {selectedLanguage}
         </p>
-        <ArrowDown/>
+       <div className={`${isDropdownOpen ? 'rotate-0':"rotate-180"} transition-all ease-in-out duration-300`}>
+       <ArrowDown/>
+       </div>
       </div>
 
       {isDropdownOpen && (

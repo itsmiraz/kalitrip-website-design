@@ -73,59 +73,64 @@ const Footer = () => {
   return (
     <div>
       <div className="bg-[#040F16] md:px-0 px-[20px] pb-[11px]  pt-[60px]">
-        <div className="max-w-[1240px] flex md:flex-row flex-col justify-center  md:justify-between mx-auto">
+      <div className="max-w-[1240px] flex md:flex-row flex-col justify-center  md:justify-between mx-auto">
           <div className="w-full max-w-full md:max-w-[192px] flex flex-col md:justify-start items-center justify-center ">
-            <div>
+            <div className="md:mx-0 flex justify-center md:justify-start  w-full">
               <Image src={Logo} alt="" />
             </div>
-            <div className="flex mt-[40px] justify-center md:justify-start flex-wrap gap-[16px]">
-              {socialLinks.map((item, i) => (
-                <div
-                  className="bg-[#FDF7FA]/10 text-[#FDF7FA]/30 hover:text-[#FDF7FA] flex justify-center items-center hover:bg-[#14591D] w-[36px] h-[36px]  cursor-pointer rounded-full  border border-[#FDF7FA]/20 backdrop-blur"
-                  key={i}
-                >
-                  {item.icon}
-                </div>
-              ))}
+            <div className="mt-[30px] md:mt-[0px]">
+              <h3 className="font-semibold block md:hidden   text-[16px] md:text-[24px] mb-[0px] md:text-start text-center font-clashDisplay  text-[#FDF7FA] ">
+                Follow us
+              </h3>
+              <div className="flex mt-[20px] md:mt-[40px] justify-center md:justify-start flex-wrap gap-[16px]">
+                {socialLinks.map((item, i) => (
+                  <div
+                    className="bg-[#FDF7FA]/10 text-[#FDF7FA]/30 hover:text-[#FDF7FA] flex justify-center items-center hover:bg-[#14591D] w-[36px] h-[36px]  cursor-pointer rounded-full  border border-[#FDF7FA]/20 backdrop-blur"
+                    key={i}
+                  >
+                    {item.icon}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
           <div className="pt-[30px] mt-[30px] md:mt-0 md:pt-[0px]  border-t border-[#696969] md:border-none">
-            <h3 className="font-semibold text-[16px] md:text-[24px] mb-[30px] md:text-start text-center font-clashDisplay  text-[#FDF7FA] ">
+            <h3 className="font-semibold text-[16px] md:text-[24px] mb-[20px] md:mb-[30px] md:text-start text-center font-clashDisplay  text-[#FDF7FA] ">
               Ease of use
             </h3>
-            <ul className="space-y-[20px] md:text-start text-center font-inter">
+            <ul className="space-y-[10px] md:space-y-[20px] md:text-start text-center font-inter">
               <li>
-                <p className="text-[#ABABAB]  cursor-pointer    hover:font-semibold hover:text-[#14591D] text-[12px] md:leading-[18px]  md:text-[18px]">
+                <p className="text-[#ABABAB]  cursor-pointer    hover:font-semibold hover:text-[#14591D] text-[12px] md:leading-[100%]  md:text-[18px]">
                   Welcome
                 </p>
               </li>
               <li>
-                <p className="text-[#ABABAB]  cursor-pointer    hover:font-semibold hover:text-[#14591D] text-[12px]  md:leading-[18px] md:text-[18px]">
+                <p className="text-[#ABABAB]  cursor-pointer    hover:font-semibold hover:text-[#14591D] text-[12px]  md:leading-[100%] md:text-[18px]">
                   Features
                 </p>
               </li>
               <li>
-                <p className="text-[#ABABAB]   cursor-pointer   hover:font-semibold hover:text-[#14591D] text-[12px]  md:leading-[18px] md:text-[18px]">
+                <p className="text-[#ABABAB]   cursor-pointer   hover:font-semibold hover:text-[#14591D] text-[12px]  md:leading-[100%] md:text-[18px]">
                   Testimonials
                 </p>
               </li>
               <li>
-                <p className="text-[#ABABAB]   cursor-pointer   hover:font-semibold hover:text-[#14591D] text-[12px]  md:leading-[18px] md:text-[18px]">
+                <p className="text-[#ABABAB]   cursor-pointer   hover:font-semibold hover:text-[#14591D] text-[12px]  md:leading-[100%] md:text-[18px]">
                   Blog
                 </p>
               </li>
               <li>
-                <p className="text-[#ABABAB]  cursor-pointer    hover:font-semibold hover:text-[#14591D] text-[12px]  md:leading-[18px] md:text-[18px]">
+                <p className="text-[#ABABAB]  cursor-pointer    hover:font-semibold hover:text-[#14591D] text-[12px]  md:leading-[100%] md:text-[18px]">
                   Boutique
                 </p>
               </li>
             </ul>
           </div>
           <div className="mt-[30px] md:mt-0">
-            <h3 className="font-semibold md:text-start text-center text-[16px] md:text-[24px] mb-[30px] font-clashDisplay   text-[#FDF7FA] ">
+            <h3 className="font-semibold md:text-start text-center text-[16px] md:text-[24px] mb-[20px] md:mb-[30px] font-clashDisplay   text-[#FDF7FA] ">
               Contact Info.
             </h3>
-            <ul className="space-y-[16px] md:text-start text-center font-inter">
+            <ul className="space-y-[14px] md:space-y-[16px] md:text-start text-center font-inter">
               <li className="flex md:justify-start justify-center  gap-x-[17px]">
                 <Phone />
                 <p className="text-[12px] md:text-[18px]   text-[#ABABAB]">
@@ -150,11 +155,11 @@ const Footer = () => {
           </div>
           <div className="flex justify-center md:justify-start md:mt-0 mt-[40px] max-w-full md:max-w-[266px] flex-wrap gap-y-[10px] gap-x-[10px]">
             {FooterImages.map((item, i) => (
-              <ImageIcon i={i} key={i} item={item} />
+              <ImageIcon item={item} i={i} key={i} />
             ))}
           </div>
         </div>
-        <div className="max-w-[1240px] py-[10px] px-[20px] mx-auto mt-[17px] bg-[#FFFFFF]/10 backdrop-blur flex justify-between items-center rounded-[15px]">
+        <div className="max-w-[1240px] py-[10px] px-[20px] mx-auto mt-[37px] bg-[#FFFFFF]/10 backdrop-blur flex justify-between items-center rounded-[15px]">
           <div className="flex items-center gap-x-2">
             <CopyRightIcon />
             <p className="font-inter text-[10px] md:text-[18px] font-medium text-[#ABABAB]">
